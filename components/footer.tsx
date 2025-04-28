@@ -93,16 +93,17 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="mr-2 text-gray-400 flex-shrink-0 mt-1" size={18} />
-                <span className="text-gray-400">Av. Paulista, 1000, São Paulo - SP, Brasil</span>
+                <span className="text-gray-400">Edifício Hangar Business Park, Hangar
+                2, Sala 301, Salvador, Bahia, Brasil</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 text-gray-400 flex-shrink-0" size={18} />
-                <span className="text-gray-400">(11) 9999-9999</span>
+                <span className="text-gray-400">(71) 99349-1849</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 text-gray-400 flex-shrink-0" size={18} />
                 <a href="mailto:contato@rochaperin.com.br" className="text-gray-400 hover:text-white">
-                  contato@rochaperin.com.br
+                  contato@rochaperin.com
                 </a>
               </li>
             </ul>
