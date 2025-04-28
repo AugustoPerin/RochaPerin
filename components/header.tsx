@@ -18,7 +18,7 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
-            <Image src="/rochaperin-site-home-button.png" alt="RochaPerin Logo" width={150} height={40} priority />
+            <Image src="/rochaperin-site-home-button-sem-borda.png" alt="RochaPerin Logo" width={200} height={80} priority />
           </Link>
 
           {/* Desktop Navigation */}
