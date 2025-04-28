@@ -42,7 +42,7 @@ export default function Header() {
 
           <div className="hidden md:block">
             <Button asChild>
-              <Link href="/contato">Fale Conosco</Link>
+              <Link href="http://wa.me/5571993491849?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20RochaPerin">Fale Conosco</Link>
             </Button>
           </div>
 

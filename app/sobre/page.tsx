@@ -33,7 +33,7 @@ export default function SobrePage() {
                 processos, análise de dados, migração para nuvem e desenvolvimento de chatbots empresariais.
               </p>
               <p className="text-gray-700 mb-4">
-                Fundada em 2015, nossa empresa nasceu com o propósito de ajudar organizações a se adaptarem ao mundo
+                Nossa empresa nasceu com o propósito de ajudar organizações a se adaptarem ao mundo
                 digital, otimizando processos e melhorando a experiência de seus clientes através da tecnologia.
               </p>
               <p className="text-gray-700 mb-6">

@@ -26,7 +26,7 @@ export default function Home() {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="/placeholder.svg?height=400&width=500"
+                src="/rochaperin-site-first-image.png?height=368&width=368"
                 alt="Automação de processos"
                 className="rounded-lg shadow-xl"
               />

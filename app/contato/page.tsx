@@ -85,6 +85,10 @@ export default function ContatoPage() {
                       <RadioGroupItem value="parceria" id="parceria" />
                       <Label htmlFor="parceria">Proposta de parceria</Label>
                     </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="outros" id="outros" />
+                      <Label htmlFor="outros">Outros</Label>
+                    </div>
                   </RadioGroup>
                 </div>
 
@@ -104,25 +108,12 @@ export default function ContatoPage() {
                 <h3 className="text-2xl font-semibold mb-6">Informações de Contato</h3>
 
                 <div className="space-y-6">
-                  <div className="flex items-start">
-                    <MapPin className="text-blue-600 mr-4 flex-shrink-0 mt-1" size={24} />
-                    <div>
-                      <h4 className="font-medium mb-1">Endereço</h4>
-                      <p className="text-gray-600">
-                        Av. Paulista, 1000
-                        <br />
-                        Bela Vista, São Paulo - SP
-                        <br />
-                        CEP: 01310-100
-                      </p>
-                    </div>
-                  </div>
 
                   <div className="flex items-start">
                     <Phone className="text-blue-600 mr-4 flex-shrink-0 mt-1" size={24} />
                     <div>
                       <h4 className="font-medium mb-1">Telefone</h4>
-                      <p className="text-gray-600">(11) 9999-9999</p>
+                      <p className="text-gray-600">(71) 99349-1849</p>
                     </div>
                   </div>
 
@@ -130,7 +121,7 @@ export default function ContatoPage() {
                     <Mail className="text-blue-600 mr-4 flex-shrink-0 mt-1" size={24} />
                     <div>
                       <h4 className="font-medium mb-1">E-mail</h4>
-                      <p className="text-gray-600">contato@rochaperin.com.br</p>
+                      <p className="text-gray-600">contato@rochaperin.com</p>
                     </div>
                   </div>
                 </div>
@@ -207,19 +198,6 @@ export default function ContatoPage() {
         </div>
       </section>
 
-      {/* Mapa */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Localização</h2>
-          <div className="h-96 bg-gray-300 rounded-lg overflow-hidden">
-            {/* Aqui seria inserido um mapa real */}
-            <div className="w-full h-full flex items-center justify-center">
-              <p className="text-gray-600">Mapa da localização da RochaPerin</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -229,7 +207,7 @@ export default function ContatoPage() {
             <div className="border border-gray-200 rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-3">Quanto tempo leva para implementar um chatbot?</h3>
               <p className="text-gray-600">
-                O tempo de implementação varia de acordo com a complexidade do projeto, mas geralmente leva de 2 a 8
+                O tempo de implementação varia de acordo com a complexidade do projeto, mas geralmente leva de 1 a 5
                 semanas, desde o planejamento até a entrega final.
               </p>
             </div>
@@ -259,12 +237,6 @@ export default function ContatoPage() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Não encontrou a resposta que procurava?</p>
-            <Button asChild variant="outline">
-              <Link href="/contato">Entre em contato</Link>
-            </Button>
-          </div>
         </div>
       </section>
     </div>
