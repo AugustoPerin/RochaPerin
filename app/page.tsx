@@ -35,6 +35,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Clientes Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Nossos Clientes</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+            {/* Client logos would go here - using placeholders for now */}
+            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
+              <img src="/placeholder.svg?height=60&width=120" alt="Cliente 1" className="max-h-12" />
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
+              <img src="/placeholder.svg?height=60&width=120" alt="Cliente 2" className="max-h-12" />
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
+              <img src="/placeholder.svg?height=60&width=120" alt="Cliente 3" className="max-h-12" />
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
+              <img src="/placeholder.svg?height=60&width=120" alt="Cliente 4" className="max-h-12" />
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
+              <img src="/placeholder.svg?height=60&width=120" alt="Cliente 5" className="max-h-12" />
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <Button asChild variant="outline">
+              <Link href="/clientes">Ver todos os clientes</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Serviços Principais */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">

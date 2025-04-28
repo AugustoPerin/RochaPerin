@@ -11,7 +11,11 @@ export const metadata = {
   title: "RochaPerin - Automação de Processos e Chatbots Empresariais",
   description:
     "Especialistas em automação de processos, análise de dados, migração para nuvem e chatbots empresariais.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
+  icons: {
+    icon: "/rochaperin-favicon.png",
+    apple: "/rochaperin-favicon.png",
+  },
 }
 
 export default function RootLayout({

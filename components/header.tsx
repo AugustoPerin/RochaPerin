@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -17,7 +18,7 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-blue-700">RochaPerin</span>
+            <Image src="/rochaperin-site-home-button.png" alt="RochaPerin Logo" width={150} height={40} priority />
           </Link>
 
           {/* Desktop Navigation */}
@@ -27,6 +28,9 @@ export default function Header() {
             </Link>
             <Link href="/servicos" className="text-gray-700 hover:text-blue-700 font-medium">
               Serviços
+            </Link>
+            <Link href="/clientes" className="text-gray-700 hover:text-blue-700 font-medium">
+              Clientes
             </Link>
             <Link href="/sobre" className="text-gray-700 hover:text-blue-700 font-medium">
               Sobre Nós
@@ -71,6 +75,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Serviços
+              </Link>
+              <Link
+                href="/clientes"
+                className="text-gray-700 hover:text-blue-700 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Clientes
               </Link>
               <Link
                 href="/sobre"
