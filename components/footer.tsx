@@ -17,11 +17,11 @@ export default function Footer() {
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.instagram.com/rocha_perin/" className="text-gray-400 hover:text-white">
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.linkedin.com/company/rochaperin/" className="text-gray-400 hover:text-white">
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </a>
@@ -50,11 +50,6 @@ export default function Footer() {
               <li>
                 <Link href="/contato" className="text-gray-400 hover:text-white">
                   Contato
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white">
-                  Blog
                 </Link>
               </li>
             </ul>

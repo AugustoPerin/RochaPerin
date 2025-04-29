@@ -205,7 +205,7 @@ export default function ContatoPage() {
                       </svg>
                       <span className="sr-only">Facebook</span>
                     </a>
-                    <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    <a href="https://www.instagram.com/rocha_perin/" className="text-blue-600 hover:text-blue-800 transition-colors">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -224,7 +224,7 @@ export default function ContatoPage() {
                       </svg>
                       <span className="sr-only">Instagram</span>
                     </a>
-                    <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    <a href="https://www.linkedin.com/company/rochaperin/" className="text-blue-600 hover:text-blue-800 transition-colors">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
