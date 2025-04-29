@@ -24,9 +24,9 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-blue-600 px-6 py-3 font-medium"
+                className="border-white text-blue-700 hover:bg-blue-600 px-6 py-3 font-medium"
               >
-                <Link href="/contato">Fale conosco</Link>
+                <Link href="http://wa.me/5571993491849?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20RochaPerin">Fale conosco</Link>
               </Button>
             </div>
           </div>
