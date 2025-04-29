@@ -1,60 +1,27 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Link from "next/link"
 import { Check } from "lucide-react"
-import { WaveDivider } from "@/components/ui/wave-divider"
-import { SectionTitle } from "@/components/ui/section-title"
+import { UnifiedHero } from "@/components/ui/unified-hero"
+import { UnifiedSectionTitle } from "@/components/ui/unified-section-title"
+import { UnifiedCTA } from "@/components/ui/unified-cta"
+import { UnifiedWaveDivider } from "@/components/ui/unified-wave-divider"
 
 export default function GeracaoLeadsPage() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:16px_16px]"></div>
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <motion.div
-              className="md:w-1/2 mb-10 md:mb-0"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Bot de Geração de Leads</h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Transforme visitantes em clientes potenciais com nosso bot inteligente de geração de leads, capturando
-                informações valiosas e qualificando prospects 24 horas por dia.
-              </p>
-              <Link
-                href="/contato"
-                className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-3 rounded-full font-medium transition duration-300 shadow-lg inline-block"
-              >
-                Solicitar Demonstração
-              </Link>
-            </motion.div>
-            <motion.div
-              className="md:w-1/2"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <img
-                src="/placeholder.svg?height=400&width=500&query=lead generation chatbot interface"
-                alt="Bot de Geração de Leads"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
-            </motion.div>
-          </div>
-        </div>
-        <WaveDivider />
-      </section>
+      <UnifiedHero
+        title="Bot de Geração de Leads"
+        description="Transforme visitantes em clientes potenciais com nosso bot inteligente de geração de leads, capturando informações valiosas e qualificando prospects 24 horas por dia."
+        imageSrc="/placeholder.svg?height=400&width=500&query=lead generation chatbot interface"
+        imageAlt="Bot de Geração de Leads"
+      />
 
       {/* Benefícios */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <SectionTitle title="Benefícios do Bot de Geração de Leads" center={true} />
+          <UnifiedSectionTitle title="Benefícios do Bot de Geração de Leads" />
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
@@ -116,9 +83,9 @@ export default function GeracaoLeadsPage() {
 
       {/* Como Funciona */}
       <section className="py-16 md:py-24 bg-gray-50 relative">
-        <WaveDivider flip={true} color="#f9fafb" />
+        <UnifiedWaveDivider flip={true} color="#f9fafb" />
         <div className="container mx-auto px-4">
-          <SectionTitle title="Como Funciona" center={true} />
+          <UnifiedSectionTitle title="Como Funciona" />
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -191,13 +158,13 @@ export default function GeracaoLeadsPage() {
             </motion.div>
           </div>
         </div>
-        <WaveDivider color="#ffffff" />
+        <UnifiedWaveDivider color="#ffffff" />
       </section>
 
       {/* Casos de Uso */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <SectionTitle title="Aplicações do Bot de Geração de Leads" center={true} />
+          <UnifiedSectionTitle title="Aplicações do Bot de Geração de Leads" />
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300"
@@ -265,9 +232,9 @@ export default function GeracaoLeadsPage() {
 
       {/* Diferenciais */}
       <section className="py-16 md:py-24 bg-gray-50 relative">
-        <WaveDivider flip={true} color="#f9fafb" />
+        <UnifiedWaveDivider flip={true} color="#f9fafb" />
         <div className="container mx-auto px-4">
-          <SectionTitle title="Nossos Diferenciais" center={true} />
+          <UnifiedSectionTitle title="Nossos Diferenciais" />
           <div className="grid md:grid-cols-3 gap-6">
             <motion.div
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
@@ -316,33 +283,14 @@ export default function GeracaoLeadsPage() {
             </motion.div>
           </div>
         </div>
-        <WaveDivider color="#1d4ed8" />
+        <UnifiedWaveDivider color="#1d4ed8" />
       </section>
 
       {/* CTA */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:16px_16px]"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para aumentar sua geração de leads?</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-              Transforme seu site e redes sociais em máquinas de captação de leads qualificados. Entre em contato hoje
-              mesmo para uma demonstração personalizada.
-            </p>
-            <Link
-              href="/contato"
-              className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-full font-medium text-lg transition duration-300 inline-block shadow-lg"
-            >
-              Solicitar Demonstração
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-    </main>
+      <UnifiedCTA
+        title="Pronto para aumentar sua geração de leads?"
+        description="Transforme seu site e redes sociais em máquinas de captação de leads qualificados. Entre em contato hoje mesmo para uma demonstração personalizada."
+      />
+    </div>
   )
 }

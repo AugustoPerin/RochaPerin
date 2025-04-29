@@ -1,184 +1,117 @@
-import Link from "next/link"
-import { BarChart, CheckCircle, LineChart, MessageSquare } from "lucide-react"
-import { Button } from "@/components/ui/button"
+"use client"
+
+import { motion } from "framer-motion"
+import { MessageSquare, BarChart, LineChart, CheckCircle } from "lucide-react"
+import { UnifiedHero } from "@/components/ui/unified-hero"
+import { UnifiedFeatureCard } from "@/components/ui/unified-feature-card"
+import { UnifiedBenefitCard } from "@/components/ui/unified-benefit-card"
+import { UnifiedSectionTitle } from "@/components/ui/unified-section-title"
+import { UnifiedStepCard } from "@/components/ui/unified-step-card"
+import { UnifiedUseCaseCard } from "@/components/ui/unified-use-case-card"
+import { UnifiedCTA } from "@/components/ui/unified-cta"
+import { UnifiedWaveDivider } from "@/components/ui/unified-wave-divider"
 
 export default function PesquisasPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-blue-700 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl font-bold mb-4">Pesquisas de Satisfação</h1>
-              <p className="text-xl mb-8">
-                Colete feedback dos clientes de forma eficiente com chatbots que realizam pesquisas de satisfação
-                personalizadas e geram insights valiosos para seu negócio.
-              </p>
-              <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
-                <Link href="/contato">Solicite uma demonstração</Link>
-              </Button>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img
-                src="/placeholder.svg?height=400&width=500"
-                alt="Pesquisas de Satisfação"
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <UnifiedHero
+        title="Pesquisas de Satisfação"
+        description="Colete feedback dos clientes de forma eficiente com chatbots que realizam pesquisas de satisfação personalizadas e geram insights valiosos para seu negócio."
+        imageSrc="/customer-satisfaction-dashboard.png"
+        imageAlt="Pesquisas de Satisfação"
+      />
 
       {/* Recursos */}
-      <section className="py-16">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Recursos Principais</h2>
+          <UnifiedSectionTitle title="Recursos Principais" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <MessageSquare className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Questionários Interativos</h3>
-              <p className="text-gray-600 mb-4">
-                Crie pesquisas dinâmicas e conversacionais que engajam os clientes e aumentam as taxas de resposta.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Formato conversacional</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Perguntas personalizáveis</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Lógica condicional</span>
-                </li>
-              </ul>
-            </div>
+            <UnifiedFeatureCard
+              icon={MessageSquare}
+              title="Questionários Interativos"
+              description="Crie pesquisas dinâmicas e conversacionais que engajam os clientes e aumentam as taxas de resposta."
+              features={["Formato conversacional", "Perguntas personalizáveis", "Lógica condicional"]}
+              delay={0.1}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <BarChart className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Análise de Sentimento</h3>
-              <p className="text-gray-600 mb-4">
-                Identifique automaticamente o sentimento dos clientes em respostas abertas para entender melhor suas
-                emoções.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Detecção de emoções</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Categorização automática</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Alertas para feedback negativo</span>
-                </li>
-              </ul>
-            </div>
+            <UnifiedFeatureCard
+              icon={BarChart}
+              title="Análise de Sentimento"
+              description="Identifique automaticamente o sentimento dos clientes em respostas abertas para entender melhor suas emoções."
+              features={["Detecção de emoções", "Categorização automática", "Alertas para feedback negativo"]}
+              delay={0.2}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <LineChart className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Relatórios Detalhados</h3>
-              <p className="text-gray-600 mb-4">
-                Visualize e analise os resultados das pesquisas com dashboards intuitivos e relatórios personalizáveis.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Dashboards em tempo real</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Exportação de dados</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                  <span>Análise de tendências</span>
-                </li>
-              </ul>
-            </div>
+            <UnifiedFeatureCard
+              icon={LineChart}
+              title="Relatórios Detalhados"
+              description="Visualize e analise os resultados das pesquisas com dashboards intuitivos e relatórios personalizáveis."
+              features={["Dashboards em tempo real", "Exportação de dados", "Análise de tendências"]}
+              delay={0.3}
+            />
           </div>
         </div>
       </section>
 
       {/* Benefícios */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 relative">
+        <UnifiedWaveDivider flip={true} color="#f9fafb" />
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Benefícios para seu Negócio</h2>
+          <UnifiedSectionTitle title="Benefícios para seu Negócio" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Aumento da Taxa de Resposta
-              </h3>
-              <p className="text-gray-600">
-                Obtenha mais respostas com pesquisas conversacionais que são mais envolventes e menos intrusivas que
-                formulários tradicionais.
-              </p>
-            </div>
+            <UnifiedBenefitCard
+              title="Aumento da Taxa de Resposta"
+              description="Obtenha mais respostas com pesquisas conversacionais que são mais envolventes e menos intrusivas que formulários tradicionais."
+              delay={0.1}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Feedback em Tempo Real
-              </h3>
-              <p className="text-gray-600">
-                Receba e analise feedback imediatamente após interações com clientes, permitindo ações corretivas
-                rápidas.
-              </p>
-            </div>
+            <UnifiedBenefitCard
+              title="Feedback em Tempo Real"
+              description="Receba e analise feedback imediatamente após interações com clientes, permitindo ações corretivas rápidas."
+              delay={0.2}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Insights Acionáveis
-              </h3>
-              <p className="text-gray-600">
-                Transforme dados brutos em insights práticos que podem ser usados para melhorar produtos, serviços e
-                processos.
-              </p>
-            </div>
+            <UnifiedBenefitCard
+              title="Insights Acionáveis"
+              description="Transforme dados brutos em insights práticos que podem ser usados para melhorar produtos, serviços e processos."
+              delay={0.3}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Personalização Contínua
-              </h3>
-              <p className="text-gray-600">
-                Use o feedback dos clientes para personalizar suas ofertas e comunicações, aumentando a relevância e
-                satisfação.
-              </p>
-            </div>
+            <UnifiedBenefitCard
+              title="Personalização Contínua"
+              description="Use o feedback dos clientes para personalizar suas ofertas e comunicações, aumentando a relevância e satisfação."
+              delay={0.4}
+            />
           </div>
         </div>
+        <UnifiedWaveDivider color="#ffffff" />
       </section>
 
       {/* Tipos de Pesquisas */}
-      <section className="py-16">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Tipos de Pesquisas</h2>
+          <UnifiedSectionTitle title="Tipos de Pesquisas" />
 
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
-              <img
-                src="/placeholder.svg?height=400&width=500"
-                alt="Tipos de Pesquisas"
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="md:w-1/2">
+            <motion.div
+              className="md:w-1/2"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <img src="/survey-types-metrics-visualization.png" alt="Tipos de Pesquisas" className="rounded-lg shadow-lg" />
+            </motion.div>
+            <motion.div
+              className="md:w-1/2"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <h3 className="text-2xl font-semibold mb-4">Pesquisas personalizadas para cada necessidade</h3>
               <p className="text-gray-700 mb-6">
                 Oferecemos diferentes tipos de pesquisas para coletar feedback em diversos momentos da jornada do
@@ -222,113 +155,86 @@ export default function PesquisasPage() {
                   </div>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Como Funciona */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 relative">
+        <UnifiedWaveDivider flip={true} color="#f9fafb" />
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Como Funciona</h2>
+          <UnifiedSectionTitle title="Como Funciona" />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Configuração</h3>
-              <p className="text-gray-600">
-                Configuramos as pesquisas de acordo com seus objetivos, definindo perguntas, gatilhos e canais.
-              </p>
-            </div>
+            <UnifiedStepCard
+              number={1}
+              title="Configuração"
+              description="Configuramos as pesquisas de acordo com seus objetivos, definindo perguntas, gatilhos e canais."
+              delay={0.1}
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">2</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Distribuição</h3>
-              <p className="text-gray-600">
-                O chatbot envia as pesquisas automaticamente nos momentos ideais através dos canais preferidos dos
-                clientes.
-              </p>
-            </div>
+            <UnifiedStepCard
+              number={2}
+              title="Distribuição"
+              description="O chatbot envia as pesquisas automaticamente nos momentos ideais através dos canais preferidos dos clientes."
+              delay={0.2}
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">3</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Coleta</h3>
-              <p className="text-gray-600">
-                Os clientes respondem às pesquisas de forma conversacional, e os dados são coletados em tempo real.
-              </p>
-            </div>
+            <UnifiedStepCard
+              number={3}
+              title="Coleta"
+              description="Os clientes respondem às pesquisas de forma conversacional, e os dados são coletados em tempo real."
+              delay={0.3}
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">4</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Análise</h3>
-              <p className="text-gray-600">
-                Os dados são processados e apresentados em dashboards intuitivos, gerando insights acionáveis.
-              </p>
-            </div>
+            <UnifiedStepCard
+              number={4}
+              title="Análise"
+              description="Os dados são processados e apresentados em dashboards intuitivos, gerando insights acionáveis."
+              delay={0.4}
+            />
           </div>
         </div>
+        <UnifiedWaveDivider color="#ffffff" />
       </section>
 
       {/* Casos de Uso */}
-      <section className="py-16">
+      <section className="py-16 md:py-24 bg-white relative">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Ideal Para</h2>
+          <UnifiedSectionTitle title="Ideal Para" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Varejo e E-commerce</h3>
-              <p className="text-gray-600">
-                Empresas que desejam entender a satisfação dos clientes com produtos, entregas e experiência de compra.
-              </p>
-            </div>
+            <UnifiedUseCaseCard
+              icon={MessageSquare}
+              title="Varejo e E-commerce"
+              description="Empresas que desejam entender a satisfação dos clientes com produtos, entregas e experiência de compra."
+              delay={0.1}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Serviços e Assinaturas</h3>
-              <p className="text-gray-600">
-                Empresas que oferecem serviços contínuos e precisam monitorar a satisfação ao longo do tempo.
-              </p>
-            </div>
+            <UnifiedUseCaseCard
+              icon={MessageSquare}
+              title="Serviços e Assinaturas"
+              description="Empresas que oferecem serviços contínuos e precisam monitorar a satisfação ao longo do tempo."
+              delay={0.2}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Suporte e Atendimento</h3>
-              <p className="text-gray-600">
-                Equipes de suporte que desejam avaliar a qualidade do atendimento e identificar áreas de melhoria.
-              </p>
-            </div>
+            <UnifiedUseCaseCard
+              icon={MessageSquare}
+              title="Suporte e Atendimento"
+              description="Equipes de suporte que desejam avaliar a qualidade do atendimento e identificar áreas de melhoria."
+              delay={0.3}
+            />
           </div>
         </div>
+        <UnifiedWaveDivider color="#1d4ed8" />
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-blue-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Pronto para entender melhor seus clientes?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Entre em contato conosco hoje mesmo e descubra como nossas pesquisas de satisfação podem ajudar a melhorar
-            seus produtos e serviços.
-          </p>
-          <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
-            <Link href="/contato">Solicite uma demonstração</Link>
-          </Button>
-        </div>
-      </section>
+      <UnifiedCTA
+        title="Pronto para entender melhor seus clientes?"
+        description="Entre em contato conosco hoje mesmo e descubra como nossas pesquisas de satisfação podem ajudar a melhorar seus produtos e serviços."
+      />
     </div>
   )
 }
