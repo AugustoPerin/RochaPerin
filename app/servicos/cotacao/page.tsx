@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { CheckCircle, FileText, LineChart, Settings } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { CheckCircle, FileText, LineChart, Settings } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function CotacaoPage() {
   return (
@@ -12,10 +12,15 @@ export default function CotacaoPage() {
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-4xl font-bold mb-4">Cotação Automatizada</h1>
               <p className="text-xl mb-8">
-                Agilize o processo de cotação com um sistema inteligente que gera orçamentos personalizados
-                instantaneamente, aumentando suas taxas de conversão.
+                Agilize o processo de cotação com um sistema inteligente que
+                gera orçamentos personalizados instantaneamente, aumentando suas
+                taxas de conversão.
               </p>
-              <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-blue-700 hover:bg-gray-100"
+              >
                 <Link href="/contato">Solicite uma demonstração</Link>
               </Button>
             </div>
@@ -33,29 +38,42 @@ export default function CotacaoPage() {
       {/* Recursos */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Recursos Principais</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Recursos Principais
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <Settings className="text-blue-600 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Cálculos Automáticos</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Cálculos Automáticos
+              </h3>
               <p className="text-gray-600 mb-4">
-                Sistema inteligente que calcula preços com base em parâmetros personalizáveis, garantindo precisão e
-                consistência.
+                Sistema inteligente que calcula preços com base em parâmetros
+                personalizáveis, garantindo precisão e consistência.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Regras de precificação flexíveis</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Cálculos de impostos e taxas</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Descontos automáticos</span>
                 </li>
               </ul>
@@ -65,22 +83,33 @@ export default function CotacaoPage() {
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <FileText className="text-blue-600 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Propostas Personalizadas</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Propostas Personalizadas
+              </h3>
               <p className="text-gray-600 mb-4">
-                Geração de documentos de cotação profissionais e personalizados com sua marca e informações específicas
-                do cliente.
+                Geração de documentos de cotação profissionais e personalizados
+                com sua marca e informações específicas do cliente.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Templates personalizáveis</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Inclusão de imagens e gráficos</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Exportação em múltiplos formatos</span>
                 </li>
               </ul>
@@ -90,21 +119,33 @@ export default function CotacaoPage() {
               <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                 <LineChart className="text-blue-600 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Análise de Conversão</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Análise de Conversão
+              </h3>
               <p className="text-gray-600 mb-4">
-                Acompanhe o status de cada cotação e analise taxas de conversão para otimizar seu processo de vendas.
+                Acompanhe o status de cada cotação e analise taxas de conversão
+                para otimizar seu processo de vendas.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Dashboard de performance</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Relatórios detalhados</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Identificação de gargalos</span>
                 </li>
               </ul>
@@ -116,7 +157,9 @@ export default function CotacaoPage() {
       {/* Benefícios */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Benefícios para seu Negócio</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Benefícios para seu Negócio
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -125,7 +168,8 @@ export default function CotacaoPage() {
                 Resposta Imediata
               </h3>
               <p className="text-gray-600">
-                Forneça cotações instantâneas aos seus clientes, aumentando as chances de conversão em vendas.
+                Forneça cotações instantâneas aos seus clientes, aumentando as
+                chances de conversão em vendas.
               </p>
             </div>
 
@@ -135,7 +179,8 @@ export default function CotacaoPage() {
                 Redução de Erros
               </h3>
               <p className="text-gray-600">
-                Elimine erros humanos de cálculo que podem resultar em prejuízos ou insatisfação do cliente.
+                Elimine erros humanos de cálculo que podem resultar em prejuízos
+                ou insatisfação do cliente.
               </p>
             </div>
 
@@ -145,7 +190,8 @@ export default function CotacaoPage() {
                 Padronização
               </h3>
               <p className="text-gray-600">
-                Garanta consistência nas cotações, independentemente de quem as gera, mantendo sua política de preços.
+                Garanta consistência nas cotações, independentemente de quem as
+                gera, mantendo sua política de preços.
               </p>
             </div>
 
@@ -155,7 +201,8 @@ export default function CotacaoPage() {
                 Aumento de Produtividade
               </h3>
               <p className="text-gray-600">
-                Libere sua equipe de vendas para focar em atividades estratégicas em vez de cálculos manuais.
+                Libere sua equipe de vendas para focar em atividades
+                estratégicas em vez de cálculos manuais.
               </p>
             </div>
           </div>
@@ -165,7 +212,9 @@ export default function CotacaoPage() {
       {/* Como Funciona */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Como Funciona</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Como Funciona
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
@@ -174,7 +223,8 @@ export default function CotacaoPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Configuração</h3>
               <p className="text-gray-600">
-                Configuramos o sistema com seus produtos, serviços, preços e regras de negócio específicas.
+                Configuramos o sistema com seus produtos, serviços, preços e
+                regras de negócio específicas.
               </p>
             </div>
 
@@ -184,7 +234,8 @@ export default function CotacaoPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Solicitação</h3>
               <p className="text-gray-600">
-                O cliente preenche um formulário com suas necessidades específicas através do seu site ou aplicativo.
+                O cliente preenche um formulário com suas necessidades
+                específicas através do seu site ou aplicativo.
               </p>
             </div>
 
@@ -194,7 +245,8 @@ export default function CotacaoPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Processamento</h3>
               <p className="text-gray-600">
-                O sistema processa as informações, aplica as regras de negócio e calcula o preço final.
+                O sistema processa as informações, aplica as regras de negócio e
+                calcula o preço final.
               </p>
             </div>
 
@@ -204,7 +256,8 @@ export default function CotacaoPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Entrega</h3>
               <p className="text-gray-600">
-                Uma proposta profissional é gerada e enviada ao cliente, com opção de aceite online.
+                Uma proposta profissional é gerada e enviada ao cliente, com
+                opção de aceite online.
               </p>
             </div>
           </div>
@@ -221,9 +274,12 @@ export default function CotacaoPage() {
               <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Settings className="text-blue-600 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Construtoras e Reformas</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Construtoras e Reformas
+              </h3>
               <p className="text-gray-600">
-                Empresas que precisam calcular orçamentos complexos com múltiplos materiais e serviços.
+                Empresas que precisam calcular orçamentos complexos com
+                múltiplos materiais e serviços.
               </p>
             </div>
 
@@ -231,9 +287,12 @@ export default function CotacaoPage() {
               <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Settings className="text-blue-600 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Agências e Consultorias</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Agências e Consultorias
+              </h3>
               <p className="text-gray-600">
-                Empresas de serviços que precisam gerar propostas personalizadas com rapidez e precisão.
+                Empresas de serviços que precisam gerar propostas personalizadas
+                com rapidez e precisão.
               </p>
             </div>
 
@@ -241,9 +300,12 @@ export default function CotacaoPage() {
               <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Settings className="text-blue-600 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">E-commerces e Varejo</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                E-commerces e Varejo
+              </h3>
               <p className="text-gray-600">
-                Lojas que oferecem produtos customizáveis ou pacotes com múltiplas opções de configuração.
+                Lojas que oferecem produtos customizáveis ou pacotes com
+                múltiplas opções de configuração.
               </p>
             </div>
           </div>
@@ -253,16 +315,22 @@ export default function CotacaoPage() {
       {/* CTA */}
       <section className="py-16 bg-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Pronto para agilizar suas cotações?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Pronto para agilizar suas cotações?
+          </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Entre em contato conosco hoje mesmo e descubra como nossa solução de cotação automatizada pode transformar
-            seu processo de vendas.
+            Entre em contato conosco hoje mesmo e descubra como nossa solução de
+            cotação automatizada pode transformar seu processo de vendas.
           </p>
-          <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
+          <Button
+            asChild
+            size="lg"
+            className="bg-white text-blue-700 hover:bg-gray-100"
+          >
             <Link href="/contato">Solicite uma demonstração</Link>
           </Button>
         </div>
       </section>
     </div>
-  )
+  );
 }

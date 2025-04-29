@@ -1,13 +1,19 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Mail, Phone } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { motion } from "framer-motion";
+import { Mail, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function ContatoPage() {
   return (
@@ -41,13 +47,18 @@ export default function ContatoPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Estamos prontos para ajudar a transformar o seu negócio com nossas soluções tecnológicas.
+            Estamos prontos para ajudar a transformar o seu negócio com nossas
+            soluções tecnológicas.
           </motion.p>
         </div>
 
         {/* Wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" fill="white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 80"
+            fill="white"
+          >
             <path d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,80L1360,80C1280,80,1120,80,960,80C800,80,640,80,480,80C320,80,160,80,80,80L0,80Z"></path>
           </svg>
         </div>
@@ -64,28 +75,48 @@ export default function ContatoPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Envie uma mensagem</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Envie uma mensagem
+              </h2>
               <p className="text-gray-600 mb-8">
-                Preencha o formulário abaixo e nossa equipe entrará em contato o mais breve possível.
+                Preencha o formulário abaixo e nossa equipe entrará em contato o
+                mais breve possível.
               </p>
 
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="nome">Nome completo</Label>
-                    <Input id="nome" placeholder="Digite seu nome completo" className="rounded-lg" />
+                    <Input
+                      id="nome"
+                      placeholder="Digite seu nome completo"
+                      className="rounded-lg"
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="empresa">Empresa</Label>
-                    <Input id="empresa" placeholder="Nome da sua empresa" className="rounded-lg" />
+                    <Input
+                      id="empresa"
+                      placeholder="Nome da sua empresa"
+                      className="rounded-lg"
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">E-mail</Label>
-                    <Input id="email" type="email" placeholder="seu@email.com" className="rounded-lg" />
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="seu@email.com"
+                      className="rounded-lg"
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="telefone">Telefone</Label>
-                    <Input id="telefone" placeholder="(00) 00000-0000" className="rounded-lg" />
+                    <Input
+                      id="telefone"
+                      placeholder="(00) 00000-0000"
+                      className="rounded-lg"
+                    />
                   </div>
                 </div>
 
@@ -96,8 +127,12 @@ export default function ContatoPage() {
                       <SelectValue placeholder="Selecione o assunto" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="automacao">Automação de Processos</SelectItem>
-                      <SelectItem value="chatbots">Chatbots Empresariais</SelectItem>
+                      <SelectItem value="automacao">
+                        Automação de Processos
+                      </SelectItem>
+                      <SelectItem value="chatbots">
+                        Chatbots Empresariais
+                      </SelectItem>
                       <SelectItem value="analise">Análise de Dados</SelectItem>
                       <SelectItem value="nuvem">Migração para Nuvem</SelectItem>
                       <SelectItem value="outro">Outro Assunto</SelectItem>
@@ -110,7 +145,9 @@ export default function ContatoPage() {
                   <RadioGroup defaultValue="informacoes">
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="informacoes" id="informacoes" />
-                      <Label htmlFor="informacoes">Quero mais informações</Label>
+                      <Label htmlFor="informacoes">
+                        Quero mais informações
+                      </Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="orcamento" id="orcamento" />
@@ -159,11 +196,16 @@ export default function ContatoPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold mb-6">Informações de Contato</h3>
+                <h3 className="text-2xl font-semibold mb-6">
+                  Informações de Contato
+                </h3>
 
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <Phone className="text-blue-600 mr-4 flex-shrink-0 mt-1" size={24} />
+                    <Phone
+                      className="text-blue-600 mr-4 flex-shrink-0 mt-1"
+                      size={24}
+                    />
                     <div>
                       <h4 className="font-medium mb-1">Telefone</h4>
                       <p className="text-gray-600">(71) 99349-1849</p>
@@ -171,7 +213,10 @@ export default function ContatoPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <Mail className="text-blue-600 mr-4 flex-shrink-0 mt-1" size={24} />
+                    <Mail
+                      className="text-blue-600 mr-4 flex-shrink-0 mt-1"
+                      size={24}
+                    />
                     <div>
                       <h4 className="font-medium mb-1">E-mail</h4>
                       <p className="text-gray-600">contato@rochaperin.com</p>
@@ -181,14 +226,19 @@ export default function ContatoPage() {
 
                 <div className="mt-8">
                   <h4 className="font-medium mb-3">Horário de Atendimento</h4>
-                  <p className="text-gray-600 mb-1">Segunda a Sexta: 9h às 18h</p>
+                  <p className="text-gray-600 mb-1">
+                    Segunda a Sexta: 9h às 18h
+                  </p>
                   <p className="text-gray-600">Sábado: 9h às 13h</p>
                 </div>
 
                 <div className="mt-8">
                   <h4 className="font-medium mb-3">Redes Sociais</h4>
                   <div className="flex space-x-4">
-                    <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    <a
+                      href="#"
+                      className="text-blue-600 hover:text-blue-800 transition-colors"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -205,7 +255,10 @@ export default function ContatoPage() {
                       </svg>
                       <span className="sr-only">Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com/rocha_perin/" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    <a
+                      href="https://www.instagram.com/rocha_perin/"
+                      className="text-blue-600 hover:text-blue-800 transition-colors"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -218,13 +271,23 @@ export default function ContatoPage() {
                         strokeLinejoin="round"
                         className="lucide lucide-instagram"
                       >
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        ></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                       </svg>
                       <span className="sr-only">Instagram</span>
                     </a>
-                    <a href="https://www.linkedin.com/company/rochaperin/" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    <a
+                      href="https://www.linkedin.com/company/rochaperin/"
+                      className="text-blue-600 hover:text-blue-800 transition-colors"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -273,10 +336,13 @@ export default function ContatoPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-xl font-semibold mb-3">Quanto tempo leva para implementar um chatbot?</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Quanto tempo leva para implementar um chatbot?
+              </h3>
               <p className="text-gray-600">
-                O tempo de implementação varia de acordo com a complexidade do projeto, mas geralmente leva de 1 a 5
-                semanas, desde o planejamento até a entrega final.
+                O tempo de implementação varia de acordo com a complexidade do
+                projeto, mas geralmente leva de 1 a 5 semanas, desde o
+                planejamento até a entrega final.
               </p>
             </motion.div>
 
@@ -288,10 +354,13 @@ export default function ContatoPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-xl font-semibold mb-3">Vocês oferecem suporte após a implementação?</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Vocês oferecem suporte após a implementação?
+              </h3>
               <p className="text-gray-600">
-                Sim, oferecemos diferentes planos de suporte e manutenção para garantir que sua solução continue
-                funcionando perfeitamente após a implementação.
+                Sim, oferecemos diferentes planos de suporte e manutenção para
+                garantir que sua solução continue funcionando perfeitamente após
+                a implementação.
               </p>
             </motion.div>
 
@@ -303,10 +372,13 @@ export default function ContatoPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-xl font-semibold mb-3">É possível integrar com sistemas existentes?</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                É possível integrar com sistemas existentes?
+              </h3>
               <p className="text-gray-600">
-                Sim, nossas soluções são desenvolvidas para se integrarem facilmente com sistemas existentes, como CRMs,
-                ERPs e plataformas de e-commerce.
+                Sim, nossas soluções são desenvolvidas para se integrarem
+                facilmente com sistemas existentes, como CRMs, ERPs e
+                plataformas de e-commerce.
               </p>
             </motion.div>
 
@@ -318,15 +390,18 @@ export default function ContatoPage() {
               transition={{ duration: 0.5, delay: 0.4 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-xl font-semibold mb-3">Quais tecnologias vocês utilizam?</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Quais tecnologias vocês utilizam?
+              </h3>
               <p className="text-gray-600">
-                Utilizamos tecnologias modernas e robustas, incluindo inteligência artificial, processamento de
-                linguagem natural, APIs RESTful e arquiteturas em nuvem.
+                Utilizamos tecnologias modernas e robustas, incluindo
+                inteligência artificial, processamento de linguagem natural,
+                APIs RESTful e arquiteturas em nuvem.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }

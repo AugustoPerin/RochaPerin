@@ -1,9 +1,20 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { ArrowRight, Bot, Calendar, CheckCircle, CreditCard, FileText, MessageSquare, ShoppingCart, Truck, Users } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  Bot,
+  Calendar,
+  CheckCircle,
+  CreditCard,
+  FileText,
+  MessageSquare,
+  ShoppingCart,
+  Truck,
+  Users,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function ServicosPage() {
   return (
@@ -37,13 +48,18 @@ export default function ServicosPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Conheça as soluções que a RochaPerin oferece para transformar e otimizar o seu negócio.
+            Conheça as soluções que a RochaPerin oferece para transformar e
+            otimizar o seu negócio.
           </motion.p>
         </div>
 
         {/* Wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" fill="white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 80"
+            fill="white"
+          >
             <path d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,80L1360,80C1280,80,1120,80,960,80C800,80,640,80,480,80C320,80,160,80,80,80L0,80Z"></path>
           </svg>
         </div>
@@ -76,28 +92,42 @@ export default function ServicosPage() {
                 <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                   <Calendar className="text-blue-600 w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Agendamento de Serviços</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Agendamento de Serviços
+                </h3>
                 <p className="text-gray-600 mb-4">
-                  Automatize o processo de agendamento de serviços, permitindo que seus clientes marquem horários de forma
-                  rápida e eficiente.
+                  Automatize o processo de agendamento de serviços, permitindo
+                  que seus clientes marquem horários de forma rápida e
+                  eficiente.
                 </p>
                 <ul className="mb-4 space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Integração com calendários</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Lembretes automáticos</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Gestão de disponibilidade</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                <span className="text-sm font-medium text-blue-700">
+                  Explorar serviço
+                </span>
                 <Link
                   href="/servicos/agendamento"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -120,28 +150,41 @@ export default function ServicosPage() {
                 <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                   <FileText className="text-blue-600 w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Cotação Automatizada</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Cotação Automatizada
+                </h3>
                 <p className="text-gray-600 mb-4">
-                  Agilize o processo de cotação com um sistema inteligente que gera orçamentos personalizados
-                  instantaneamente.
+                  Agilize o processo de cotação com um sistema inteligente que
+                  gera orçamentos personalizados instantaneamente.
                 </p>
                 <ul className="mb-4 space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Cálculos automáticos</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Personalização de propostas</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Integração com CRM</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                <span className="text-sm font-medium text-blue-700">
+                  Explorar serviço
+                </span>
                 <Link
                   href="/servicos/cotacao"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -164,28 +207,41 @@ export default function ServicosPage() {
                 <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                   <FileText className="text-blue-600 w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Catálogo Interativo</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Catálogo Interativo
+                </h3>
                 <p className="text-gray-600 mb-4">
-                  Ofereça um catálogo digital interativo que permite aos clientes explorar produtos e serviços de forma
-                  dinâmica.
+                  Ofereça um catálogo digital interativo que permite aos
+                  clientes explorar produtos e serviços de forma dinâmica.
                 </p>
                 <ul className="mb-4 space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Busca avançada</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Filtros personalizados</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Atualização em tempo real</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                <span className="text-sm font-medium text-blue-700">
+                  Explorar serviço
+                </span>
                 <Link
                   href="/servicos/catalogo"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -208,27 +264,41 @@ export default function ServicosPage() {
                 <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                   <ShoppingCart className="text-blue-600 w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">WhatsApp Shopping</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  WhatsApp Shopping
+                </h3>
                 <p className="text-gray-600 mb-4">
-                  Transforme o WhatsApp em um canal de vendas com catálogo interativo e carrinho de compras integrado.
+                  Transforme o WhatsApp em um canal de vendas com catálogo
+                  interativo e carrinho de compras integrado.
                 </p>
                 <ul className="mb-4 space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Catálogo de produtos</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Carrinho de compras</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Pagamento integrado</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                <span className="text-sm font-medium text-blue-700">
+                  Explorar serviço
+                </span>
                 <Link
                   href="/servicos/whatsapp-shopping"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -251,28 +321,42 @@ export default function ServicosPage() {
                 <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                   <Truck className="text-blue-600 w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Rastreamento de Pedidos</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Rastreamento de Pedidos
+                </h3>
                 <p className="text-gray-600 mb-4">
-                  Ofereça aos seus clientes um sistema de rastreamento de pedidos em tempo real, aumentando a
-                  transparência e satisfação.
+                  Ofereça aos seus clientes um sistema de rastreamento de
+                  pedidos em tempo real, aumentando a transparência e
+                  satisfação.
                 </p>
                 <ul className="mb-4 space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Atualizações em tempo real</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Notificações automáticas</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Integração com transportadoras</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                <span className="text-sm font-medium text-blue-700">
+                  Explorar serviço
+                </span>
                 <Link
                   href="/servicos/rastreamento"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -295,27 +379,41 @@ export default function ServicosPage() {
                 <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                   <Users className="text-blue-600 w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Registro de Eventos</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  Registro de Eventos
+                </h3>
                 <p className="text-gray-600 mb-4">
-                  Simplifique o processo de inscrição em eventos com um sistema automatizado de registro e gerenciamento.
+                  Simplifique o processo de inscrição em eventos com um sistema
+                  automatizado de registro e gerenciamento.
                 </p>
                 <ul className="mb-4 space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Formulários personalizados</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Pagamento integrado</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                    <CheckCircle
+                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                      size={16}
+                    />
                     <span>Emissão de credenciais</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                <span className="text-sm font-medium text-blue-700">
+                  Explorar serviço
+                </span>
                 <Link
                   href="/servicos/eventos"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -351,28 +449,41 @@ export default function ServicosPage() {
                   <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                     <MessageSquare className="text-blue-600 w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Atendimento ao Cliente (SAC)</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Atendimento ao Cliente (SAC)
+                  </h3>
                   <p className="text-gray-600 mb-4">
-                    Automatize o atendimento ao cliente com um chatbot inteligente que responde dúvidas e resolve
-                    problemas 24/7.
+                    Automatize o atendimento ao cliente com um chatbot
+                    inteligente que responde dúvidas e resolve problemas 24/7.
                   </p>
                   <ul className="mb-4 space-y-2">
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Respostas instantâneas</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Escalonamento para humanos</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Integração com CRM</span>
                     </li>
                   </ul>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                  <span className="text-sm font-medium text-blue-700">
+                    Explorar serviço
+                  </span>
                   <Link
                     href="/servicos/chatbot-sac"
                     className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -395,28 +506,41 @@ export default function ServicosPage() {
                   <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                     <MessageSquare className="text-blue-600 w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Pesquisas de Satisfação</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Pesquisas de Satisfação
+                  </h3>
                   <p className="text-gray-600 mb-4">
-                    Colete feedback dos clientes de forma eficiente com chatbots que realizam pesquisas de satisfação
-                    personalizadas.
+                    Colete feedback dos clientes de forma eficiente com chatbots
+                    que realizam pesquisas de satisfação personalizadas.
                   </p>
                   <ul className="mb-4 space-y-2">
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Questionários interativos</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Análise de sentimento</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Relatórios detalhados</span>
                     </li>
                   </ul>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                  <span className="text-sm font-medium text-blue-700">
+                    Explorar serviço
+                  </span>
                   <Link
                     href="/servicos/pesquisas"
                     className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -439,27 +563,41 @@ export default function ServicosPage() {
                   <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                     <MessageSquare className="text-blue-600 w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Abertura de Tickets</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Abertura de Tickets
+                  </h3>
                   <p className="text-gray-600 mb-4">
-                    Automatize o processo de abertura e categorização de tickets de suporte com um chatbot inteligente.
+                    Automatize o processo de abertura e categorização de tickets
+                    de suporte com um chatbot inteligente.
                   </p>
                   <ul className="mb-4 space-y-2">
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Categorização automática</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Priorização inteligente</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Integração com helpdesk</span>
                     </li>
                   </ul>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                  <span className="text-sm font-medium text-blue-700">
+                    Explorar serviço
+                  </span>
                   <Link
                     href="/servicos/tickets"
                     className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -482,28 +620,41 @@ export default function ServicosPage() {
                   <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                     <Bot className="text-blue-600 w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Bot de Geração de Leads</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Bot de Geração de Leads
+                  </h3>
                   <p className="text-gray-600 mb-4">
-                    Capture e qualifique leads automaticamente com um chatbot que engaja visitantes e coleta informações
-                    relevantes.
+                    Capture e qualifique leads automaticamente com um chatbot
+                    que engaja visitantes e coleta informações relevantes.
                   </p>
                   <ul className="mb-4 space-y-2">
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Qualificação de leads</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Integração com CRM</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Segmentação automática</span>
                     </li>
                   </ul>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                  <span className="text-sm font-medium text-blue-700">
+                    Explorar serviço
+                  </span>
                   <Link
                     href="/servicos/geracao-leads"
                     className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -526,27 +677,41 @@ export default function ServicosPage() {
                   <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                     <Bot className="text-blue-600 w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Ofertas Promocionais</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Ofertas Promocionais
+                  </h3>
                   <p className="text-gray-600 mb-4">
-                    Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências.
+                    Envie ofertas personalizadas aos clientes com base em seu
+                    histórico de compras e preferências.
                   </p>
                   <ul className="mb-4 space-y-2">
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Personalização avançada</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Segmentação de clientes</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Análise de conversão</span>
                     </li>
                   </ul>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                  <span className="text-sm font-medium text-blue-700">
+                    Explorar serviço
+                  </span>
                   <Link
                     href="/servicos/ofertas"
                     className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -569,27 +734,41 @@ export default function ServicosPage() {
                   <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                     <CreditCard className="text-blue-600 w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Bot de Cobrança Amigável</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Bot de Cobrança Amigável
+                  </h3>
                   <p className="text-gray-600 mb-4">
-                    Automatize o processo de cobrança com um chatbot que envia lembretes amigáveis e facilita o pagamento.
+                    Automatize o processo de cobrança com um chatbot que envia
+                    lembretes amigáveis e facilita o pagamento.
                   </p>
                   <ul className="mb-4 space-y-2">
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Lembretes personalizados</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Opções de pagamento</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                      <CheckCircle
+                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                        size={16}
+                      />
                       <span>Negociação de prazos</span>
                     </li>
                   </ul>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
+                  <span className="text-sm font-medium text-blue-700">
+                    Explorar serviço
+                  </span>
                   <Link
                     href="/servicos/cobranca"
                     className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -635,7 +814,8 @@ export default function ServicosPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Entre em contato conosco hoje mesmo e descubra como nossas soluções podem impulsionar sua empresa.
+              Entre em contato conosco hoje mesmo e descubra como nossas
+              soluções podem impulsionar sua empresa.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -655,5 +835,5 @@ export default function ServicosPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

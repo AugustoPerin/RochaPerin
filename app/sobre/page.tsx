@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { CheckCircle } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function SobrePage() {
   return (
@@ -37,13 +37,18 @@ export default function SobrePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Conheça nossa história, missão e os valores que nos guiam na transformação digital de empresas.
+            Conheça nossa história, missão e os valores que nos guiam na
+            transformação digital de empresas.
           </motion.p>
         </div>
 
         {/* Wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" fill="white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 80"
+            fill="white"
+          >
             <path d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,80L1360,80C1280,80,1120,80,960,80C800,80,640,80,480,80C320,80,160,80,80,80L0,80Z"></path>
           </svg>
         </div>
@@ -73,19 +78,24 @@ export default function SobrePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Quem Somos</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Quem Somos
+              </h2>
               <p className="text-gray-700 mb-4">
-                A RochaPerin é uma empresa brasileira especializada em soluções tecnológicas para automação de
-                processos, análise de dados, migração para nuvem e desenvolvimento de chatbots empresariais.
+                A RochaPerin é uma empresa brasileira especializada em soluções
+                tecnológicas para automação de processos, análise de dados,
+                migração para nuvem e desenvolvimento de chatbots empresariais.
               </p>
               <p className="text-gray-700 mb-4">
-                Nossa empresa nasceu com o propósito de ajudar organizações a se adaptarem ao mundo digital, otimizando
-                processos e melhorando a experiência de seus clientes através da tecnologia.
+                Nossa empresa nasceu com o propósito de ajudar organizações a se
+                adaptarem ao mundo digital, otimizando processos e melhorando a
+                experiência de seus clientes através da tecnologia.
               </p>
               <p className="text-gray-700 mb-6">
-                Com uma equipe multidisciplinar de especialistas em tecnologia, negócios e experiência do usuário,
-                desenvolvemos soluções personalizadas que atendem às necessidades específicas de cada cliente,
-                independentemente do tamanho ou setor de atuação.
+                Com uma equipe multidisciplinar de especialistas em tecnologia,
+                negócios e experiência do usuário, desenvolvemos soluções
+                personalizadas que atendem às necessidades específicas de cada
+                cliente, independentemente do tamanho ou setor de atuação.
               </p>
             </motion.div>
           </div>
@@ -114,10 +124,13 @@ export default function SobrePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-blue-700">Missão</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-700">
+                Missão
+              </h3>
               <p className="text-gray-700">
-                Transformar negócios através da tecnologia, automatizando processos e melhorando a experiência dos
-                clientes com soluções inovadoras e personalizadas.
+                Transformar negócios através da tecnologia, automatizando
+                processos e melhorando a experiência dos clientes com soluções
+                inovadoras e personalizadas.
               </p>
             </motion.div>
 
@@ -129,10 +142,13 @@ export default function SobrePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-blue-700">Visão</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-700">
+                Visão
+              </h3>
               <p className="text-gray-700">
-                Ser reconhecida como referência em soluções tecnológicas no Brasil, contribuindo para a transformação
-                digital de empresas de todos os portes e setores.
+                Ser reconhecida como referência em soluções tecnológicas no
+                Brasil, contribuindo para a transformação digital de empresas de
+                todos os portes e setores.
               </p>
             </motion.div>
 
@@ -144,26 +160,43 @@ export default function SobrePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-blue-700">Valores</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-700">
+                Valores
+              </h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Inovação constante</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Excelência técnica</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Foco no cliente</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Ética e transparência</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                  <CheckCircle
+                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                    size={16}
+                  />
                   <span>Compromisso com resultados</span>
                 </li>
               </ul>
@@ -198,8 +231,8 @@ export default function SobrePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Diagnóstico</h3>
               <p className="text-gray-600">
-                Analisamos profundamente os processos e necessidades do seu negócio para identificar oportunidades de
-                melhoria.
+                Analisamos profundamente os processos e necessidades do seu
+                negócio para identificar oportunidades de melhoria.
               </p>
             </motion.div>
 
@@ -215,8 +248,8 @@ export default function SobrePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Planejamento</h3>
               <p className="text-gray-600">
-                Desenvolvemos um plano estratégico personalizado com soluções que atendam às necessidades específicas da
-                sua empresa.
+                Desenvolvemos um plano estratégico personalizado com soluções
+                que atendam às necessidades específicas da sua empresa.
               </p>
             </motion.div>
 
@@ -232,7 +265,8 @@ export default function SobrePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Implementação</h3>
               <p className="text-gray-600">
-                Executamos o projeto com metodologias ágeis, garantindo entregas rápidas e de alta qualidade.
+                Executamos o projeto com metodologias ágeis, garantindo entregas
+                rápidas e de alta qualidade.
               </p>
             </motion.div>
 
@@ -248,7 +282,8 @@ export default function SobrePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Acompanhamento</h3>
               <p className="text-gray-600">
-                Oferecemos suporte contínuo e monitoramento de resultados para garantir o sucesso a longo prazo.
+                Oferecemos suporte contínuo e monitoramento de resultados para
+                garantir o sucesso a longo prazo.
               </p>
             </motion.div>
           </div>
@@ -286,7 +321,8 @@ export default function SobrePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Entre em contato conosco para discutir como podemos ajudar a transformar o seu negócio.
+            Entre em contato conosco para discutir como podemos ajudar a
+            transformar o seu negócio.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -305,5 +341,5 @@ export default function SobrePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

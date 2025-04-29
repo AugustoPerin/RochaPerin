@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 export default function ClientesPage() {
   return (
@@ -36,13 +36,18 @@ export default function ClientesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Conheça algumas das empresas que confiam em nossas soluções para transformar seus negócios.
+            Conheça algumas das empresas que confiam em nossas soluções para
+            transformar seus negócios.
           </motion.p>
         </div>
 
         {/* Wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" fill="white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 80"
+            fill="white"
+          >
             <path d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,80L1360,80C1280,80,1120,80,960,80C800,80,640,80,480,80C320,80,160,80,80,80L0,80Z"></path>
           </svg>
         </div>
@@ -72,10 +77,16 @@ export default function ClientesPage() {
               whileHover={{ y: -5 }}
             >
               <div className="bg-gray-50 w-full h-32 rounded-md mb-4 flex items-center justify-center">
-                <img src="/cliente-integral.png" alt="Cliente 1" className="max-h-16" />
+                <img
+                  src="/cliente-integral.png"
+                  alt="Cliente 1"
+                  className="max-h-16"
+                />
               </div>
               <h3 className="text-lg font-semibold mb-2">Colégio Integral</h3>
-              <p className="text-gray-600 text-center text-sm">Implementação de chatbot para atendimento ao cliente</p>
+              <p className="text-gray-600 text-center text-sm">
+                Implementação de chatbot para atendimento ao cliente
+              </p>
             </motion.div>
 
             <motion.div
@@ -87,10 +98,16 @@ export default function ClientesPage() {
               whileHover={{ y: -5 }}
             >
               <div className="bg-gray-50 w-full h-32 rounded-md mb-4 flex items-center justify-center">
-                <img src="/placeholder.svg?height=80&width=160&text=Cliente 2" alt="Cliente 2" className="max-h-16" />
+                <img
+                  src="/placeholder.svg?height=80&width=160&text=Cliente 2"
+                  alt="Cliente 2"
+                  className="max-h-16"
+                />
               </div>
               <h3 className="text-lg font-semibold mb-2">Empresa 2</h3>
-              <p className="text-gray-600 text-center text-sm">Automação de processos internos e análise de dados</p>
+              <p className="text-gray-600 text-center text-sm">
+                Automação de processos internos e análise de dados
+              </p>
             </motion.div>
 
             <motion.div
@@ -102,10 +119,16 @@ export default function ClientesPage() {
               whileHover={{ y: -5 }}
             >
               <div className="bg-gray-50 w-full h-32 rounded-md mb-4 flex items-center justify-center">
-                <img src="/placeholder.svg?height=80&width=160&text=Cliente 3" alt="Cliente 3" className="max-h-16" />
+                <img
+                  src="/placeholder.svg?height=80&width=160&text=Cliente 3"
+                  alt="Cliente 3"
+                  className="max-h-16"
+                />
               </div>
               <h3 className="text-lg font-semibold mb-2">Empresa 3</h3>
-              <p className="text-gray-600 text-center text-sm">Implementação de chatbot para atendimento ao cliente</p>
+              <p className="text-gray-600 text-center text-sm">
+                Implementação de chatbot para atendimento ao cliente
+              </p>
             </motion.div>
 
             <motion.div
@@ -117,15 +140,24 @@ export default function ClientesPage() {
               whileHover={{ y: -5 }}
             >
               <div className="bg-gray-50 w-full h-32 rounded-md mb-4 flex items-center justify-center">
-                <img src="/placeholder.svg?height=80&width=160&text=Cliente 4" alt="Cliente 4" className="max-h-16" />
+                <img
+                  src="/placeholder.svg?height=80&width=160&text=Cliente 4"
+                  alt="Cliente 4"
+                  className="max-h-16"
+                />
               </div>
               <h3 className="text-lg font-semibold mb-2">Empresa 4</h3>
-              <p className="text-gray-600 text-center text-sm">Automação de processos internos e análise de dados</p>
+              <p className="text-gray-600 text-center text-sm">
+                Automação de processos internos e análise de dados
+              </p>
             </motion.div>
           </div>
 
           <div className="text-center">
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full shadow-md">
+            <Button
+              asChild
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full shadow-md"
+            >
               <Link href="/contato">Seja nosso cliente</Link>
             </Button>
           </div>
@@ -156,8 +188,9 @@ export default function ClientesPage() {
               whileHover={{ y: -5 }}
             >
               <p className="text-gray-700 mb-4 italic">
-                "A implementação do chatbot da RochaPerin reduziu nosso tempo de resposta em 80% e aumentou a satisfação
-                dos clientes significativamente."
+                "A implementação do chatbot da RochaPerin reduziu nosso tempo de
+                resposta em 80% e aumentou a satisfação dos clientes
+                significativamente."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-full mr-4 flex items-center justify-center">
@@ -165,7 +198,9 @@ export default function ClientesPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Maria Silva</h4>
-                  <p className="text-gray-600 text-sm">Diretora de Atendimento, Empresa A</p>
+                  <p className="text-gray-600 text-sm">
+                    Diretora de Atendimento, Empresa A
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -179,8 +214,9 @@ export default function ClientesPage() {
               whileHover={{ y: -5 }}
             >
               <p className="text-gray-700 mb-4 italic">
-                "A automação de processos implementada pela equipe da RochaPerin nos permitiu reduzir custos
-                operacionais em 35% no primeiro ano."
+                "A automação de processos implementada pela equipe da RochaPerin
+                nos permitiu reduzir custos operacionais em 35% no primeiro
+                ano."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-full mr-4 flex items-center justify-center">
@@ -202,8 +238,9 @@ export default function ClientesPage() {
               whileHover={{ y: -5 }}
             >
               <p className="text-gray-700 mb-4 italic">
-                "A migração para nuvem foi realizada com zero tempo de inatividade e nos proporcionou uma infraestrutura
-                muito mais escalável e segura."
+                "A migração para nuvem foi realizada com zero tempo de
+                inatividade e nos proporcionou uma infraestrutura muito mais
+                escalável e segura."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-full mr-4 flex items-center justify-center">
@@ -250,7 +287,8 @@ export default function ClientesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Entre em contato conosco hoje mesmo e descubra como nossas soluções podem transformar o seu negócio.
+            Entre em contato conosco hoje mesmo e descubra como nossas soluções
+            podem transformar o seu negócio.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -269,5 +307,5 @@ export default function ClientesPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
