@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Bot, Cloud, Database, LineChart } from "lucide-react"
+import { ArrowRight, Bot, Cloud, Database, LineChart } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -26,7 +26,9 @@ export default function Home() {
                 variant="outline"
                 className="border-white text-blue-700 hover:bg-blue-600 px-6 py-3 font-medium"
               >
-                <Link href="http://wa.me/5571993491849?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20RochaPerin">Fale conosco</Link>
+                <Link href="http://wa.me/5571993491849?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20RochaPerin">
+                  Fale conosco
+                </Link>
               </Button>
             </div>
           </div>
@@ -37,7 +39,7 @@ export default function Home() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Nossos Clientes</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-items-center">
             {/* Client logos would go here - using placeholders for now */}
             <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
               <img src="/cliente-integral.png?height=60&width=120" alt="Colégio Integral" className="max-h-12" />
@@ -50,9 +52,6 @@ export default function Home() {
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
               <img src="/placeholder.svg?height=60&width=120" alt="Cliente 4" className="max-h-12" />
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
-              <img src="/placeholder.svg?height=60&width=120" alt="Cliente 5" className="max-h-12" />
             </div>
           </div>
           <div className="text-center mt-10">

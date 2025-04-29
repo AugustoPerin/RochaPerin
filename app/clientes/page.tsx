@@ -19,28 +19,63 @@ export default function ClientesPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Clientes Destacados</h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Client logos - using placeholders for now */}
-            {Array.from({ length: 8 }).map((_, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center"
-              >
-                <div className="bg-gray-100 w-full h-32 rounded-md mb-4 flex items-center justify-center">
-                  <img
-                    src={`/placeholder.svg?height=80&width=160&text=Cliente ${index + 1}`}
-                    alt={`Cliente ${index + 1}`}
-                    className="max-h-16"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Empresa {index + 1}</h3>
-                <p className="text-gray-600 text-center text-sm">
-                  {index % 2 === 0
-                    ? "Implementação de chatbot para atendimento ao cliente"
-                    : "Automação de processos internos e análise de dados"}
-                </p>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+              <div className="bg-gray-100 w-full h-32 rounded-md mb-4 flex items-center justify-center">
+                <img
+                  src="/placeholder.svg?height=80&width=160&text=Cliente 1"
+                  alt="Cliente 1"
+                  className="max-h-16"
+                />
               </div>
-            ))}
+              <h3 className="text-lg font-semibold mb-2">Empresa 1</h3>
+              <p className="text-gray-600 text-center text-sm">
+                Implementação de chatbot para atendimento ao cliente
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+              <div className="bg-gray-100 w-full h-32 rounded-md mb-4 flex items-center justify-center">
+                <img
+                  src="/placeholder.svg?height=80&width=160&text=Cliente 2"
+                  alt="Cliente 2"
+                  className="max-h-16"
+                />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Empresa 2</h3>
+              <p className="text-gray-600 text-center text-sm">
+                Automação de processos internos e análise de dados
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+              <div className="bg-gray-100 w-full h-32 rounded-md mb-4 flex items-center justify-center">
+                <img
+                  src="/placeholder.svg?height=80&width=160&text=Cliente 3"
+                  alt="Cliente 3"
+                  className="max-h-16"
+                />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Empresa 3</h3>
+              <p className="text-gray-600 text-center text-sm">
+                Implementação de chatbot para atendimento ao cliente
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
+              <div className="bg-gray-100 w-full h-32 rounded-md mb-4 flex items-center justify-center">
+                <img
+                  src="/placeholder.svg?height=80&width=160&text=Cliente 4"
+                  alt="Cliente 4"
+                  className="max-h-16"
+                />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Empresa 4</h3>
+              <p className="text-gray-600 text-center text-sm">
+                Automação de processos internos e análise de dados
+              </p>
+            </div>
           </div>
 
           <div className="text-center">
