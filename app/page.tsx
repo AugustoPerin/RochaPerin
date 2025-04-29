@@ -189,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* Refined Specialties Section with In-place Expansion */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -279,7 +279,7 @@ export default function Home() {
       </section>
 
       {/* Featured Solutions - Modern Card Design */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
