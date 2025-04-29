@@ -8,7 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-700 to-blue-800 text-white py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center text-center mb-10 md:mb-16">
+          <div className="flex flex-col items-center text-center md:mb-16">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 max-w-4xl mx-auto leading-tight">
               Transforme seu negócio com automação inteligente
             </h1>
@@ -40,7 +40,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
             {/* Client logos would go here - using placeholders for now */}
             <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
-              <img src="/placeholder.svg?height=60&width=120" alt="Cliente 1" className="max-h-12" />
+              <img src="/cliente-integral.png?height=60&width=120" alt="Colégio Integral" className="max-h-12" />
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[180px] h-[100px] flex items-center justify-center">
               <img src="/placeholder.svg?height=60&width=120" alt="Cliente 2" className="max-h-12" />
