@@ -98,7 +98,7 @@ export default function Header() {
                 Contato
               </Link>
               <Button asChild className="mt-2">
-                <Link href="/contato" onClick={() => setIsMenuOpen(false)}>
+                <Link href="http://wa.me/5571993491849?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20RochaPerin" onClick={() => setIsMenuOpen(false)}>
                   Fale Conosco
                 </Link>
               </Button>
