@@ -6,30 +6,28 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-blue-700 to-blue-800 text-white py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Transforme seu negócio com automação inteligente</h1>
-              <p className="text-xl mb-8">
-                A RochaPerin é especialista em automação de processos, análise de dados, migração para nuvem e chatbots
-                empresariais.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
-                  <Link href="/servicos">Conheça nossos serviços</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-blue-700 hover:bg-blue-700">
-                  <Link href="/contato">Fale conosco</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img
-                src="/rochaperin-site-first-image.webp?height=350&width=350"
-                alt="Automação de processos"
-                className="rounded-lg shadow-xl"
-              />
+          <div className="flex flex-col items-center text-center mb-10 md:mb-16">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 max-w-4xl mx-auto leading-tight">
+              Transforme seu negócio com automação inteligente
+            </h1>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-white/90">
+              A RochaPerin é especialista em automação de processos, análise de dados, migração para nuvem e chatbots
+              empresariais para impulsionar sua eficiência operacional.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-gray-100 px-6 py-3 font-medium">
+                <Link href="/servicos">Conheça nossos serviços</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-blue-600 px-6 py-3 font-medium"
+              >
+                <Link href="/contato">Fale conosco</Link>
+              </Button>
             </div>
           </div>
         </div>
