@@ -3,24 +3,22 @@
 import { Calendar, CheckCircle, QrCode, Users } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { HeroSection } from "@/components/ui/hero-section"
-import { SectionTitle } from "@/components/ui/section-title"
-import { FeatureCard } from "@/components/ui/feature-card"
-import { BenefitCard } from "@/components/ui/benefit-card"
-import { StepCard } from "@/components/ui/step-card"
-import { UseCaseCard } from "@/components/ui/use-case-card"
-import { CTASection } from "@/components/ui/cta-section"
-import { WaveDivider } from "@/components/ui/wave-divider"
+import { UnifiedHero } from "@/components/ui/unified-hero"
+import { UnifiedSectionTitle } from "@/components/ui/unified-section-title"
+import { UnifiedFeatureCard } from "@/components/ui/unified-feature-card"
+import { UnifiedBenefitCard } from "@/components/ui/unified-benefit-card"
+import { UnifiedStepCard } from "@/components/ui/unified-step-card"
+import { UnifiedUseCaseCard } from "@/components/ui/unified-use-case-card"
+import { UnifiedCTA } from "@/components/ui/unified-cta"
+import { UnifiedWaveDivider } from "@/components/ui/unified-wave-divider"
 import { ArrowRight } from "lucide-react"
 
 export default function EventosPage() {
   return (
     <div className="min-h-screen">
-      <HeroSection
+      <UnifiedHero
         title="Registro de Eventos"
         description="Simplifique o processo de inscrição em eventos com um sistema automatizado de registro, pagamento e gerenciamento de participantes."
-        ctaText="Solicite uma demonstração"
-        ctaLink="/contato"
         imageSrc="/event-registration-dashboard.png"
         imageAlt="Registro de Eventos"
       />
@@ -28,28 +26,31 @@ export default function EventosPage() {
       {/* Recursos */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <SectionTitle title="Recursos Principais" center={true} />
+          <UnifiedSectionTitle title="Recursos Principais" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard
+            <UnifiedFeatureCard
               icon={Users}
               title="Formulários Personalizados"
               description="Crie formulários de inscrição personalizados para coletar exatamente as informações que você precisa dos participantes."
               features={["Campos customizáveis", "Lógica condicional", "Validação automática"]}
+              delay={0.1}
             />
 
-            <FeatureCard
+            <UnifiedFeatureCard
               icon={Calendar}
               title="Pagamento Integrado"
               description="Ofereça múltiplas opções de pagamento e processe transações de forma segura diretamente no formulário de inscrição."
               features={["Múltiplos métodos de pagamento", "Processamento seguro", "Emissão automática de recibos"]}
+              delay={0.2}
             />
 
-            <FeatureCard
+            <UnifiedFeatureCard
               icon={QrCode}
               title="Emissão de Credenciais"
               description="Gere e envie automaticamente credenciais digitais com QR Code para facilitar o check-in no dia do evento."
               features={["Credenciais personalizáveis", "QR Codes únicos", "Envio automático por e-mail"]}
+              delay={0.3}
             />
           </div>
         </div>
@@ -57,39 +58,47 @@ export default function EventosPage() {
 
       {/* Benefícios */}
       <section className="py-16 md:py-24 bg-gray-50 relative">
-        <WaveDivider flip={true} color="#f9fafb" />
-        <div className="container mx-auto px-4">
-          <SectionTitle title="Benefícios para seu Negócio" center={true} />
+        <div className="absolute top-0 left-0 right-0">
+          <UnifiedWaveDivider flip={true} />
+        </div>
+        <div className="container mx-auto px-4 pt-16">
+          <UnifiedSectionTitle title="Benefícios para seu Negócio" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <BenefitCard
+            <UnifiedBenefitCard
               title="Economia de Tempo"
               description="Automatize todo o processo de inscrição, desde o registro até a emissão de credenciais, liberando sua equipe para outras tarefas."
+              delay={0.1}
             />
 
-            <BenefitCard
+            <UnifiedBenefitCard
               title="Redução de Erros"
               description="Elimine erros manuais de registro e problemas de comunicação com um sistema automatizado e integrado."
+              delay={0.2}
             />
 
-            <BenefitCard
+            <UnifiedBenefitCard
               title="Melhor Experiência"
               description="Ofereça uma experiência de inscrição simples e profissional, aumentando a satisfação dos participantes desde o primeiro contato."
+              delay={0.3}
             />
 
-            <BenefitCard
+            <UnifiedBenefitCard
               title="Dados Valiosos"
               description="Colete e analise dados importantes sobre os participantes para melhorar futuros eventos e ações de marketing."
+              delay={0.4}
             />
           </div>
         </div>
-        <WaveDivider color="#ffffff" />
+        <div className="absolute bottom-0 left-0 right-0">
+          <UnifiedWaveDivider />
+        </div>
       </section>
 
       {/* Check-in Automatizado */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <SectionTitle title="Check-in Automatizado para Eventos" center={true} />
+          <UnifiedSectionTitle title="Check-in Automatizado para Eventos" />
 
           <div className="flex flex-col md:flex-row items-center gap-12">
             <motion.div
@@ -152,72 +161,81 @@ export default function EventosPage() {
 
       {/* Como Funciona */}
       <section className="py-16 md:py-24 bg-gray-50 relative">
-        <WaveDivider flip={true} color="#f9fafb" />
-        <div className="container mx-auto px-4">
-          <SectionTitle title="Como Funciona" center={true} />
+        <div className="absolute top-0 left-0 right-0">
+          <UnifiedWaveDivider flip={true} />
+        </div>
+        <div className="container mx-auto px-4 pt-16">
+          <UnifiedSectionTitle title="Como Funciona" />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <StepCard
+            <UnifiedStepCard
               number={1}
               title="Configuração"
               description="Configuramos o sistema de acordo com as necessidades do seu evento, incluindo formulários e opções de pagamento."
+              delay={0.1}
             />
 
-            <StepCard
+            <UnifiedStepCard
               number={2}
               title="Inscrição"
               description="Os participantes se inscrevem online, preenchendo o formulário e realizando o pagamento quando aplicável."
+              delay={0.2}
             />
 
-            <StepCard
+            <UnifiedStepCard
               number={3}
               title="Confirmação"
               description="O sistema envia automaticamente confirmações e credenciais com QR Code para os participantes."
+              delay={0.3}
             />
 
-            <StepCard
+            <UnifiedStepCard
               number={4}
               title="Check-in"
               description="No dia do evento, os participantes são registrados rapidamente através da leitura do QR Code."
+              delay={0.4}
             />
           </div>
         </div>
-        <WaveDivider color="#ffffff" />
+        <div className="absolute bottom-0 left-0 right-0">
+          <UnifiedWaveDivider />
+        </div>
       </section>
 
       {/* Casos de Uso */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <SectionTitle title="Ideal Para" center={true} />
+          <UnifiedSectionTitle title="Ideal Para" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <UseCaseCard
+            <UnifiedUseCaseCard
               icon={Users}
               title="Conferências e Congressos"
               description="Eventos profissionais com múltiplas palestras, workshops e grande número de participantes."
+              delay={0.1}
             />
 
-            <UseCaseCard
+            <UnifiedUseCaseCard
               icon={Users}
               title="Feiras e Exposições"
               description="Eventos comerciais com múltiplos expositores e visitantes que precisam de credenciamento eficiente."
+              delay={0.2}
             />
 
-            <UseCaseCard
+            <UnifiedUseCaseCard
               icon={Users}
               title="Cursos e Workshops"
               description="Eventos educacionais que exigem inscrição prévia, pagamento e controle de presença dos participantes."
+              delay={0.3}
             />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <CTASection
+      <UnifiedCTA
         title="Pronto para simplificar o registro do seu evento?"
         description="Entre em contato conosco hoje mesmo e descubra como nossa solução de registro de eventos pode transformar a experiência dos seus participantes."
-        ctaText="Solicite uma demonstração"
-        ctaLink="/contato"
       />
     </div>
   )

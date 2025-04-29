@@ -3,15 +3,25 @@
 import { Check, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { SectionTitle } from "@/components/ui/section-title"
-import { WaveDivider } from "@/components/ui/wave-divider"
+import { UnifiedSectionTitle } from "@/components/ui/unified-section-title"
 
 export default function CheckInPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:16px_16px]"></div>
+      <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+              backgroundSize: "60px 60px",
+            }}
+          ></div>
+        </div>
+
         <div className="container mx-auto max-w-5xl py-20 px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Check-in Automatizado para Eventos</h1>
@@ -28,7 +38,13 @@ export default function CheckInPage() {
             </Link>
           </motion.div>
         </div>
-        <WaveDivider />
+
+        {/* Wave divider */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" fill="white">
+            <path d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,80L1360,80C1280,80,1120,80,960,80C800,80,640,80,480,80C320,80,160,80,80,80L0,80Z"></path>
+          </svg>
+        </div>
       </section>
 
       {/* Main Content */}
@@ -67,12 +83,16 @@ export default function CheckInPage() {
           </div>
 
           {/* Benefits */}
-          <SectionTitle title="Benefícios do Check-in Automatizado" center={true} />
+          <UnifiedSectionTitle title="Benefícios do Check-in Automatizado" />
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <motion.div
               className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Check className="h-6 w-6 text-blue-600" />
@@ -87,6 +107,10 @@ export default function CheckInPage() {
               className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Check className="h-6 w-6 text-blue-600" />
@@ -101,6 +125,10 @@ export default function CheckInPage() {
               className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Check className="h-6 w-6 text-blue-600" />
@@ -114,7 +142,7 @@ export default function CheckInPage() {
           </div>
 
           {/* How it Works */}
-          <SectionTitle title="Como Funciona" center={true} />
+          <UnifiedSectionTitle title="Como Funciona" />
           <div className="bg-gray-50 p-8 rounded-xl mb-16 shadow-sm border border-gray-100">
             <ol className="space-y-6">
               <motion.li
@@ -189,12 +217,16 @@ export default function CheckInPage() {
           </div>
 
           {/* Use Cases */}
-          <SectionTitle title="Aplicações Ideais" center={true} />
+          <UnifiedSectionTitle title="Aplicações Ideais" />
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <motion.div
               className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Conferências e Congressos</h3>
               <p className="text-gray-700">
@@ -205,6 +237,10 @@ export default function CheckInPage() {
               className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Feiras e Exposições</h3>
               <p className="text-gray-700">
@@ -215,6 +251,10 @@ export default function CheckInPage() {
               className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Workshops e Treinamentos</h3>
               <p className="text-gray-700">
@@ -225,6 +265,10 @@ export default function CheckInPage() {
               className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Eventos Corporativos</h3>
               <p className="text-gray-700">
