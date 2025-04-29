@@ -1,336 +1,161 @@
-import Link from "next/link";
-import { Calendar, CheckCircle, Clock, Users } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client"
+
+import { Calendar, Clock, Users } from "lucide-react"
+import { HeroSection } from "@/components/ui/hero-section"
+import { SectionTitle } from "@/components/ui/section-title"
+import { FeatureCard } from "@/components/ui/feature-card"
+import { BenefitCard } from "@/components/ui/benefit-card"
+import { StepCard } from "@/components/ui/step-card"
+import { UseCaseCard } from "@/components/ui/use-case-card"
+import { CTASection } from "@/components/ui/cta-section"
+import { WaveDivider } from "@/components/ui/wave-divider"
 
 export default function AgendamentoPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-blue-700 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl font-bold mb-4">
-                Agendamento de Serviços
-              </h1>
-              <p className="text-xl mb-8">
-                Automatize o processo de agendamento e permita que seus clientes
-                marquem horários de forma rápida e eficiente, 24 horas por dia,
-                7 dias por semana.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-blue-700 hover:bg-gray-100"
-              >
-                <Link href="/contato">Solicite uma demonstração</Link>
-              </Button>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img
-                src="/placeholder.svg?height=400&width=500"
-                alt="Agendamento de Serviços"
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Agendamento de Serviços"
+        description="Automatize o processo de agendamento e permita que seus clientes marquem horários de forma rápida e eficiente, 24 horas por dia, 7 dias por semana."
+        ctaText="Solicite uma demonstração"
+        ctaLink="/contato"
+        imageSrc="/modern-calendar-app.png"
+        imageAlt="Agendamento de Serviços"
+      />
 
       {/* Recursos */}
-      <section className="py-16">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Recursos Principais
-          </h2>
+          <SectionTitle title="Recursos Principais" center={true} />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <Calendar className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Calendário Inteligente
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Sistema de calendário que exibe apenas horários disponíveis,
-                evitando conflitos e otimizando sua agenda.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Visualização diária, semanal e mensal</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Bloqueio automático de horários ocupados</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Personalização de disponibilidade</span>
-                </li>
-              </ul>
-            </div>
+            <FeatureCard
+              icon={Calendar}
+              title="Calendário Inteligente"
+              description="Sistema de calendário que exibe apenas horários disponíveis, evitando conflitos e otimizando sua agenda."
+              features={[
+                "Visualização diária, semanal e mensal",
+                "Bloqueio automático de horários ocupados",
+                "Personalização de disponibilidade",
+              ]}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <Clock className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Lembretes Automáticos
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Envio automático de lembretes por e-mail, SMS ou WhatsApp para
-                reduzir faltas e atrasos.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Lembretes personalizáveis</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Múltiplos canais de comunicação</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Confirmação de presença</span>
-                </li>
-              </ul>
-            </div>
+            <FeatureCard
+              icon={Clock}
+              title="Lembretes Automáticos"
+              description="Envio automático de lembretes por e-mail, SMS ou WhatsApp para reduzir faltas e atrasos."
+              features={["Lembretes personalizáveis", "Múltiplos canais de comunicação", "Confirmação de presença"]}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <Users className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Gestão de Recursos</h3>
-              <p className="text-gray-600 mb-4">
-                Controle eficiente de recursos humanos, equipamentos e salas
-                necessários para cada serviço.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Alocação inteligente de recursos</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Prevenção de sobreposições</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Otimização de capacidade</span>
-                </li>
-              </ul>
-            </div>
+            <FeatureCard
+              icon={Users}
+              title="Gestão de Recursos"
+              description="Controle eficiente de recursos humanos, equipamentos e salas necessários para cada serviço."
+              features={["Alocação inteligente de recursos", "Prevenção de sobreposições", "Otimização de capacidade"]}
+            />
           </div>
         </div>
       </section>
 
       {/* Benefícios */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 relative">
+        <WaveDivider flip={true} color="#f9fafb" />
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Benefícios para seu Negócio
-          </h2>
+          <SectionTitle title="Benefícios para seu Negócio" center={true} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Redução de Custos Operacionais
-              </h3>
-              <p className="text-gray-600">
-                Diminua custos com pessoal dedicado a agendamentos e reduza o
-                tempo gasto em tarefas administrativas.
-              </p>
-            </div>
+            <BenefitCard
+              title="Redução de Custos Operacionais"
+              description="Diminua custos com pessoal dedicado a agendamentos e reduza o tempo gasto em tarefas administrativas."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Diminuição de Faltas e Cancelamentos
-              </h3>
-              <p className="text-gray-600">
-                Reduza significativamente o número de faltas e cancelamentos de
-                última hora com lembretes automáticos.
-              </p>
-            </div>
+            <BenefitCard
+              title="Diminuição de Faltas e Cancelamentos"
+              description="Reduza significativamente o número de faltas e cancelamentos de última hora com lembretes automáticos."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Aumento da Satisfação do Cliente
-              </h3>
-              <p className="text-gray-600">
-                Ofereça mais conveniência aos seus clientes, permitindo
-                agendamentos a qualquer hora e em qualquer lugar.
-              </p>
-            </div>
+            <BenefitCard
+              title="Aumento da Satisfação do Cliente"
+              description="Ofereça mais conveniência aos seus clientes, permitindo agendamentos a qualquer hora e em qualquer lugar."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Otimização da Agenda
-              </h3>
-              <p className="text-gray-600">
-                Maximize o uso do tempo disponível com uma distribuição mais
-                eficiente de compromissos.
-              </p>
-            </div>
+            <BenefitCard
+              title="Otimização da Agenda"
+              description="Maximize o uso do tempo disponível com uma distribuição mais eficiente de compromissos."
+            />
           </div>
         </div>
+        <WaveDivider color="#ffffff" />
       </section>
 
       {/* Como Funciona */}
-      <section className="py-16">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Como Funciona
-          </h2>
+          <SectionTitle title="Como Funciona" center={true} />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Configuração</h3>
-              <p className="text-gray-600">
-                Configuramos o sistema de acordo com suas necessidades,
-                definindo serviços, duração e disponibilidade.
-              </p>
-            </div>
+            <StepCard
+              number={1}
+              title="Configuração"
+              description="Configuramos o sistema de acordo com suas necessidades, definindo serviços, duração e disponibilidade."
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">2</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Agendamento</h3>
-              <p className="text-gray-600">
-                O cliente seleciona o serviço desejado, data e horário
-                disponível através do site ou aplicativo.
-              </p>
-            </div>
+            <StepCard
+              number={2}
+              title="Agendamento"
+              description="O cliente seleciona o serviço desejado, data e horário disponível através do site ou aplicativo."
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">3</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Confirmação</h3>
-              <p className="text-gray-600">
-                O sistema envia uma confirmação automática e adiciona o
-                compromisso à agenda do prestador de serviço.
-              </p>
-            </div>
+            <StepCard
+              number={3}
+              title="Confirmação"
+              description="O sistema envia uma confirmação automática e adiciona o compromisso à agenda do prestador de serviço."
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">4</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Lembretes</h3>
-              <p className="text-gray-600">
-                Lembretes automáticos são enviados antes do compromisso para
-                garantir a presença do cliente.
-              </p>
-            </div>
+            <StepCard
+              number={4}
+              title="Lembretes"
+              description="Lembretes automáticos são enviados antes do compromisso para garantir a presença do cliente."
+            />
           </div>
         </div>
       </section>
 
       {/* Casos de Uso */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 relative">
+        <WaveDivider flip={true} color="#f9fafb" />
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Ideal Para</h2>
+          <SectionTitle title="Ideal Para" center={true} />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Clínicas e Consultórios
-              </h3>
-              <p className="text-gray-600">
-                Médicos, dentistas, psicólogos e outros profissionais de saúde
-                que precisam gerenciar consultas.
-              </p>
-            </div>
+            <UseCaseCard
+              icon={Users}
+              title="Clínicas e Consultórios"
+              description="Médicos, dentistas, psicólogos e outros profissionais de saúde que precisam gerenciar consultas."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Salões de Beleza e Spas
-              </h3>
-              <p className="text-gray-600">
-                Estabelecimentos que oferecem serviços de beleza, estética e
-                bem-estar com múltiplos profissionais.
-              </p>
-            </div>
+            <UseCaseCard
+              icon={Users}
+              title="Salões de Beleza e Spas"
+              description="Estabelecimentos que oferecem serviços de beleza, estética e bem-estar com múltiplos profissionais."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Prestadores de Serviços
-              </h3>
-              <p className="text-gray-600">
-                Advogados, contadores, consultores e outros profissionais que
-                trabalham com agendamento de reuniões.
-              </p>
-            </div>
+            <UseCaseCard
+              icon={Users}
+              title="Prestadores de Serviços"
+              description="Advogados, contadores, consultores e outros profissionais que trabalham com agendamento de reuniões."
+            />
           </div>
         </div>
+        <WaveDivider color="#1d4ed8" />
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-blue-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Pronto para otimizar seus agendamentos?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Entre em contato conosco hoje mesmo e descubra como nossa solução de
-            agendamento pode transformar seu negócio.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-white text-blue-700 hover:bg-gray-100"
-          >
-            <Link href="/contato">Solicite uma demonstração</Link>
-          </Button>
-        </div>
-      </section>
+      <CTASection
+        title="Pronto para otimizar seus agendamentos?"
+        description="Entre em contato conosco hoje mesmo e descubra como nossa solução de agendamento pode transformar seu negócio."
+        ctaText="Solicite uma demonstração"
+        ctaLink="/contato"
+      />
     </div>
-  );
+  )
 }

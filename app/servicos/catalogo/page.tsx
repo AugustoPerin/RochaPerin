@@ -1,336 +1,157 @@
-import Link from "next/link";
-import { CheckCircle, FileText, Search, Settings } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client"
+
+import { FileText, Search, Settings } from "lucide-react"
+import { HeroSection } from "@/components/ui/hero-section"
+import { SectionTitle } from "@/components/ui/section-title"
+import { FeatureCard } from "@/components/ui/feature-card"
+import { BenefitCard } from "@/components/ui/benefit-card"
+import { StepCard } from "@/components/ui/step-card"
+import { UseCaseCard } from "@/components/ui/use-case-card"
+import { CTASection } from "@/components/ui/cta-section"
+import { WaveDivider } from "@/components/ui/wave-divider"
 
 export default function CatalogoPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-blue-700 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl font-bold mb-4">Catálogo Interativo</h1>
-              <p className="text-xl mb-8">
-                Ofereça uma experiência de compra dinâmica e envolvente com um
-                catálogo digital interativo que permite aos clientes explorar
-                seus produtos e serviços de forma intuitiva.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-blue-700 hover:bg-gray-100"
-              >
-                <Link href="/contato">Solicite uma demonstração</Link>
-              </Button>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img
-                src="/placeholder.svg?height=400&width=500"
-                alt="Catálogo Interativo"
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Catálogo Interativo"
+        description="Ofereça uma experiência de compra dinâmica e envolvente com um catálogo digital interativo que permite aos clientes explorar seus produtos e serviços de forma intuitiva."
+        ctaText="Solicite uma demonstração"
+        ctaLink="/contato"
+        imageSrc="/modern-product-showcase.png"
+        imageAlt="Catálogo Interativo"
+      />
 
       {/* Recursos */}
-      <section className="py-16">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Recursos Principais
-          </h2>
+          <SectionTitle title="Recursos Principais" center={true} />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <Search className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Busca Avançada</h3>
-              <p className="text-gray-600 mb-4">
-                Sistema de busca inteligente que permite aos clientes encontrar
-                rapidamente o que procuram por nome, categoria, preço ou
-                características.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Filtros personalizáveis</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Sugestões inteligentes</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Correção automática</span>
-                </li>
-              </ul>
-            </div>
+            <FeatureCard
+              icon={Search}
+              title="Busca Avançada"
+              description="Sistema de busca inteligente que permite aos clientes encontrar rapidamente o que procuram por nome, categoria, preço ou características."
+              features={["Filtros personalizáveis", "Sugestões inteligentes", "Correção automática"]}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <FileText className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Conteúdo Rico</h3>
-              <p className="text-gray-600 mb-4">
-                Apresente seus produtos com descrições detalhadas, imagens de
-                alta qualidade, vídeos e conteúdo interativo.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Galerias de imagens</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Vídeos demonstrativos</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Visualização 360°</span>
-                </li>
-              </ul>
-            </div>
+            <FeatureCard
+              icon={FileText}
+              title="Conteúdo Rico"
+              description="Apresente seus produtos com descrições detalhadas, imagens de alta qualidade, vídeos e conteúdo interativo."
+              features={["Galerias de imagens", "Vídeos demonstrativos", "Visualização 360°"]}
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-100 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                <Settings className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Atualização em Tempo Real
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Mantenha seu catálogo sempre atualizado com informações de
-                preço, disponibilidade e promoções em tempo real.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Sincronização com estoque</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Preços dinâmicos</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle
-                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                    size={16}
-                  />
-                  <span>Promoções temporárias</span>
-                </li>
-              </ul>
-            </div>
+            <FeatureCard
+              icon={Settings}
+              title="Atualização em Tempo Real"
+              description="Mantenha seu catálogo sempre atualizado com informações de preço, disponibilidade e promoções em tempo real."
+              features={["Sincronização com estoque", "Preços dinâmicos", "Promoções temporárias"]}
+            />
           </div>
         </div>
       </section>
 
       {/* Benefícios */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 relative">
+        <WaveDivider flip={true} color="#f9fafb" />
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Benefícios para seu Negócio
-          </h2>
+          <SectionTitle title="Benefícios para seu Negócio" center={true} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Aumento de Vendas
-              </h3>
-              <p className="text-gray-600">
-                Apresente seus produtos de forma atraente e interativa,
-                incentivando os clientes a conhecerem mais opções e aumentando o
-                ticket médio.
-              </p>
-            </div>
+            <BenefitCard
+              title="Aumento de Vendas"
+              description="Apresente seus produtos de forma atraente e interativa, incentivando os clientes a conhecerem mais opções e aumentando o ticket médio."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Redução de Custos
-              </h3>
-              <p className="text-gray-600">
-                Elimine a necessidade de catálogos impressos, reduzindo custos
-                com impressão e distribuição, além de ser ecologicamente
-                responsável.
-              </p>
-            </div>
+            <BenefitCard
+              title="Redução de Custos"
+              description="Elimine a necessidade de catálogos impressos, reduzindo custos com impressão e distribuição, além de ser ecologicamente responsável."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Alcance Global
-              </h3>
-              <p className="text-gray-600">
-                Disponibilize seu catálogo online para clientes em qualquer
-                lugar do mundo, expandindo seu alcance de mercado.
-              </p>
-            </div>
+            <BenefitCard
+              title="Alcance Global"
+              description="Disponibilize seu catálogo online para clientes em qualquer lugar do mundo, expandindo seu alcance de mercado."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <CheckCircle className="text-green-500 mr-2" size={20} />
-                Insights Valiosos
-              </h3>
-              <p className="text-gray-600">
-                Obtenha dados sobre o comportamento dos clientes, como produtos
-                mais visualizados e tempo gasto em cada item.
-              </p>
-            </div>
+            <BenefitCard
+              title="Insights Valiosos"
+              description="Obtenha dados sobre o comportamento dos clientes, como produtos mais visualizados e tempo gasto em cada item."
+            />
           </div>
         </div>
+        <WaveDivider color="#ffffff" />
       </section>
 
       {/* Como Funciona */}
-      <section className="py-16">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Como Funciona
-          </h2>
+          <SectionTitle title="Como Funciona" center={true} />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Cadastro</h3>
-              <p className="text-gray-600">
-                Cadastramos seus produtos e serviços com todas as informações,
-                imagens e especificações necessárias.
-              </p>
-            </div>
+            <StepCard
+              number={1}
+              title="Cadastro"
+              description="Cadastramos seus produtos e serviços com todas as informações, imagens e especificações necessárias."
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">2</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Personalização</h3>
-              <p className="text-gray-600">
-                Personalizamos a interface do catálogo de acordo com a
-                identidade visual da sua empresa.
-              </p>
-            </div>
+            <StepCard
+              number={2}
+              title="Personalização"
+              description="Personalizamos a interface do catálogo de acordo com a identidade visual da sua empresa."
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">3</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Integração</h3>
-              <p className="text-gray-600">
-                Integramos o catálogo ao seu site, aplicativo ou sistema de
-                e-commerce existente.
-              </p>
-            </div>
+            <StepCard
+              number={3}
+              title="Integração"
+              description="Integramos o catálogo ao seu site, aplicativo ou sistema de e-commerce existente."
+            />
 
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-700 text-2xl font-bold">4</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Atualização</h3>
-              <p className="text-gray-600">
-                Fornecemos um painel administrativo intuitivo para que você
-                possa atualizar seu catálogo facilmente.
-              </p>
-            </div>
+            <StepCard
+              number={4}
+              title="Atualização"
+              description="Fornecemos um painel administrativo intuitivo para que você possa atualizar seu catálogo facilmente."
+            />
           </div>
         </div>
       </section>
 
       {/* Casos de Uso */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 relative">
+        <WaveDivider flip={true} color="#f9fafb" />
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Ideal Para</h2>
+          <SectionTitle title="Ideal Para" center={true} />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <FileText className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Lojas e E-commerces
-              </h3>
-              <p className="text-gray-600">
-                Empresas de varejo que desejam apresentar seus produtos de forma
-                atraente e interativa.
-              </p>
-            </div>
+            <UseCaseCard
+              icon={FileText}
+              title="Lojas e E-commerces"
+              description="Empresas de varejo que desejam apresentar seus produtos de forma atraente e interativa."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <FileText className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Distribuidores e Atacadistas
-              </h3>
-              <p className="text-gray-600">
-                Empresas B2B que precisam disponibilizar catálogos extensos com
-                especificações técnicas detalhadas.
-              </p>
-            </div>
+            <UseCaseCard
+              icon={FileText}
+              title="Distribuidores e Atacadistas"
+              description="Empresas B2B que precisam disponibilizar catálogos extensos com especificações técnicas detalhadas."
+            />
 
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <FileText className="text-blue-600 w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Restaurantes e Serviços
-              </h3>
-              <p className="text-gray-600">
-                Estabelecimentos que desejam apresentar seus cardápios ou
-                serviços de forma digital e interativa.
-              </p>
-            </div>
+            <UseCaseCard
+              icon={FileText}
+              title="Restaurantes e Serviços"
+              description="Estabelecimentos que desejam apresentar seus cardápios ou serviços de forma digital e interativa."
+            />
           </div>
         </div>
+        <WaveDivider color="#1d4ed8" />
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-blue-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Pronto para modernizar seu catálogo?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Entre em contato conosco hoje mesmo e descubra como nosso catálogo
-            interativo pode transformar a experiência de compra dos seus
-            clientes.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-white text-blue-700 hover:bg-gray-100"
-          >
-            <Link href="/contato">Solicite uma demonstração</Link>
-          </Button>
-        </div>
-      </section>
+      <CTASection
+        title="Pronto para modernizar seu catálogo?"
+        description="Entre em contato conosco hoje mesmo e descubra como nosso catálogo interativo pode transformar a experiência de compra dos seus clientes."
+        ctaText="Solicite uma demonstração"
+        ctaLink="/contato"
+      />
     </div>
-  );
+  )
 }
