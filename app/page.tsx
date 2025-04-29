@@ -22,7 +22,7 @@ export default function Home() {
     {
       icon: <LineChart className="text-blue-600 w-8 h-8" />,
       title: "Automação de Processos",
-      description: "Otimize fluxos de trabalho e aumente a eficiência operacional com automação inteligente.",
+      description: "Otimize fluxos de trabalho e a eficiência operacional com automação inteligente.",
       details:
         "Eliminamos tarefas repetitivas, reduzimos erros humanos e aceleramos processos com nossas soluções de automação. Desde agendamentos e cotações até rastreamento de pedidos e gestão de eventos, nossas soluções são personalizadas para as necessidades específicas do seu negócio.",
       link: "/servicos/automacao",
