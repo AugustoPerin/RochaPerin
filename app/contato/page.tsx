@@ -171,15 +171,15 @@ export default function ContatoPage() {
                       <SelectValue placeholder="Selecione o assunto" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="automacao">
+                      <SelectItem value="Automação de Processos">
                         Automação de Processos
                       </SelectItem>
-                      <SelectItem value="chatbots">
+                      <SelectItem value="Chatbots Empresariais">
                         Chatbots Empresariais
                       </SelectItem>
-                      <SelectItem value="analise">Análise de Dados</SelectItem>
-                      <SelectItem value="nuvem">Migração para Nuvem</SelectItem>
-                      <SelectItem value="outro">Outro Assunto</SelectItem>
+                      <SelectItem value="Análise de Dados">Análise de Dados</SelectItem>
+                      <SelectItem value="Migração para Nuvem">Migração para Nuvem</SelectItem>
+                      <SelectItem value="Outro Assunt">Outro Assunto</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -191,25 +191,25 @@ export default function ContatoPage() {
                     defaultValue="informacoes"
                   >
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="informacoes" id="informacoes" />
+                      <RadioGroupItem value="Quero mais informações" id="informacoes" />
                       <Label htmlFor="informacoes">
                         Quero mais informações
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="orcamento" id="orcamento" />
+                      <RadioGroupItem value="Solicitar orçamento" id="orcamento" />
                       <Label htmlFor="orcamento">Solicitar orçamento</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="demonstracao" id="demonstracao" />
+                      <RadioGroupItem value="Agendar demonstração" id="demonstracao" />
                       <Label htmlFor="demonstracao">Agendar demonstração</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="parceria" id="parceria" />
+                      <RadioGroupItem value="Proposta de parceria" id="parceria" />
                       <Label htmlFor="parceria">Proposta de parceria</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="outros" id="outros" />
+                      <RadioGroupItem value="Outros" id="outros" />
                       <Label htmlFor="outros">Outros</Label>
                     </div>
                   </RadioGroup>

@@ -359,7 +359,7 @@ export default function Home() {
                   rápidas e precisas 24/7.
                 </p>
                 <Link
-                  href="/servicos/chatbots/atendimento"
+                  href="/servicos/chatbot-sac"
                   className="inline-flex items-center text-white font-medium hover:underline"
                 >
                   Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
@@ -386,14 +386,13 @@ export default function Home() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
                 <h3 className="text-xl font-semibold mb-2 text-white">
-                  Agendamento Automatizado
+                  Ofertas Promocionais
                 </h3>
                 <p className="text-gray-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Simplifique o agendamento de serviços e exames com nossa
-                  solução intuitiva.
+                  Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências.
                 </p>
                 <Link
-                  href="/servicos/automacao/agendamento"
+                  href="/servicos/ofertas"
                   className="inline-flex items-center text-white font-medium hover:underline"
                 >
                   Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
@@ -427,7 +426,7 @@ export default function Home() {
                   interativo e carrinho de compras.
                 </p>
                 <Link
-                  href="/servicos/automacao/whatsapp-shopping"
+                  href="/servicos/whatsapp-shopping"
                   className="inline-flex items-center text-white font-medium hover:underline"
                 >
                   Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
