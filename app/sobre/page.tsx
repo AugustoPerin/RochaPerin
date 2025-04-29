@@ -21,7 +21,7 @@ export default function SobrePage() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src="/rochaperin-quem-somos-nos.webp?height=400&width=600"
                 alt="Equipe RochaPerin"
                 className="rounded-lg shadow-lg"
               />
@@ -41,26 +41,6 @@ export default function SobrePage() {
                 desenvolvemos soluções personalizadas que atendem às necessidades específicas de cada cliente,
                 independentemente do tamanho ou setor de atuação.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-blue-100 p-2 rounded-full mr-3">
-                    <Users className="text-blue-600 w-5 h-5" />
-                  </div>
-                  <span className="font-medium">+100 Clientes</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-blue-100 p-2 rounded-full mr-3">
-                    <Award className="text-blue-600 w-5 h-5" />
-                  </div>
-                  <span className="font-medium">+50 Projetos</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-blue-100 p-2 rounded-full mr-3">
-                    <Clock className="text-blue-600 w-5 h-5" />
-                  </div>
-                  <span className="font-medium">8 Anos de Experiência</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

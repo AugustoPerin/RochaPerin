@@ -19,14 +19,14 @@ export default function Home() {
                 <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
                   <Link href="/servicos">Conheça nossos serviços</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-blue-700">
+                <Button asChild size="lg" variant="outline" className="border-white text-blue-700 hover:bg-blue-700">
                   <Link href="/contato">Fale conosco</Link>
                 </Button>
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="/rochaperin-site-first-image.png?height=368&width=368"
+                src="/rochaperin-site-first-image.webp?height=350&width=350"
                 alt="Automação de processos"
                 className="rounded-lg shadow-xl"
               />
