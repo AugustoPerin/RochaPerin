@@ -2,21 +2,10 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import {
-  ArrowRight,
-  Bot,
-  Calendar,
-  CheckCircle,
-  CreditCard,
-  FileText,
-  MessageSquare,
-  ShoppingCart,
-  Truck,
-  Users,
-} from "lucide-react"
+import { CheckCircle, MessageSquare, ShoppingCart, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export default function ServicosPage() {
+export default function WhatsAppShoppingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Gradient Overlay */}
@@ -33,23 +22,49 @@ export default function ServicosPage() {
           ></div>
         </div>
 
-        <div className="container mx-auto px-4 py-16 md:py-20 relative z-10 text-center">
-          <motion.h1
-            className="text-3xl md:text-5xl font-bold mb-4 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Nossos Serviços
-          </motion.h1>
-          <motion.p
-            className="text-lg md:text-xl max-w-3xl mx-auto text-blue-100"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Conheça as soluções que a RochaPerin oferece para transformar e otimizar o seu negócio.
-          </motion.p>
+        <div className="container mx-auto px-4 py-16 md:py-20 relative z-10">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 mb-10 md:mb-0">
+              <motion.h1
+                className="text-3xl md:text-5xl font-bold mb-4 leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                WhatsApp Shopping
+              </motion.h1>
+              <motion.p
+                className="text-lg md:text-xl max-w-3xl mb-8 text-blue-100"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Transforme o WhatsApp em um poderoso canal de vendas com catálogo interativo e carrinho de compras,
+                oferecendo uma experiência de compra conveniente e familiar para seus clientes.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6 font-medium text-base rounded-full shadow-lg"
+                >
+                  <Link href="/contato">Solicite uma demonstração</Link>
+                </Button>
+              </motion.div>
+            </div>
+            <motion.div
+              className="md:w-1/2 flex justify-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <img src="/whatsapp-shop-catalog.png" alt="WhatsApp Shopping" className="rounded-lg shadow-xl" />
+            </motion.div>
+          </div>
         </div>
 
         {/* Wave divider */}
@@ -60,7 +75,7 @@ export default function ServicosPage() {
         </div>
       </section>
 
-      {/* Categorias de Serviços */}
+      {/* Recursos */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
@@ -70,553 +85,232 @@ export default function ServicosPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Automação de Processos
+            Recursos Principais
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Agendamento de Serviços */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <Calendar className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Agendamento de Serviços</h3>
-                <p className="text-gray-600 mb-4">
-                  Automatize o processo de agendamento de serviços, permitindo que seus clientes marquem horários de
-                  forma rápida e eficiente.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Integração com calendários</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Lembretes automáticos</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Gestão de disponibilidade</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                <Link
-                  href="/servicos/agendamento"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Cotação Automatizada */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <FileText className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Cotação Automatizada</h3>
-                <p className="text-gray-600 mb-4">
-                  Agilize o processo de cotação com um sistema inteligente que gera orçamentos personalizados
-                  instantaneamente.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Cálculos automáticos</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Personalização de propostas</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Integração com CRM</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                <Link
-                  href="/servicos/cotacao"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Catálogo Interativo */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <FileText className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Catálogo Interativo</h3>
-                <p className="text-gray-600 mb-4">
-                  Ofereça um catálogo digital interativo que permite aos clientes explorar produtos e serviços de forma
-                  dinâmica.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Busca avançada</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Filtros personalizados</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Atualização em tempo real</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                <Link
-                  href="/servicos/catalogo"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* WhatsApp Shopping */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <ShoppingCart className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">WhatsApp Shopping</h3>
-                <p className="text-gray-600 mb-4">
-                  Transforme o WhatsApp em um canal de vendas com catálogo interativo e carrinho de compras integrado.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Catálogo de produtos</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Carrinho de compras</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Pagamento integrado</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                <Link
-                  href="/servicos/whatsapp-shopping"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Rastreamento de Pedidos */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <Truck className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Rastreamento de Pedidos</h3>
-                <p className="text-gray-600 mb-4">
-                  Ofereça aos seus clientes um sistema de rastreamento de pedidos em tempo real, aumentando a
-                  transparência e satisfação.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Atualizações em tempo real</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Notificações automáticas</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Integração com transportadoras</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                <Link
-                  href="/servicos/rastreamento"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Registro de Eventos */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <Users className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Registro de Eventos</h3>
-                <p className="text-gray-600 mb-4">
-                  Simplifique o processo de inscrição em eventos com um sistema automatizado de registro e
-                  gerenciamento.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Formulários personalizados</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Pagamento integrado</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Emissão de credenciais</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                <Link
-                  href="/servicos/eventos"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="mt-24">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              Chatbots Especializados
-            </motion.h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Atendimento ao Cliente (SAC) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <ShoppingCart className="text-blue-600 w-8 h-8" />,
+                title: "Catálogo de Produtos",
+                description:
+                  "Apresente seus produtos de forma organizada e atraente diretamente no WhatsApp, com imagens, descrições e preços.",
+                features: ["Categorias e subcategorias", "Busca por nome ou código", "Produtos em destaque"],
+              },
+              {
+                icon: <ShoppingCart className="text-blue-600 w-8 h-8" />,
+                title: "Carrinho de Compras",
+                description:
+                  "Permita que os clientes adicionem produtos ao carrinho, ajustem quantidades e finalizem a compra sem sair do WhatsApp.",
+                features: ["Gestão de quantidades", "Cálculo automático de total", "Aplicação de cupons"],
+              },
+              {
+                icon: <MessageSquare className="text-blue-600 w-8 h-8" />,
+                title: "Pagamento Integrado",
+                description:
+                  "Ofereça múltiplas opções de pagamento diretamente pelo WhatsApp, tornando o processo de compra rápido e conveniente.",
+                features: ["Cartão de crédito", "PIX", "Boleto bancário"],
+              },
+            ].map((resource, index) => (
               <motion.div
+                key={index}
                 className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
                 <div className="p-8">
                   <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <MessageSquare className="text-blue-600 w-8 h-8" />
+                    {resource.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Atendimento ao Cliente (SAC)</h3>
-                  <p className="text-gray-600 mb-4">
-                    Automatize o atendimento ao cliente com um chatbot inteligente que responde dúvidas e resolve
-                    problemas 24/7.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Respostas instantâneas</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Escalonamento para humanos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Integração com CRM</span>
-                    </li>
+                  <h3 className="text-xl font-semibold mb-3">{resource.title}</h3>
+                  <p className="text-gray-600 mb-4">{resource.description}</p>
+                  <ul className="space-y-2">
+                    {resource.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                  <Link
-                    href="/servicos/chatbot-sac"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
               </motion.div>
-
-              {/* Pesquisas de Satisfação */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <MessageSquare className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Pesquisas de Satisfação</h3>
-                  <p className="text-gray-600 mb-4">
-                    Colete feedback dos clientes de forma eficiente com chatbots que realizam pesquisas de satisfação
-                    personalizadas.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Questionários interativos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Análise de sentimento</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Relatórios detalhados</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                  <Link
-                    href="/servicos/pesquisas"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Abertura de Tickets */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <MessageSquare className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Abertura de Tickets</h3>
-                  <p className="text-gray-600 mb-4">
-                    Automatize o processo de abertura e categorização de tickets de suporte com um chatbot inteligente.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Categorização automática</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Priorização inteligente</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Integração com helpdesk</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                  <Link
-                    href="/servicos/tickets"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Bot de Geração de Leads */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <Bot className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Bot de Geração de Leads</h3>
-                  <p className="text-gray-600 mb-4">
-                    Capture e qualifique leads automaticamente com um chatbot que engaja visitantes e coleta informações
-                    relevantes.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Qualificação de leads</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Integração com CRM</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Segmentação automática</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                  <Link
-                    href="/servicos/geracao-leads"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Ofertas Promocionais */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <Bot className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Ofertas Promocionais</h3>
-                  <p className="text-gray-600 mb-4">
-                    Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Personalização avançada</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Segmentação de clientes</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Análise de conversão</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                  <Link
-                    href="/servicos/ofertas"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Bot de Cobrança */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <CreditCard className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Bot de Cobrança Amigável</h3>
-                  <p className="text-gray-600 mb-4">
-                    Automatize o processo de cobrança com um chatbot que envia lembretes amigáveis e facilita o
-                    pagamento.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Lembretes personalizados</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Opções de pagamento</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                      <span>Negociação de prazos</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
-                  <Link
-                    href="/servicos/cobranca"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA - Modern Design */}
+      {/* Benefícios */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Benefícios para seu Negócio
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                title: "Aumento de Vendas",
+                description:
+                  "Aproveite a popularidade e familiaridade do WhatsApp para criar um novo canal de vendas eficiente e acessível.",
+              },
+              {
+                title: "Redução de Abandono",
+                description:
+                  "Diminua as taxas de abandono de carrinho oferecendo uma experiência de compra simplificada e familiar.",
+              },
+              {
+                title: "Atendimento Personalizado",
+                description:
+                  "Combine automação com atendimento humano quando necessário, oferecendo suporte personalizado durante a jornada de compra.",
+              },
+              {
+                title: "Baixo Custo de Implementação",
+                description:
+                  "Aproveite um canal que seus clientes já utilizam, sem necessidade de desenvolver aplicativos ou sites complexos.",
+              },
+            ].map((benefit, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-md"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <h3 className="text-xl font-semibold mb-4 flex items-center">
+                  <CheckCircle className="text-green-500 mr-2" size={20} />
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Como Funciona */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Como Funciona
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                step: "1",
+                title: "Configuração",
+                description:
+                  "Configuramos seu catálogo de produtos e integramos com seu sistema de gestão ou e-commerce existente.",
+              },
+              {
+                step: "2",
+                title: "Navegação",
+                description:
+                  "O cliente navega pelo catálogo, visualiza produtos e adiciona itens ao carrinho diretamente no WhatsApp.",
+              },
+              {
+                step: "3",
+                title: "Checkout",
+                description:
+                  "O cliente finaliza a compra, escolhe a forma de pagamento e fornece informações de entrega.",
+              },
+              {
+                step: "4",
+                title: "Acompanhamento",
+                description:
+                  "O cliente recebe atualizações sobre o status do pedido e informações de rastreamento pelo WhatsApp.",
+              },
+            ].map((step, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-blue-700 text-2xl font-bold">{step.step}</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Casos de Uso */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Ideal Para
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                icon: <Smartphone className="text-blue-600 w-8 h-8" />,
+                title: "Lojas de Varejo",
+                description:
+                  "Pequenas e médias empresas que desejam oferecer uma experiência de compra digital sem grandes investimentos.",
+              },
+              {
+                icon: <Smartphone className="text-blue-600 w-8 h-8" />,
+                title: "Restaurantes e Delivery",
+                description:
+                  "Estabelecimentos que desejam oferecer cardápio digital e receber pedidos diretamente pelo WhatsApp.",
+              },
+              {
+                icon: <Smartphone className="text-blue-600 w-8 h-8" />,
+                title: "Serviços por Assinatura",
+                description:
+                  "Empresas que oferecem produtos recorrentes ou assinaturas e desejam facilitar o processo de compra.",
+              },
+            ].map((useCase, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-md text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  {useCase.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{useCase.title}</h3>
+                <p className="text-gray-600">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="relative py-24 bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -639,7 +333,7 @@ export default function ServicosPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              Pronto para transformar seu negócio?
+              Pronto para vender pelo WhatsApp?
             </motion.h2>
             <motion.p
               className="text-xl mb-10 text-blue-100"
@@ -648,7 +342,8 @@ export default function ServicosPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Entre em contato conosco hoje mesmo e descubra como nossas soluções podem impulsionar sua empresa.
+              Entre em contato conosco hoje mesmo e descubra como nossa solução de WhatsApp Shopping pode transformar
+              seu negócio.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
