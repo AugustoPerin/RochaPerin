@@ -8,7 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-700 to-blue-800 text-white py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center text-center md:mb-16">
+          <div className="flex flex-col items-center text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 max-w-4xl mx-auto leading-tight">
               Transforme seu negócio com automação inteligente
             </h1>
