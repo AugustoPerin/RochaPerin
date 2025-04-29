@@ -1,35 +1,25 @@
-"use client";
+import { Toaster as RootToaster } from "react-hot-toast";
+import UIToastMessage from "./toast-message";
 
-import { useToast } from "@/hooks/use-toast";
-import {
-  Toast,
-  ToastClose,
-  ToastDescription,
-  ToastProvider,
-  ToastTitle,
-  ToastViewport,
-} from "@/components/ui/toast";
-
-export function Toaster() {
-  const { toasts } = useToast();
+export default function UIToaster() {
+  const duration = 3000;
 
   return (
-    <ToastProvider>
-      {toasts.map(function ({ id, title, description, action, ...props }) {
-        return (
-          <Toast key={id} {...props}>
-            <div className="grid gap-1">
-              {title && <ToastTitle>{title}</ToastTitle>}
-              {description && (
-                <ToastDescription>{description}</ToastDescription>
-              )}
-            </div>
-            {action}
-            <ToastClose />
-          </Toast>
-        );
-      })}
-      <ToastViewport />
-    </ToastProvider>
+    <RootToaster
+      position="bottom-right"
+      toastOptions={{
+        duration,
+      }}
+    >
+      {({ id, message, type, duration, visible }) => (
+        <UIToastMessage
+          id={id}
+          message={message?.toString() ?? ""}
+          type={type}
+          duration={duration ?? 0}
+          visible={visible}
+        />
+      )}
+    </RootToaster>
   );
 }

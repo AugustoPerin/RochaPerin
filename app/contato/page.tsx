@@ -1,10 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
@@ -14,8 +11,51 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
+import { Mail, Phone } from "lucide-react";
+import { useTransition } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import { handleContact } from "../actions/contato";
+
+type FormInput = {
+  nome: string;
+  empresa: string;
+  email: string;
+  telefone: string;
+  assunto: string;
+  mensagem: string;
+  contato: string;
+};
 
 export default function ContatoPage() {
+  const [isLoading, startTransition] = useTransition();
+  const { register, handleSubmit, setValue, reset } = useForm({
+    defaultValues: {
+      nome: "",
+      empresa: "",
+      email: "",
+      telefone: "",
+      assunto: "automacao",
+      mensagem: "",
+      contato: "informacoes",
+    },
+  });
+
+  const onSubmit = (data: FormInput) => {
+    startTransition(async () => {
+      try {
+        await handleContact(data);
+        reset();
+        toast.success("Mensagem enviada com sucesso!");
+      } catch (error) {
+        console.error(error);
+        toast.error("Erro ao enviar mensagem. Tente novamente mais tarde.");
+      }
+    });
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section with Gradient Overlay */}
@@ -83,7 +123,7 @@ export default function ContatoPage() {
                 mais breve possível.
               </p>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="nome">Nome completo</Label>
@@ -91,6 +131,7 @@ export default function ContatoPage() {
                       id="nome"
                       placeholder="Digite seu nome completo"
                       className="rounded-lg"
+                      {...register("nome")}
                     />
                   </div>
                   <div className="space-y-2">
@@ -99,6 +140,7 @@ export default function ContatoPage() {
                       id="empresa"
                       placeholder="Nome da sua empresa"
                       className="rounded-lg"
+                      {...register("empresa")}
                     />
                   </div>
                   <div className="space-y-2">
@@ -108,6 +150,7 @@ export default function ContatoPage() {
                       type="email"
                       placeholder="seu@email.com"
                       className="rounded-lg"
+                      {...register("email")}
                     />
                   </div>
                   <div className="space-y-2">
@@ -116,13 +159,14 @@ export default function ContatoPage() {
                       id="telefone"
                       placeholder="(00) 00000-0000"
                       className="rounded-lg"
+                      {...register("telefone")}
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="assunto">Assunto</Label>
-                  <Select>
+                  <Select onValueChange={(value) => setValue("assunto", value)}>
                     <SelectTrigger className="rounded-lg">
                       <SelectValue placeholder="Selecione o assunto" />
                     </SelectTrigger>
@@ -142,7 +186,10 @@ export default function ContatoPage() {
 
                 <div className="space-y-2">
                   <Label>Como podemos ajudar?</Label>
-                  <RadioGroup defaultValue="informacoes">
+                  <RadioGroup
+                    onValueChange={(value) => setValue("contato", value)}
+                    defaultValue="informacoes"
+                  >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="informacoes" id="informacoes" />
                       <Label htmlFor="informacoes">
@@ -175,6 +222,7 @@ export default function ContatoPage() {
                     placeholder="Descreva sua necessidade em detalhes..."
                     rows={5}
                     className="rounded-lg"
+                    {...register("mensagem")}
                   />
                 </div>
 
@@ -183,7 +231,23 @@ export default function ContatoPage() {
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full shadow-md"
                 >
-                  Enviar mensagem
+                  {isLoading ? (
+                    <span className="flex items-center">
+                      <svg
+                        className="animate-spin h-5 w-5 mr-3 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"
+                        />
+                      </svg>
+                      Enviando...
+                    </span>
+                  ) : (
+                    <>Enviar Mensagem</>
+                  )}
                 </Button>
               </form>
             </motion.div>
