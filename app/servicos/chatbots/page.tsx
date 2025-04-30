@@ -170,7 +170,7 @@ export default function ChatbotsPage() {
                   "Escalonamento inteligente para atendentes humanos",
                   "Integração com sistemas de CRM e helpdesk",
                 ],
-                link: "/servicos/atendimento",
+                link: "/servicos/chatbot-sac",
               },
               {
                 title: "Geração de Leads",
@@ -181,7 +181,7 @@ export default function ChatbotsPage() {
                   "Integração com ferramentas de marketing",
                   "Segmentação e direcionamento personalizado",
                 ],
-                link: "/servicos/leads",
+                link: "/servicos/geracao-leads",
               },
               {
                 title: "Pesquisas de Satisfação",
