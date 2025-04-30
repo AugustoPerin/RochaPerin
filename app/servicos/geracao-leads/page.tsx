@@ -150,9 +150,8 @@ export default function GeracaoLeadsPage() {
               transition={{ duration: 0.5 }}
             >
               <img
-                src="/placeholder.svg?height=500&width=500&query=lead qualification process flowchart"
+                src="/rochaperin-geracao-leads-2.jpg"
                 alt="Processo de Geração de Leads"
-                width={500}
                 height={500}
                 className="rounded-lg shadow-xl"
               />
