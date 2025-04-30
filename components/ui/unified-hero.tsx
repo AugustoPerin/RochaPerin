@@ -11,6 +11,8 @@ interface UnifiedHeroProps {
   ctaLink?: string
   imageSrc: string
   imageAlt: string
+  imageWidth?: number
+  imageHeight?: number
 }
 
 export function UnifiedHero({
@@ -72,7 +74,15 @@ export function UnifiedHero({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <img src={imageSrc || "/placeholder.svg"} alt={imageAlt} className="rounded-lg shadow-xl" />
+            <img
+              src={imageSrc || "/placeholder.svg"}
+              alt={imageAlt}
+              className="rounded-lg shadow-xl"
+              style={{
+                width: imageWidth ? `${imageWidth}px` : "auto",
+                height: imageHeight ? `${imageHeight}px` : "auto",
+              }}
+            />
           </motion.div>
         </div>
       </div>
