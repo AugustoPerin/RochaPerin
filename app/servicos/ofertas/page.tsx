@@ -20,8 +20,7 @@ export default function OfertasPage() {
         description="Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências, aumentando as taxas de conversão e o valor médio do pedido."
         imageSrc="/rochaperin-ofertas.webp"
         imageAlt="Ofertas Promocionais Personalizadas"
-        imageWidth={300}
-        imageHeight={200}
+        imageHeight={300}
       />
 
       {/* Recursos */}
