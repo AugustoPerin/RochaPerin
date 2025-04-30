@@ -18,7 +18,7 @@ export default function OfertasPage() {
       <UnifiedHero
         title="Ofertas Promocionais Personalizadas"
         description="Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências, aumentando as taxas de conversão e o valor médio do pedido."
-        imageSrc="/placeholder.svg?height=400&width=500&query=personalized promotional offers dashboard"
+        imageSrc="/rochaperin-ofertas.png?height=400&width=300&query=personalized promotional offers dashboard"
         imageAlt="Ofertas Promocionais Personalizadas"
       />
 
