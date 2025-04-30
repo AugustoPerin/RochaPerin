@@ -22,6 +22,8 @@ export function UnifiedHero({
   ctaLink = "/contato",
   imageSrc,
   imageAlt,
+  imageWidth,
+  imageHeight,
 }: UnifiedHeroProps) {
   return (
     <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
@@ -79,8 +81,8 @@ export function UnifiedHero({
               alt={imageAlt}
               className="rounded-lg shadow-xl"
               style={{
-                width: imageWidth ? `${imageWidth}px` : "auto",
-                height: imageHeight ? `${imageHeight}px` : "auto",
+                width: imageWidth ? `${imageWidth}px` : undefined,
+                height: imageHeight ? `${imageHeight}px` : undefined,
               }}
             />
           </motion.div>
