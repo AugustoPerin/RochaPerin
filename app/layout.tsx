@@ -14,8 +14,8 @@ export const metadata = {
     "Especialistas em automação de processos, análise de dados, migração para nuvem e chatbots empresariais.",
   generator: "v0.dev",
   icons: {
-    icon: "/rochaperin-favicon.png",
-    apple: "/rochaperin-favicon.png",
+    icon: "/rochaperin-Logo-Favicon.ico",
+    apple: "/rochaperin-Logo-Favicon.ico",
   },
 }
 
