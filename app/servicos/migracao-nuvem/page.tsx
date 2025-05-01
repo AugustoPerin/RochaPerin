@@ -78,18 +78,6 @@ const cloudMigrationServices: CloudService[] = [
     icon: Server,
   },
   {
-    title: "Segurança em Nuvem",
-    description:
-      "Proteja seus dados, aplicações e infraestrutura na nuvem, garantindo conformidade e mitigando ameaças.",
-    features: [
-      "Gestão de Identidade e Acesso (IAM)",
-      "Configuração de Firewalls e WAFs",
-      "Monitoramento de segurança (SIEM)",
-    ],
-    link: "/servicos/migracao-nuvem/seguranca-nuvem",
-    icon: Shield,
-  },
-  {
     title: "Otimização de Custos (FinOps)",
     description:
       "Reduza seus gastos com nuvem sem comprometer a performance com práticas de FinOps e otimização de recursos.",

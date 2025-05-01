@@ -99,18 +99,6 @@ const dataAnalysisServices: DataService[] = [
     link: "/servicos/analise-dados/analise-vendas-marketing",
     icon: TrendingUp,
   },
-  {
-    title: "Limpeza e Preparação de Dados",
-    description:
-      "Garanta a qualidade e confiabilidade dos seus dados com processos eficientes de limpeza, transformação e enriquecimento.",
-    features: [
-      "Identificação e tratamento de erros e inconsistências",
-      "Padronização e normalização de dados",
-      "Enriquecimento com fontes externas",
-    ],
-    link: "/servicos/analise-dados/limpeza-preparacao-dados",
-    icon: Filter,
-  },
 ]
 
 export default function AnaliseDadosPage() {

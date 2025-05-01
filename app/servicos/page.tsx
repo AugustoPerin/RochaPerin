@@ -17,12 +17,10 @@ import {
   Brain, // Icon for Análise Preditiva
   Briefcase, // Icon for BI
   Database, // Icon for Engenharia/Migração Dados
-  Filter, // Icon for Limpeza Dados
   TrendingUp, // Icon for Vendas/Marketing
   Map, // Icon for Estratégia Nuvem
   Cloud, // Icon for Migração Aplicações
   Server, // Icon for Migração Infra
-  Shield, // Icon for Segurança Nuvem
   DollarSign, // Icon for Custos Nuvem
   Settings, // Icon for Serviços Gerenciados
   LucideProps,
@@ -240,13 +238,6 @@ const serviceData: ServiceCategory[] = [
             link: "/servicos/analise-dados/analise-vendas-marketing",
             icon: TrendingUp,
         },
-        {
-            title: "Limpeza e Preparação de Dados",
-            description: "Garanta a qualidade e confiabilidade dos seus dados com processos eficientes de limpeza, transformação e enriquecimento.",
-            features: ["Tratamento de erros", "Padronização", "Enriquecimento de dados"],
-            link: "/servicos/analise-dados/limpeza-preparacao-dados",
-            icon: Filter,
-        },
     ],
   },
   {
@@ -279,13 +270,6 @@ const serviceData: ServiceCategory[] = [
             features: ["Migração de VMs", "Migração de Storage", "Configuração de Redes (VPC)"],
             link: "/servicos/migracao-nuvem/migracao-infraestrutura-nuvem",
             icon: Server,
-        },
-        {
-            title: "Segurança em Nuvem",
-            description: "Proteja seus dados, aplicações e infraestrutura na nuvem, garantindo conformidade e mitigando ameaças.",
-            features: ["Gestão de Identidade (IAM)", "Segurança de Rede (WAF)", "Monitoramento (SIEM)"],
-            link: "/servicos/migracao-nuvem/seguranca-nuvem",
-            icon: Shield,
         },
         {
             title: "Otimização de Custos (FinOps)",
