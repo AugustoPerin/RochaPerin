@@ -65,7 +65,7 @@ const serviceData: ServiceCategory[] = [
           "Lembretes automáticos",
           "Gestão de disponibilidade",
         ],
-        link: "/servicos/agendamento",
+        link: "/servicos/automacao/agendamento",
         icon: Calendar,
       },
       {
@@ -77,7 +77,7 @@ const serviceData: ServiceCategory[] = [
           "Personalização de propostas",
           "Integração com CRM",
         ],
-        link: "/servicos/cotacao",
+        link: "/servicos/automacao/cotacao",
         icon: FileText,
       },
       {
@@ -89,7 +89,7 @@ const serviceData: ServiceCategory[] = [
           "Filtros personalizados",
           "Atualização em tempo real",
         ],
-        link: "/servicos/catalogo",
+        link: "/servicos/automacao/catalogo",
         icon: FileText, // Reusing icon
       },
       {
@@ -101,7 +101,7 @@ const serviceData: ServiceCategory[] = [
           "Carrinho de compras",
           "Pagamento integrado",
         ],
-        link: "/servicos/whatsapp-shopping",
+        link: "/servicos/automacao/whatsapp-shopping",
         icon: ShoppingCart,
       },
       {
@@ -113,7 +113,7 @@ const serviceData: ServiceCategory[] = [
           "Notificações automáticas",
           "Integração com transportadoras",
         ],
-        link: "/servicos/rastreamento",
+        link: "/servicos/automacao/rastreamento",
         icon: Truck,
       },
       {
@@ -125,7 +125,7 @@ const serviceData: ServiceCategory[] = [
           "Pagamento integrado",
           "Emissão de credenciais",
         ],
-        link: "/servicos/eventos",
+        link: "/servicos/automacao/eventos",
         icon: Users,
       },
     ],
@@ -142,7 +142,7 @@ const serviceData: ServiceCategory[] = [
           "Escalonamento para humanos",
           "Integração com CRM",
         ],
-        link: "/servicos/chatbot-sac",
+        link: "/servicos/chatbots/chatbot-sac",
         icon: MessageSquare,
       },
       {
@@ -154,7 +154,7 @@ const serviceData: ServiceCategory[] = [
           "Análise de sentimento",
           "Relatórios detalhados",
         ],
-        link: "/servicos/pesquisas",
+        link: "/servicos/chatbots/pesquisas",
         icon: MessageSquare, // Reusing icon
       },
       {
@@ -166,7 +166,7 @@ const serviceData: ServiceCategory[] = [
           "Priorização inteligente",
           "Integração com helpdesk",
         ],
-        link: "/servicos/tickets",
+        link: "/servicos/chatbots/tickets",
         icon: MessageSquare, // Reusing icon
       },
       {
@@ -178,7 +178,7 @@ const serviceData: ServiceCategory[] = [
           "Agendamento de reuniões",
           "Integração com CRM",
         ],
-        link: "/servicos/geracao-leads",
+        link: "/servicos/chatbots/geracao-leads",
         icon: Bot,
       },
       {
@@ -190,7 +190,7 @@ const serviceData: ServiceCategory[] = [
           "Opções de pagamento variadas",
           "Negociação de prazos",
         ],
-        link: "/servicos/cobrancas",
+        link: "/servicos/chatbots/cobrancas",
         icon: CreditCard,
       },
     ],
