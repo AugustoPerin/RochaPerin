@@ -9,7 +9,6 @@ import {
   Briefcase,
   CheckCircle,
   Database,
-  Filter,
   TrendingUp,
   Users,
   LucideProps,
