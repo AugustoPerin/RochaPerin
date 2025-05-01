@@ -96,7 +96,7 @@ Nome: Augusto de Oliveira Perin E-mail: contato@rochaperin.com
     lines.forEach((line, index) => {
       const trimmedLine = line.trim()
 
-      if (trimmedLine.match(/^\d+\.\s+[A-Z\sÇÃÍÊ]+$/)) { // Matches section titles like "1. OBJETIVO"
+      if (trimmedLine.match(/^\d+\.\s+[A-Z\sÇÃÕÍÊ]+$/)) { // Matches section titles like "1. OBJETIVO"
         if (currentList.length > 0) {
           elements.push(
             <ul key={`ul-${index-1}`} className="list-disc list-inside mb-4 pl-4 space-y-2">
