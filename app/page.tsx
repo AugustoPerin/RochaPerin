@@ -141,6 +141,10 @@ export default function Home() {
                 src="/cliente-integral.webp"
                 alt="Colégio Integral"
                 className="max-h-12 grayscale hover:grayscale-0 transition-all duration-300"
+                style={{
+                  width: 50,
+                  height: 50,
+                }}
               />
             </motion.div>
             <motion.div
