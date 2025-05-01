@@ -13,13 +13,302 @@ import {
   ShoppingCart,
   Truck,
   Users,
+  BarChart, // Icon for Dashboards
+  Brain, // Icon for Análise Preditiva
+  Briefcase, // Icon for BI
+  Database, // Icon for Engenharia/Migração Dados
+  Filter, // Icon for Limpeza Dados
+  TrendingUp, // Icon for Vendas/Marketing
+  Map, // Icon for Estratégia Nuvem
+  Cloud, // Icon for Migração Aplicações
+  Server, // Icon for Migração Infra
+  Shield, // Icon for Segurança Nuvem
+  DollarSign, // Icon for Custos Nuvem
+  Settings, // Icon for Serviços Gerenciados
+  LucideProps,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+
+// Define service structure
+interface Service {
+  title: string;
+  description: string;
+  features: string[];
+  link: string;
+  icon: React.ComponentType<LucideProps>;
+}
+
+// Define category structure
+interface ServiceCategory {
+  categoryTitle: string;
+  services: Service[];
+}
+
+// Service data
+const serviceData: ServiceCategory[] = [
+  {
+    categoryTitle: "Automação de Processos",
+    services: [
+      {
+        title: "Agendamento de Serviços",
+        description:
+          "Automatize o processo de agendamento, permitindo que seus clientes marquem horários de forma rápida e eficiente.",
+        features: [
+          "Integração com calendários",
+          "Lembretes automáticos",
+          "Gestão de disponibilidade",
+        ],
+        link: "/servicos/agendamento",
+        icon: Calendar,
+      },
+      {
+        title: "Cotação Automatizada",
+        description:
+          "Agilize o processo de cotação com um sistema inteligente que gera orçamentos personalizados instantaneamente.",
+        features: [
+          "Cálculos automáticos",
+          "Personalização de propostas",
+          "Integração com CRM",
+        ],
+        link: "/servicos/cotacao",
+        icon: FileText,
+      },
+      {
+        title: "Catálogo Interativo",
+        description:
+          "Ofereça um catálogo digital interativo que permite aos clientes explorar produtos e serviços de forma dinâmica.",
+        features: [
+          "Busca avançada",
+          "Filtros personalizados",
+          "Atualização em tempo real",
+        ],
+        link: "/servicos/catalogo",
+        icon: FileText, // Reusing icon
+      },
+      {
+        title: "WhatsApp Shopping",
+        description:
+          "Transforme o WhatsApp em um canal de vendas com catálogo interativo e carrinho de compras integrado.",
+        features: [
+          "Catálogo de produtos",
+          "Carrinho de compras",
+          "Pagamento integrado",
+        ],
+        link: "/servicos/whatsapp-shopping",
+        icon: ShoppingCart,
+      },
+      {
+        title: "Rastreamento de Pedidos",
+        description:
+          "Ofereça aos seus clientes um sistema de rastreamento de pedidos em tempo real, aumentando a transparência e satisfação.",
+        features: [
+          "Atualizações em tempo real",
+          "Notificações automáticas",
+          "Integração com transportadoras",
+        ],
+        link: "/servicos/rastreamento",
+        icon: Truck,
+      },
+      {
+        title: "Registro de Eventos",
+        description:
+          "Simplifique o processo de inscrição em eventos com um sistema automatizado de registro e gerenciamento.",
+        features: [
+          "Formulários personalizados",
+          "Pagamento integrado",
+          "Emissão de credenciais",
+        ],
+        link: "/servicos/eventos",
+        icon: Users,
+      },
+    ],
+  },
+  {
+    categoryTitle: "Chatbots Especializados",
+    services: [
+      {
+        title: "Atendimento ao Cliente (SAC)",
+        description:
+          "Automatize o atendimento com um chatbot inteligente que responde dúvidas e resolve problemas 24/7.",
+        features: [
+          "Respostas instantâneas",
+          "Escalonamento para humanos",
+          "Integração com CRM",
+        ],
+        link: "/servicos/chatbot-sac",
+        icon: MessageSquare,
+      },
+      {
+        title: "Pesquisas de Satisfação",
+        description:
+          "Colete feedback dos clientes de forma eficiente com chatbots que realizam pesquisas personalizadas.",
+        features: [
+          "Questionários interativos",
+          "Análise de sentimento",
+          "Relatórios detalhados",
+        ],
+        link: "/servicos/pesquisas",
+        icon: MessageSquare, // Reusing icon
+      },
+      {
+        title: "Abertura de Tickets",
+        description:
+          "Automatize a abertura e categorização de tickets de suporte com um chatbot inteligente.",
+        features: [
+          "Categorização automática",
+          "Priorização inteligente",
+          "Integração com helpdesk",
+        ],
+        link: "/servicos/tickets",
+        icon: MessageSquare, // Reusing icon
+      },
+      {
+        title: "Geração de Leads",
+        description:
+          "Capture e qualifique leads automaticamente através de conversas interativas em seu site ou redes sociais.",
+        features: [
+          "Qualificação automática",
+          "Agendamento de reuniões",
+          "Integração com CRM",
+        ],
+        link: "/servicos/geracao-leads",
+        icon: Bot,
+      },
+      {
+        title: "Cobrança Amigável",
+        description:
+          "Automatize o processo de cobrança com um chatbot que envia lembretes amigáveis e facilita pagamentos.",
+        features: [
+          "Lembretes personalizados",
+          "Opções de pagamento variadas",
+          "Negociação de prazos",
+        ],
+        link: "/servicos/cobrancas",
+        icon: CreditCard,
+      },
+    ],
+  },
+  {
+    categoryTitle: "Análise de Dados",
+    services: [
+        {
+            title: "Dashboards e Visualização",
+            description: "Transforme dados brutos em insights visuais claros e acionáveis com dashboards interativos e personalizados.",
+            features: ["Visualizações interativas", "Monitoramento de KPIs", "Relatórios customizados"],
+            link: "/servicos/analise-dados/dashboards-visualizacao",
+            icon: BarChart,
+        },
+        {
+            title: "Análise Preditiva",
+            description: "Utilize modelos de Machine Learning para prever tendências futuras, comportamentos de clientes e otimizar decisões.",
+            features: ["Previsão de demanda", "Modelagem de Churn", "Detecção de anomalias"],
+            link: "/servicos/analise-dados/analise-preditiva",
+            icon: Brain,
+        },
+        {
+            title: "Business Intelligence (BI)",
+            description: "Implemente soluções completas de BI para coletar, organizar e analisar dados, suportando a tomada de decisão estratégica.",
+            features: ["Integração de dados", "Análise self-service", "Governança de dados"],
+            link: "/servicos/analise-dados/business-intelligence",
+            icon: Briefcase,
+        },
+        {
+            title: "Engenharia de Dados e ETL",
+            description: "Construa pipelines robustos para coletar, transformar e carregar dados de diversas fontes, garantindo informações confiáveis.",
+            features: ["Pipelines ETL/ELT", "Modelagem de Data Warehouse", "Qualidade de dados"],
+            link: "/servicos/analise-dados/engenharia-dados-etl",
+            icon: Database,
+        },
+        {
+            title: "Análise de Clientes",
+            description: "Compreenda o comportamento e valor dos seus clientes para personalizar experiências e aumentar a retenção.",
+            features: ["Segmentação avançada", "Análise de jornada", "Previsão de LTV e Churn"],
+            link: "/servicos/analise-dados/analise-clientes",
+            icon: Users,
+        },
+        {
+            title: "Análise de Vendas e Marketing",
+            description: "Otimize estratégias de vendas e marketing com análises de performance de campanhas, funil e ROI.",
+            features: ["Análise de funil", "Modelagem de atribuição", "Previsão de vendas"],
+            link: "/servicos/analise-dados/analise-vendas-marketing",
+            icon: TrendingUp,
+        },
+        {
+            title: "Limpeza e Preparação de Dados",
+            description: "Garanta a qualidade e confiabilidade dos seus dados com processos eficientes de limpeza, transformação e enriquecimento.",
+            features: ["Tratamento de erros", "Padronização", "Enriquecimento de dados"],
+            link: "/servicos/analise-dados/limpeza-preparacao-dados",
+            icon: Filter,
+        },
+    ],
+  },
+  {
+    categoryTitle: "Migração para Nuvem",
+    services: [
+        {
+            title: "Estratégia e Consultoria",
+            description: "Defina o melhor caminho para sua jornada na nuvem com estratégias personalizadas para maximizar benefícios.",
+            features: ["Assessment de maturidade", "Roadmap de adoção", "Análise de TCO"],
+            link: "/servicos/migracao-nuvem/estrategia-consultoria-nuvem",
+            icon: Map,
+        },
+        {
+            title: "Migração de Aplicações",
+            description: "Mova suas aplicações para a nuvem com segurança e eficiência, aproveitando escalabilidade e flexibilidade.",
+            features: ["Re-host (Lift & Shift)", "Re-platform", "Re-factor/Re-architect"],
+            link: "/servicos/migracao-nuvem/migracao-aplicacoes-nuvem",
+            icon: Cloud,
+        },
+        {
+            title: "Migração de Dados",
+            description: "Transfira bancos de dados e data warehouses para a nuvem de forma segura, eficiente e com mínimo downtime.",
+            features: ["Migração Relacional/NoSQL", "Migração de DW", "Validação de integridade"],
+            link: "/servicos/migracao-nuvem/migracao-dados-nuvem",
+            icon: Database,
+        },
+        {
+            title: "Migração de Infraestrutura",
+            description: "Mova servidores, armazenamento e redes para a nuvem (IaaS), ganhando escalabilidade e reduzindo custos.",
+            features: ["Migração de VMs", "Migração de Storage", "Configuração de Redes (VPC)"],
+            link: "/servicos/migracao-nuvem/migracao-infraestrutura-nuvem",
+            icon: Server,
+        },
+        {
+            title: "Segurança em Nuvem",
+            description: "Proteja seus dados, aplicações e infraestrutura na nuvem, garantindo conformidade e mitigando ameaças.",
+            features: ["Gestão de Identidade (IAM)", "Segurança de Rede (WAF)", "Monitoramento (SIEM)"],
+            link: "/servicos/migracao-nuvem/seguranca-nuvem",
+            icon: Shield,
+        },
+        {
+            title: "Otimização de Custos (FinOps)",
+            description: "Reduza seus gastos com nuvem sem comprometer a performance com práticas de FinOps e otimização de recursos.",
+            features: ["Análise de custos", "Rightsizing", "Gestão de Reservas"],
+            link: "/servicos/migracao-nuvem/otimizacao-custos-nuvem",
+            icon: DollarSign,
+        },
+        {
+            title: "Serviços Gerenciados (MSP)",
+            description: "Delegue a gestão, monitoramento e otimização do seu ambiente na nuvem para nossos especialistas 24/7.",
+            features: ["Gestão de Infra/Plataforma", "Monitoramento proativo", "Suporte especializado"],
+            link: "/servicos/migracao-nuvem/servicos-gerenciados-nuvem",
+            icon: Settings,
+        },
+    ],
+  },
+];
 
 export default function ServicosPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Gradient Overlay */}
+      {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -65,775 +354,81 @@ export default function ServicosPage() {
         </div>
       </section>
 
-      {/* Categorias de Serviços */}
+      {/* Categorias de Serviços com Carrossel */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Automação de Processos
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Agendamento de Serviços */}
+        <div className="container mx-auto px-4 space-y-16 md:space-y-24">
+          {serviceData.map((category, categoryIndex) => (
             <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+              key={category.categoryTitle}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              whileHover={{ y: -5 }}
+              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
             >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <Calendar className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  Agendamento de Serviços
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Automatize o processo de agendamento de serviços, permitindo
-                  que seus clientes marquem horários de forma rápida e
-                  eficiente.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Integração com calendários</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Lembretes automáticos</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Gestão de disponibilidade</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">
-                  Explorar serviço
-                </span>
-                <Link
-                  href="/servicos/agendamento"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Cotação Automatizada */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <FileText className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  Cotação Automatizada
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Agilize o processo de cotação com um sistema inteligente que
-                  gera orçamentos personalizados instantaneamente.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Cálculos automáticos</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Personalização de propostas</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Integração com CRM</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">
-                  Explorar serviço
-                </span>
-                <Link
-                  href="/servicos/cotacao"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Catálogo Interativo */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <FileText className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  Catálogo Interativo
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Ofereça um catálogo digital interativo que permite aos
-                  clientes explorar produtos e serviços de forma dinâmica.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Busca avançada</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Filtros personalizados</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Atualização em tempo real</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">
-                  Explorar serviço
-                </span>
-                <Link
-                  href="/servicos/catalogo"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* WhatsApp Shopping */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <ShoppingCart className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  WhatsApp Shopping
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Transforme o WhatsApp em um canal de vendas com catálogo
-                  interativo e carrinho de compras integrado.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Catálogo de produtos</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Carrinho de compras</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Pagamento integrado</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">
-                  Explorar serviço
-                </span>
-                <Link
-                  href="/servicos/whatsapp-shopping"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Rastreamento de Pedidos */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <Truck className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  Rastreamento de Pedidos
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Ofereça aos seus clientes um sistema de rastreamento de
-                  pedidos em tempo real, aumentando a transparência e
-                  satisfação.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Atualizações em tempo real</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Notificações automáticas</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Integração com transportadoras</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">
-                  Explorar serviço
-                </span>
-                <Link
-                  href="/servicos/rastreamento"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Registro de Eventos */}
-            <motion.div
-              className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="p-8">
-                <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  <Users className="text-blue-600 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  Registro de Eventos
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Simplifique o processo de inscrição em eventos com um sistema
-                  automatizado de registro e gerenciamento.
-                </p>
-                <ul className="mb-4 space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Formulários personalizados</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Pagamento integrado</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle
-                      className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                      size={16}
-                    />
-                    <span>Emissão de credenciais</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                <span className="text-sm font-medium text-blue-700">
-                  Explorar serviço
-                </span>
-                <Link
-                  href="/servicos/eventos"
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="mt-24">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              Chatbots Especializados
-            </motion.h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Atendimento ao Cliente (SAC) */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                whileHover={{ y: -5 }}
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                {category.categoryTitle}
+              </h2>
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: false, // Set to true if you want infinite loop
+                }}
+                className="w-full"
               >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <MessageSquare className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
-                    Atendimento ao Cliente (SAC)
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Automatize o atendimento ao cliente com um chatbot
-                    inteligente que responde dúvidas e resolve problemas 24/7.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Respostas instantâneas</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Escalonamento para humanos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Integração com CRM</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">
-                    Explorar serviço
-                  </span>
-                  <Link
-                    href="/servicos/chatbot-sac"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Pesquisas de Satisfação */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <MessageSquare className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
-                    Pesquisas de Satisfação
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Colete feedback dos clientes de forma eficiente com chatbots
-                    que realizam pesquisas de satisfação personalizadas.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Questionários interativos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Análise de sentimento</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Relatórios detalhados</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">
-                    Explorar serviço
-                  </span>
-                  <Link
-                    href="/servicos/pesquisas"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Abertura de Tickets */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <MessageSquare className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
-                    Abertura de Tickets
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Automatize o processo de abertura e categorização de tickets
-                    de suporte com um chatbot inteligente.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Categorização automática</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Priorização inteligente</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Integração com helpdesk</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">
-                    Explorar serviço
-                  </span>
-                  <Link
-                    href="/servicos/tickets"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Bot de Geração de Leads */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <Bot className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
-                    Bot de Geração de Leads
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Capture e qualifique leads automaticamente com um chatbot
-                    que engaja visitantes e coleta informações relevantes.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Qualificação de leads</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Integração com CRM</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Segmentação automática</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">
-                    Explorar serviço
-                  </span>
-                  <Link
-                    href="/servicos/geracao-leads"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Ofertas Promocionais */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <Bot className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
-                    Ofertas Promocionais
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Envie ofertas personalizadas aos clientes com base em seu
-                    histórico de compras e preferências.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Personalização avançada</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Segmentação de clientes</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Análise de conversão</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">
-                    Explorar serviço
-                  </span>
-                  <Link
-                    href="/servicos/ofertas"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Bot de Cobrança */}
-              <motion.div
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="p-8">
-                  <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                    <CreditCard className="text-blue-600 w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
-                    Bot de Cobrança Amigável
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Automatize o processo de cobrança com um chatbot que envia
-                    lembretes amigáveis e facilita o pagamento.
-                  </p>
-                  <ul className="mb-4 space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Lembretes personalizados</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Opções de pagamento</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle
-                        className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                        size={16}
-                      />
-                      <span>Negociação de prazos</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
-                  <span className="text-sm font-medium text-blue-700">
-                    Explorar serviço
-                  </span>
-                  <Link
-                    href="/servicos/cobranca"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA - Modern Design */}
-      <section className="relative py-24 bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-              backgroundSize: "60px 60px",
-            }}
-          ></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              Pronto para transformar seu negócio?
-            </motion.h2>
-            <motion.p
-              className="text-xl mb-10 text-blue-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Entre em contato conosco hoje mesmo e descubra como nossas
-              soluções podem impulsionar sua empresa.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-blue-700 hover:bg-blue-50 px-10 py-6 rounded-full shadow-lg text-base font-medium"
-              >
-                <Link href="/contato">Solicite uma demonstração</Link>
-              </Button>
+                <CarouselContent className="-ml-4">
+                  {category.services.map((service, serviceIndex) => (
+                    <CarouselItem
+                      key={service.link}
+                      className="pl-4 md:basis-1/2 lg:basis-1/3"
+                    >
+                      <div className="p-1 h-full">
+                        <Card className="h-full flex flex-col justify-between rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
+                          <CardContent className="p-8 flex flex-col flex-grow">
+                            <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                              <service.icon className="text-blue-600 w-8 h-8" />
+                            </div>
+                            <h3 className="text-xl font-semibold mb-3">
+                              {service.title}
+                            </h3>
+                            <p className="text-gray-600 mb-4 flex-grow">
+                              {service.description}
+                            </p>
+                            <ul className="mb-4 space-y-2">
+                              {service.features.map((feature) => (
+                                <li key={feature} className="flex items-start">
+                                  <CheckCircle
+                                    className="text-green-500 mr-2 flex-shrink-0 mt-1"
+                                    size={16}
+                                  />
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </CardContent>
+                          <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl mt-auto">
+                            <span className="text-sm font-medium text-blue-700">
+                              Explorar serviço
+                            </span>
+                            <Link
+                              href={service.link}
+                              className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+                            >
+                              <ArrowRight className="w-4 h-4" />
+                            </Link>
+                          </div>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 hidden md:inline-flex" />
+                <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 hidden md:inline-flex" />
+              </Carousel>
             </motion.div>
-          </div>
+          ))}
         </div>
       </section>
     </div>
   );
 }
+
