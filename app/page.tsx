@@ -138,7 +138,7 @@ export default function Home() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="/cliente-integral.png"
+                src="/cliente-integral.webp"
                 alt="Colégio Integral"
                 className="max-h-12 grayscale hover:grayscale-0 transition-all duration-300"
               />
@@ -326,7 +326,7 @@ export default function Home() {
                   Automatize o atendimento ao cliente (SAC) com respostas rápidas e precisas 24/7.
                 </p>
                 <Link
-                  href="/servicos/chatbot-sac"
+                  href="/servicos/chatbots/chatbot-sac"
                   className="inline-flex items-center text-white font-medium hover:underline"
                 >
                   Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
@@ -357,7 +357,7 @@ export default function Home() {
                   Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências.
                 </p>
                 <Link
-                  href="/servicos/ofertas"
+                  href="/servicos/chatbots/ofertas"
                   className="inline-flex items-center text-white font-medium hover:underline"
                 >
                   Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
@@ -388,7 +388,7 @@ export default function Home() {
                   Transforme o WhatsApp em um canal de vendas com catálogo interativo e carrinho de compras.
                 </p>
                 <Link
-                  href="/servicos/whatsapp-shopping"
+                  href="/servicos/automacao/whatsapp-shopping"
                   className="inline-flex items-center text-white font-medium hover:underline"
                 >
                   Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
