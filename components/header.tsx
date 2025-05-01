@@ -19,7 +19,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
-              src="/rochaperin-Logo Botão Site.webp"
+              src="/rochaperin-Logo-Site.webp"
               alt="RochaPerin Logo"
               width={200}
               height={80}
