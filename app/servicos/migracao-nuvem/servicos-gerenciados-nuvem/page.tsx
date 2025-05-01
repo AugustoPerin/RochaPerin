@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, Server, Settings, Shield, BarChart, Headphones } from "lucide-react"
+import { Check, Server, Database, Settings, Shield, BarChart, Headphones } from "lucide-react"
 import { UnifiedHero } from "@/components/ui/unified-hero"
 import { UnifiedSectionTitle } from "@/components/ui/unified-section-title"
 import { UnifiedCTA } from "@/components/ui/unified-cta"
