@@ -49,6 +49,11 @@ export default function ContatoPage() {
         await handleContact(data);
         reset();
         toast.success("Mensagem enviada com sucesso!");
+        window.gtag("event", "generate_lead", {
+          event_category: "Formulário de contato",
+          event_label: "Lead",
+          value: 1,
+        });
       } catch (error) {
         console.error(error);
         toast.error("Erro ao enviar mensagem. Tente novamente mais tarde.");
