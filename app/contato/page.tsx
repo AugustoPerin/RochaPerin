@@ -19,7 +19,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { handleContact } from "../actions/contato";
 
-// Define gtag function type for TypeScript if not already globally defined
+// Define gtag function type for TypeScript if not already globally defined.
 declare global {
   interface Window {
     gtag: (
