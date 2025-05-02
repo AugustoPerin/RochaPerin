@@ -78,9 +78,13 @@ export default function ClientesPage() {
             >
               <div className="bg-gray-50 w-full h-32 rounded-md mb-4 flex items-center justify-center">
                 <img
-                  src="/cliente-integral.png"
+                  src="/cliente-integral.webp"
                   alt="Cliente 1"
                   className="max-h-16"
+                  style={{
+                    width: 50,
+                    height: 50,
+                  }}
                 />
               </div>
               <h3 className="text-lg font-semibold mb-2">Colégio Integral</h3>

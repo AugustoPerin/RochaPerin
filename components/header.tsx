@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import { Button } from "@/components/ui/button"
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -19,7 +19,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
-              src="/rochaperin-site-home-button-sem-borda.png"
+              src="/rochaperin_Logo-Site.webp"
               alt="RochaPerin Logo"
               width={200}
               height={80}
@@ -29,34 +29,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/"
-              className="text-gray-700 hover:text-blue-700 font-medium"
-            >
+            <Link href="/" className="text-gray-700 hover:text-blue-700 font-medium">
               Início
             </Link>
-            <Link
-              href="/servicos"
-              className="text-gray-700 hover:text-blue-700 font-medium"
-            >
+            <Link href="/servicos" className="text-gray-700 hover:text-blue-700 font-medium">
               Serviços
             </Link>
-            <Link
-              href="/clientes"
-              className="text-gray-700 hover:text-blue-700 font-medium"
-            >
+            <Link href="/clientes" className="text-gray-700 hover:text-blue-700 font-medium">
               Clientes
             </Link>
-            <Link
-              href="/sobre"
-              className="text-gray-700 hover:text-blue-700 font-medium"
-            >
+            <Link href="/sobre" className="text-gray-700 hover:text-blue-700 font-medium">
               Sobre Nós
             </Link>
-            <Link
-              href="/contato"
-              className="text-gray-700 hover:text-blue-700 font-medium"
-            >
+            <Link href="/contato" className="text-gray-700 hover:text-blue-700 font-medium">
               Contato
             </Link>
           </nav>
@@ -136,5 +121,5 @@ export default function Header() {
         </div>
       )}
     </header>
-  );
+  )
 }

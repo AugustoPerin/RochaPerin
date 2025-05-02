@@ -1,29 +1,20 @@
-"use client";
+"use client"
 
-import { useState, useRef } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  ArrowRight,
-  Bot,
-  Cloud,
-  Database,
-  LineChart,
-  ChevronDown,
-  ChevronUp,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState, useRef } from "react"
+import Link from "next/link"
+import { motion, AnimatePresence } from "framer-motion"
+import { ArrowRight, Bot, Cloud, Database, LineChart, ChevronDown, ChevronUp } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [expandedCard, setExpandedCard] = useState<number | null>(null)
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
 
   const specialties = [
     {
       icon: <Bot className="text-blue-600 w-8 h-8" />,
       title: "Chatbots Empresariais",
-      description:
-        "Automatize o atendimento ao cliente e processos internos com chatbots inteligentes.",
+      description: "Automatize o atendimento ao cliente e processos internos com chatbots inteligentes.",
       details:
         "Nossos chatbots utilizam inteligência artificial avançada para oferecer atendimento 24/7, responder perguntas frequentes, qualificar leads e automatizar processos. Integramos com WhatsApp, site, redes sociais e sistemas internos para uma experiência omnichannel completa.",
       link: "/servicos/chatbots",
@@ -31,8 +22,7 @@ export default function Home() {
     {
       icon: <LineChart className="text-blue-600 w-8 h-8" />,
       title: "Automação de Processos",
-      description:
-        "Otimize fluxos de trabalho e a eficiência operacional com automação inteligente.",
+      description: "Otimize fluxos de trabalho e a eficiência operacional com automação inteligente.",
       details:
         "Eliminamos tarefas repetitivas, reduzimos erros humanos e aceleramos processos com nossas soluções de automação. Desde agendamentos e cotações até rastreamento de pedidos e gestão de eventos, nossas soluções são personalizadas para as necessidades específicas do seu negócio.",
       link: "/servicos/automacao",
@@ -40,8 +30,7 @@ export default function Home() {
     {
       icon: <Database className="text-blue-600 w-8 h-8" />,
       title: "Análise de Dados",
-      description:
-        "Transforme dados em insights estratégicos para tomada de decisões mais inteligentes.",
+      description: "Transforme dados em insights estratégicos para tomada de decisões mais inteligentes.",
       details:
         "Extraímos valor dos seus dados com dashboards interativos, relatórios personalizados e análises preditivas. Identificamos tendências, oportunidades e riscos para impulsionar seu negócio. Nossa abordagem baseada em dados permite decisões mais precisas e estratégicas.",
       link: "/servicos/analise-dados",
@@ -49,18 +38,17 @@ export default function Home() {
     {
       icon: <Cloud className="text-blue-600 w-8 h-8" />,
       title: "Migração para Nuvem",
-      description:
-        "Modernize sua infraestrutura com soluções de nuvem seguras e escaláveis.",
+      description: "Modernize sua infraestrutura com soluções de nuvem seguras e escaláveis.",
       details:
         "Planejamos e executamos a migração de sistemas legados para a nuvem, garantindo segurança, performance e escalabilidade. Reduzimos custos de infraestrutura e aumentamos a agilidade do seu negócio com arquiteturas modernas e otimizadas para a nuvem.",
       link: "/servicos/migracao-nuvem",
     },
-  ];
+  ]
 
   // Handle card expansion and measure height for animation
   const toggleCard = (index: number) => {
-    setExpandedCard(expandedCard === index ? null : index);
-  };
+    setExpandedCard(expandedCard === index ? null : index)
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -94,9 +82,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Especialistas em automação de processos, análise de dados,
-              migração para nuvem e chatbots empresariais para impulsionar sua
-              eficiência operacional.
+              Especialistas em automação de processos, análise de dados, migração para nuvem e chatbots empresariais
+              para impulsionar sua eficiência operacional.
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4"
@@ -127,11 +114,7 @@ export default function Home() {
 
         {/* Wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 80"
-            fill="white"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" fill="white">
             <path d="M0,64L80,58.7C160,53,320,43,480,42.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,80L1360,80C1280,80,1120,80,960,80C800,80,640,80,480,80C320,80,160,80,80,80L0,80Z"></path>
           </svg>
         </div>
@@ -155,9 +138,13 @@ export default function Home() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="/cliente-integral.png"
+                src="/cliente-integral.webp"
                 alt="Colégio Integral"
                 className="max-h-12 grayscale hover:grayscale-0 transition-all duration-300"
+                style={{
+                  width: 50,
+                  height: 50,
+                }}
               />
             </motion.div>
             <motion.div
@@ -196,12 +183,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <Button
-              asChild
-              variant="ghost"
-              size="sm"
-              className="text-blue-600 hover:text-blue-800 font-medium"
-            >
+            <Button asChild variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800 font-medium">
               <Link href="/clientes" className="flex items-center">
                 Ver todos os clientes <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
@@ -230,8 +212,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Soluções tecnológicas personalizadas para impulsionar a eficiência
-              e o crescimento do seu negócio.
+              Soluções tecnológicas personalizadas para impulsionar a eficiência e o crescimento do seu negócio.
             </motion.p>
           </div>
 
@@ -250,9 +231,7 @@ export default function Home() {
                   <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                     {specialty.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">
-                    {specialty.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-3">{specialty.title}</h3>
                   <p className="text-gray-600 mb-4">{specialty.description}</p>
 
                   <AnimatePresence>
@@ -265,9 +244,7 @@ export default function Home() {
                         className="overflow-hidden"
                       >
                         <div className="pt-4 border-t border-gray-100">
-                          <p className="text-gray-600 mb-6">
-                            {specialty.details}
-                          </p>
+                          <p className="text-gray-600 mb-6">{specialty.details}</p>
                         </div>
                       </motion.div>
                     )}
@@ -291,9 +268,7 @@ export default function Home() {
                 </div>
 
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center">
-                  <span className="text-sm font-medium text-blue-700">
-                    Explorar serviço
-                  </span>
+                  <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
                   <Link
                     href={specialty.link}
                     className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -327,8 +302,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Conheça algumas das nossas soluções mais populares que estão
-              transformando negócios em todo o Brasil.
+              Conheça algumas das nossas soluções mais populares que estão transformando negócios em todo o Brasil.
             </motion.p>
           </div>
 
@@ -351,15 +325,12 @@ export default function Home() {
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
-                <h3 className="text-xl font-semibold mb-2 text-white">
-                  Chatbot de Atendimento
-                </h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">Chatbot de Atendimento</h3>
                 <p className="text-gray-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Automatize o atendimento ao cliente (SAC) com respostas
-                  rápidas e precisas 24/7.
+                  Automatize o atendimento ao cliente (SAC) com respostas rápidas e precisas 24/7.
                 </p>
                 <Link
-                  href="/servicos/chatbots/atendimento"
+                  href="/servicos/chatbots/chatbot-sac"
                   className="inline-flex items-center text-white font-medium hover:underline"
                 >
                   Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
@@ -385,15 +356,12 @@ export default function Home() {
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
-                <h3 className="text-xl font-semibold mb-2 text-white">
-                  Agendamento Automatizado
-                </h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">Ofertas Promocionais</h3>
                 <p className="text-gray-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Simplifique o agendamento de serviços e exames com nossa
-                  solução intuitiva.
+                  Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências.
                 </p>
                 <Link
-                  href="/servicos/automacao/agendamento"
+                  href="/servicos/chatbots/ofertas"
                   className="inline-flex items-center text-white font-medium hover:underline"
                 >
                   Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
@@ -419,12 +387,9 @@ export default function Home() {
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
-                <h3 className="text-xl font-semibold mb-2 text-white">
-                  WhatsApp Shopping
-                </h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">WhatsApp Shopping</h3>
                 <p className="text-gray-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Transforme o WhatsApp em um canal de vendas com catálogo
-                  interativo e carrinho de compras.
+                  Transforme o WhatsApp em um canal de vendas com catálogo interativo e carrinho de compras.
                 </p>
                 <Link
                   href="/servicos/automacao/whatsapp-shopping"
@@ -480,8 +445,8 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Entre em contato conosco hoje mesmo e descubra como nossas
-              soluções podem impulsionar sua empresa para o próximo nível.
+              Entre em contato conosco hoje mesmo e descubra como nossas soluções podem impulsionar sua empresa para o
+              próximo nível.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -501,5 +466,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
+  )
 }

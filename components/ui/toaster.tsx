@@ -1,25 +1,34 @@
-import { Toaster as RootToaster } from "react-hot-toast";
-import UIToastMessage from "./toast-message";
+"use client"
 
-export default function UIToaster() {
-  const duration = 3000;
+import * as React from "react"
+import { Toaster } from "react-hot-toast"
 
+type UIToasterProps = {}
+
+const UIToaster = React.forwardRef<React.ElementRef<typeof Toaster>, UIToasterProps>(({}, ref) => {
   return (
-    <RootToaster
-      position="bottom-right"
+    <Toaster
+      ref={ref}
+      position="top-right"
       toastOptions={{
-        duration,
+        className: "bg-white border border-gray-200 shadow-sm rounded-md",
+        duration: 3000,
+        success: {
+          style: {
+            background: "#4ade80",
+            color: "#fff",
+          },
+        },
+        error: {
+          style: {
+            background: "#f43f5e",
+            color: "#fff",
+          },
+        },
       }}
-    >
-      {({ id, message, type, duration, visible }) => (
-        <UIToastMessage
-          id={id}
-          message={message?.toString() ?? ""}
-          type={type}
-          duration={duration ?? 0}
-          visible={visible}
-        />
-      )}
-    </RootToaster>
-  );
-}
+    />
+  )
+})
+UIToaster.displayName = "UIToaster"
+
+export default UIToaster
