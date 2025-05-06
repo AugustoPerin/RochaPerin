@@ -66,7 +66,7 @@ export default function SobrePage() {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="/rochaperin-quem-somos-nos.webp"
+                src="/rochaperin-team.webp"
                 alt="Equipe RochaPerin"
                 className="rounded-xl shadow-lg"
               />
