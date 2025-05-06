@@ -314,25 +314,30 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 z-10"></div>
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative group h-64 overflow-hidden rounded-lg shadow-lg">
+                {/* Camada de gradiente sobre a imagem */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10"></div>
+
+                {/* Imagem com filtro de escurecimento */}
                 <img
                   src="/customer-service.webp?height=300&width=500"
                   alt="Atendimento ao Cliente"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.6]"
                 />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
-                <h3 className="text-xl font-semibold mb-2 text-black">Chatbot de Atendimento</h3>
-                <p className="text-black-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Automatize o atendimento ao cliente (SAC) com respostas rápidas e precisas 24/7.
-                </p>
-                <Link
-                  href="/servicos/chatbots/chatbot-sac"
-                  className="inline-flex items-center text-white font-medium hover:underline"
-                >
-                  Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+
+                {/* Conteúdo textual sobreposto */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
+                  <h3 className="text-xl font-semibold mb-2 text-white">Chatbot de Atendimento</h3>
+                  <p className="text-white mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Automatize o atendimento ao cliente (SAC) com respostas rápidas e precisas 24/7.
+                  </p>
+                  <Link
+                    href="/servicos/chatbots/chatbot-sac"
+                    className="inline-flex items-center text-white font-medium hover:underline"
+                  >
+                    Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             </motion.div>
 
@@ -345,25 +350,30 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 z-10"></div>
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative group h-64 overflow-hidden rounded-lg shadow-lg">
+                {/* Camada de gradiente sobre a imagem */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10"></div>
+
+                {/* Imagem com filtro de escurecimento */}
                 <img
                   src="/custom-offers.webp?height=300&width=500"
                   alt="Agendamento de Serviços"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.6]"
                 />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
-                <h3 className="text-xl font-semibold mb-2 text-black">Ofertas Promocionais</h3>
-                <p className="text-black-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências.
-                </p>
-                <Link
-                  href="/servicos/chatbots/ofertas"
-                  className="inline-flex items-center text-white font-medium hover:underline"
-                >
-                  Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+
+                {/* Conteúdo textual sobreposto */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
+                  <h3 className="text-xl font-semibold mb-2 text-white">Ofertas Promocionais</h3>
+                  <p className="text-white mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências.
+                  </p>
+                  <Link
+                    href="/servicos/chatbots/ofertas"
+                    className="inline-flex items-center text-white font-medium hover:underline"
+                  >
+                    Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             </motion.div>
 
