@@ -16,7 +16,7 @@ export default function AgendamentoPage() {
       <UnifiedHero
         title="Agendamento de Serviços"
         description="Automatize o processo de agendamento e permita que seus clientes marquem horários de forma rápida e eficiente, 24 horas por dia, 7 dias por semana."
-        imageSrc="/modern-calendar-app.png"
+        imageSrc="/service-scheduling.webp"
         imageAlt="Agendamento de Serviços"
       />
 
