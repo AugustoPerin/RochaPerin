@@ -80,16 +80,16 @@ export default function ClientesPage() {
                 <img
                   src="/cliente-integral.webp"
                   alt="Cliente 1"
-                  className="max-h-16"
+                  className=""
                   style={{
-                    width: 50,
-                    height: 50,
+                    width: 130,
+                    height: 130,
                   }}
                 />
               </div>
               <h3 className="text-lg font-semibold mb-2">Colégio Integral</h3>
               <p className="text-gray-600 text-center text-sm">
-                Implementação de chatbot para atendimento ao cliente
+                Implementação de chatbot para atendimento ao cliente e Inteligências Artificiais para diversas tarefas.
               </p>
             </motion.div>
 
@@ -105,7 +105,7 @@ export default function ClientesPage() {
                 <img
                   src="/placeholder.svg?height=80&width=160&text=Cliente 2"
                   alt="Cliente 2"
-                  className="max-h-16"
+                  className=""
                 />
               </div>
               <h3 className="text-lg font-semibold mb-2">Empresa 2</h3>
@@ -126,7 +126,7 @@ export default function ClientesPage() {
                 <img
                   src="/placeholder.svg?height=80&width=160&text=Cliente 3"
                   alt="Cliente 3"
-                  className="max-h-16"
+                  className=""
                 />
               </div>
               <h3 className="text-lg font-semibold mb-2">Empresa 3</h3>
@@ -147,7 +147,7 @@ export default function ClientesPage() {
                 <img
                   src="/placeholder.svg?height=80&width=160&text=Cliente 4"
                   alt="Cliente 4"
-                  className="max-h-16"
+                  className=""
                 />
               </div>
               <h3 className="text-lg font-semibold mb-2">Empresa 4</h3>
