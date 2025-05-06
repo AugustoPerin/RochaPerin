@@ -14,7 +14,7 @@ export default function MigracaoAplicacoesNuvemPage() {
       <UnifiedHero
         title="Migração de Aplicações para Nuvem"
         description="Mova suas aplicações legadas ou existentes para a nuvem com segurança e eficiência, aproveitando a escalabilidade, flexibilidade e performance do ambiente cloud."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/application-migration-cloud.webp"
         imageAlt="Migração de Aplicações para Nuvem"
         imageHeight={300}
       />

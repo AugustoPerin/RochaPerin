@@ -14,7 +14,7 @@ export default function BusinessIntelligencePage() {
       <UnifiedHero
         title="Business Intelligence (BI)"
         description="Capacite sua equipe com insights de negócios através de soluções completas de Business Intelligence, integrando dados, análises e relatórios para uma gestão mais inteligente."
-        imageSrc="/analytics-chatbot-dashboard.png" // Placeholder, replace if needed
+        imageSrc="/business-intelligence-bi.webp"
         imageAlt="Business Intelligence (BI)"
         imageHeight={300}
       />

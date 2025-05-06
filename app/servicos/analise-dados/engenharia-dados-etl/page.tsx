@@ -14,7 +14,7 @@ export default function EngenhariaDadosETLPage() {
       <UnifiedHero
         title="Engenharia de Dados e ETL"
         description="Construa pipelines de dados robustos e escaláveis para coletar, transformar e carregar dados de diversas fontes, garantindo informações confiáveis para suas análises."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/engenharia-de-dados-e-etl.webp"
         imageAlt="Engenharia de Dados e ETL"
         imageHeight={300}
       />

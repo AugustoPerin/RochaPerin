@@ -14,7 +14,7 @@ export default function MigracaoDadosNuvemPage() {
       <UnifiedHero
         title="Migração de Dados para Nuvem"
         description="Transfira seus bancos de dados e data warehouses para a nuvem de forma segura, eficiente e com mínimo downtime, garantindo a integridade e disponibilidade dos seus dados."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/data-migration-cloud.webp"
         imageAlt="Migração de Dados para Nuvem"
         imageHeight={300}
       />

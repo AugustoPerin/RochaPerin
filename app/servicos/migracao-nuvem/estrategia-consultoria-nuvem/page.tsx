@@ -14,7 +14,7 @@ export default function EstrategiaConsultoriaNuvemPage() {
       <UnifiedHero
         title="Estratégia e Consultoria em Nuvem"
         description="Defina o melhor caminho para sua jornada na nuvem com nossa consultoria especializada. Criamos estratégias personalizadas para maximizar os benefícios da nuvem para o seu negócio."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/strategy-and-consulting-cloud.webp"
         imageAlt="Estratégia e Consultoria em Nuvem"
         imageHeight={300}
       />

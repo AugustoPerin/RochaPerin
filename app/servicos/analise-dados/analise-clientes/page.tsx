@@ -14,7 +14,7 @@ export default function AnaliseClientesPage() {
       <UnifiedHero
         title="Análise de Clientes (Customer Analytics)"
         description="Compreenda profundamente o comportamento, as preferências e o valor dos seus clientes para personalizar experiências, aumentar a retenção e otimizar estratégias de marketing."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/analise-de-clientes.webp"
         imageAlt="Análise de Clientes"
         imageHeight={300}
       />

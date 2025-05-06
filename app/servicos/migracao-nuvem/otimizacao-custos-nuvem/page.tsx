@@ -14,7 +14,7 @@ export default function OtimizacaoCustosNuvemPage() {
       <UnifiedHero
         title="Otimização de Custos na Nuvem (FinOps)"
         description="Reduza seus gastos com nuvem sem comprometer a performance. Implementamos práticas de FinOps para otimizar o uso de recursos, identificar desperdícios e maximizar seu ROI."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/cost-optimization-finops-cloud.webp"
         imageAlt="Otimização de Custos na Nuvem"
         imageHeight={300}
       />

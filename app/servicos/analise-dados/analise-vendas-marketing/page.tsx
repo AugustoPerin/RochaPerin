@@ -14,7 +14,7 @@ export default function AnaliseVendasMarketingPage() {
       <UnifiedHero
         title="Análise de Vendas e Marketing"
         description="Otimize suas estratégias de vendas e marketing com análises profundas sobre o desempenho de campanhas, funil de vendas, comportamento do cliente e ROI."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/analise-de-vendas-e-marketing.webp" // Placeholder, replace if needed
         imageAlt="Análise de Vendas e Marketing"
         imageHeight={300}
       />

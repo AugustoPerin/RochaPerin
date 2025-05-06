@@ -14,7 +14,7 @@ export default function ServicosGerenciadosNuvemPage() {
       <UnifiedHero
         title="Serviços Gerenciados em Nuvem (MSP)"
         description="Delegue a gestão, monitoramento e otimização do seu ambiente na nuvem para nossos especialistas. Foque no seu core business enquanto garantimos a performance, segurança e eficiência da sua nuvem."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/managed-services-provider-msp-cloud.webp"
         imageAlt="Serviços Gerenciados em Nuvem"
         imageHeight={300}
       />

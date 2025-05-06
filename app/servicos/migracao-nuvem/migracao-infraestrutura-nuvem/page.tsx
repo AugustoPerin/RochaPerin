@@ -14,7 +14,7 @@ export default function MigracaoInfraestruturaNuvemPage() {
       <UnifiedHero
         title="Migração de Infraestrutura para Nuvem"
         description="Mova seus servidores, armazenamento e redes para a nuvem (IaaS), ganhando escalabilidade, flexibilidade e reduzindo custos operacionais com infraestrutura física."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/infrastructure-migration-cloud.webp"
         imageAlt="Migração de Infraestrutura para Nuvem"
         imageHeight={300}
       />

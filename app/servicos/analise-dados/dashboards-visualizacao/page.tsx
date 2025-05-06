@@ -14,7 +14,7 @@ export default function DashboardsVisualizacaoPage() {
       <UnifiedHero
         title="Dashboards e Visualização de Dados"
         description="Transforme seus dados brutos em insights acionáveis com dashboards interativos e visualizações claras, facilitando a tomada de decisão estratégica."
-        imageSrc="/survey-types-metrics-visualization.png" // Placeholder, replace if needed
+        imageSrc="/dashboards´-e-visualization.webp"
         imageAlt="Dashboards e Visualização de Dados"
         imageHeight={300}
       />

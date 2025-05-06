@@ -14,7 +14,7 @@ export default function AnalisePreditivaPage() {
       <UnifiedHero
         title="Análise Preditiva"
         description="Antecipe tendências, preveja resultados futuros e tome decisões proativas com base em modelos de análise preditiva robustos e personalizados para o seu negócio."
-        imageSrc="/placeholder.svg" // Placeholder, replace if needed
+        imageSrc="/predictive-analytics.webp"
         imageAlt="Análise Preditiva"
         imageHeight={300}
       />
