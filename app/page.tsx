@@ -376,25 +376,30 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 z-10"></div>
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative group h-64 overflow-hidden rounded-lg shadow-lg">
+                {/* Camada de gradiente sobre a imagem */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10"></div>
+
+                {/* Imagem com filtro de escurecimento */}
                 <img
                   src="/whatsapp-shopping.webp?height=300&width=500"
                   alt="WhatsApp Shopping"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.6]"
                 />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
-                <h3 className="text-xl font-semibold mb-2 text-black">WhatsApp Shopping</h3>
-                <p className="text-black-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Transforme o WhatsApp em um canal de vendas com catálogo interativo e carrinho de compras.
-                </p>
-                <Link
-                  href="/servicos/automacao/whatsapp-shopping"
-                  className="inline-flex items-center text-white font-medium hover:underline"
-                >
-                  Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+
+                {/* Conteúdo textual sobreposto */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-300">
+                  <h3 className="text-xl font-semibold mb-2 text-white">WhatsApp Shopping</h3>
+                  <p className="text-white mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Transforme o WhatsApp em um canal de vendas com catálogo interativo e carrinho de compras.
+                  </p>
+                  <Link
+                    href="/servicos/automacao/whatsapp-shopping"
+                    className="inline-flex items-center text-white font-medium hover:underline"
+                  >
+                    Ver detalhes <ArrowRight className="ml-1 w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </div>
