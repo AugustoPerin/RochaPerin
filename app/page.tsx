@@ -140,8 +140,8 @@ export default function Home() {
                 alt="Colégio Integral"
                 className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
-                  width: 180,
-                  height: 180,
+                  width: 130,
+                  height: 130,
                 }}
               />
             </motion.div>
@@ -155,8 +155,8 @@ export default function Home() {
                 alt="Cliente 2"
                 className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
-                  width: 180,
-                  height: 180,
+                  width: 130,
+                  height: 130,
                 }}
               />
             </motion.div>
@@ -170,8 +170,8 @@ export default function Home() {
                 alt="Cliente 3"
                 className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
-                  width: 180,
-                  height: 180,
+                  width: 130,
+                  height: 130,
                 }}
               />
             </motion.div>
@@ -185,8 +185,8 @@ export default function Home() {
                 alt="Cliente 4"
                 className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
-                  width: 180,
-                  height: 180,
+                  width: 130,
+                  height: 130,
                 }}
               />
             </motion.div>
