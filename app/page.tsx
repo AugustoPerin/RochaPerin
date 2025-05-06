@@ -138,7 +138,7 @@ export default function Home() {
               <img
                 src="/cliente-integral.webp"
                 alt="Colégio Integral"
-                className="max-h-12 grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
                   width: 180,
                   height: 180,
@@ -153,7 +153,7 @@ export default function Home() {
               <img
                 src="/placeholder.svg?height=60&width=120"
                 alt="Cliente 2"
-                className="max-h-12 grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
                   width: 180,
                   height: 180,
@@ -168,7 +168,7 @@ export default function Home() {
               <img
                 src="/placeholder.svg?height=60&width=120"
                 alt="Cliente 3"
-                className="max-h-12 grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
                   width: 180,
                   height: 180,
@@ -183,7 +183,7 @@ export default function Home() {
               <img
                 src="/placeholder.svg?height=60&width=120"
                 alt="Cliente 4"
-                className="max-h-12 grayscale hover:grayscale-0 transition-all duration-300"
+                className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
                   width: 180,
                   height: 180,
