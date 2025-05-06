@@ -92,7 +92,7 @@ export default function ClientesPage() {
                 Implementação de chatbot para atendimento ao cliente e Inteligências Artificiais para diversas tarefas.
               </p>
             </motion.div>
-
+{/* 
             <motion.div
               className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex flex-col items-center"
               initial={{ opacity: 0, y: 20 }}
@@ -154,7 +154,7 @@ export default function ClientesPage() {
               <p className="text-gray-600 text-center text-sm">
                 Automação de processos internos e análise de dados
               </p>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           <div className="text-center">
