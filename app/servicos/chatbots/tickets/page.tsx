@@ -18,7 +18,7 @@ export default function TicketsPage() {
       <UnifiedHero
         title="Abertura de Tickets"
         description="Automatize o processo de abertura e categorização de tickets de suporte com um chatbot inteligente que direciona as solicitações para os departamentos corretos."
-        imageSrc="/support-ticket-dashboard.png"
+        imageSrc="/ticket-opening.webp"
         imageAlt="Abertura de Tickets"
       />
 
@@ -103,7 +103,7 @@ export default function TicketsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <img src="/support-ticket-workflow.png" alt="Fluxo de Trabalho" className="rounded-lg shadow-lg" />
+              <img src="/ticket-fluxogram.webp" alt="Fluxo de Trabalho" className="rounded-lg shadow-lg" />
             </motion.div>
             <motion.div
               className="md:w-1/2"

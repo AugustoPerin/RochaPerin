@@ -19,7 +19,7 @@ export default function EventosPage() {
       <UnifiedHero
         title="Registro de Eventos"
         description="Simplifique o processo de inscrição em eventos com um sistema automatizado de registro, pagamento e gerenciamento de participantes."
-        imageSrc="/event-registration-dashboard.png"
+        imageSrc="/event-registration.webp"
         imageAlt="Registro de Eventos"
       />
 
@@ -108,7 +108,7 @@ export default function EventosPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <img src="/modern-event-checkin.png" alt="Check-in Automatizado" className="rounded-lg shadow-lg" />
+              <img src="/event-registration-qr-code.webp" alt="Check-in Automatizado" className="rounded-lg shadow-lg" />
             </motion.div>
             <motion.div
               className="md:w-1/2"

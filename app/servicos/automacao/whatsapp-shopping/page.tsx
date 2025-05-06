@@ -62,7 +62,7 @@ export default function WhatsAppShoppingPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <img src="/whatsapp-shop-catalog.png" alt="WhatsApp Shopping" className="rounded-lg shadow-xl" />
+              <img src="/whatsapp-shopping.webp" alt="WhatsApp Shopping" className="rounded-lg shadow-xl" />
             </motion.div>
           </div>
         </div>

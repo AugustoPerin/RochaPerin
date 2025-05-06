@@ -63,7 +63,7 @@ export default function ChatbotSACPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <img
-                src="/chatbot-analytics-dashboard.png"
+                src="/customer-service.webp"
                 alt="Chatbot de Atendimento ao Cliente"
                 className="rounded-lg shadow-xl"
               />
@@ -226,7 +226,7 @@ export default function ChatbotSACPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <img src="/connected-conversations.png" alt="Canais de Atendimento" className="rounded-lg shadow-lg" />
+              <img src="/multiple-service-channels.webp" alt="Canais de Atendimento" className="rounded-lg shadow-lg" />
             </motion.div>
             <motion.div
               className="md:w-1/2"

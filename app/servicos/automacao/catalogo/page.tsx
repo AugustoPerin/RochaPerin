@@ -16,7 +16,7 @@ export default function CatalogoPage() {
       <UnifiedHero
         title="Catálogo Interativo"
         description="Ofereça uma experiência de compra dinâmica e envolvente com um catálogo digital interativo que permite aos clientes explorar seus produtos e serviços de forma intuitiva."
-        imageSrc="/modern-product-showcase.png"
+        imageSrc="/interactive-catalogue.webp"
         imageAlt="Catálogo Interativo"
       />
 

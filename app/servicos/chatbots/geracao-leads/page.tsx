@@ -14,7 +14,7 @@ export default function GeracaoLeadsPage() {
       <UnifiedHero
         title="Bot de Geração de Leads"
         description="Transforme visitantes em clientes potenciais com nosso bot inteligente de geração de leads, capturando informações valiosas e qualificando prospects 24 horas por dia."
-        imageSrc="/rochaperin-bot-geracao-leads.webp"
+        imageSrc="/lead-generation.webp"
         imageAlt="Bot de Geração de Leads"
         imageHeight={300}
       />
@@ -150,7 +150,7 @@ export default function GeracaoLeadsPage() {
               transition={{ duration: 0.5 }}
             >
               <img
-                src="/rochaperin-geracao-leads-2.jpg"
+                src="/lead-generation-funil.webp"
                 alt="Processo de Geração de Leads"
                 height={500}
                 className="rounded-lg shadow-xl"

@@ -16,7 +16,7 @@ export default function RastreamentoPage() {
       <UnifiedHero
         title="Rastreamento de Pedidos"
         description="Ofereça aos seus clientes um sistema de rastreamento de pedidos em tempo real, aumentando a transparência e satisfação durante todo o processo de entrega."
-        imageSrc="/package-tracking-interface.png"
+        imageSrc="/order-tracking.webp"
         imageAlt="Rastreamento de Pedidos"
       />
 

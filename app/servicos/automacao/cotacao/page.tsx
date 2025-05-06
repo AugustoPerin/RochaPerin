@@ -16,7 +16,7 @@ export default function CotacaoPage() {
       <UnifiedHero
         title="Cotação Automatizada"
         description="Agilize o processo de cotação com um sistema inteligente que gera orçamentos personalizados instantaneamente, aumentando suas taxas de conversão."
-        imageSrc="/quote-system-dashboard.png"
+        imageSrc="/automated-quotation.webp"
         imageAlt="Cotação Automatizada"
       />
 

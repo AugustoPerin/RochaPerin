@@ -62,7 +62,7 @@ export default function AutomacaoPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <img src="/interconnected-automation.png" alt="Automação de Processos" className="rounded-lg shadow-xl" />
+              <img src="/business-process-automation.webp" alt="Automação de Processos" className="rounded-lg shadow-xl" />
             </motion.div>
           </div>
         </div>

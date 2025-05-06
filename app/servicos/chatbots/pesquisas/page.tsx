@@ -18,7 +18,7 @@ export default function PesquisasPage() {
       <UnifiedHero
         title="Pesquisas de Satisfação"
         description="Colete feedback dos clientes de forma eficiente com chatbots que realizam pesquisas de satisfação personalizadas e geram insights valiosos para seu negócio."
-        imageSrc="/customer-satisfaction-dashboard.png"
+        imageSrc="/customer-satisfaction-surveys.webp"
         imageAlt="Pesquisas de Satisfação"
       />
 
@@ -103,7 +103,7 @@ export default function PesquisasPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <img src="/survey-types-metrics-visualization.png" alt="Tipos de Pesquisas" className="rounded-lg shadow-lg" />
+              <img src="/satisfaction-survey.webp" alt="Tipos de Pesquisas" className="rounded-lg shadow-lg" />
             </motion.div>
             <motion.div
               className="md:w-1/2"

@@ -14,7 +14,7 @@ export default function CobrancasPage() {
       <UnifiedHero
         title="Bot de Cobrança Amigável"
         description="Automatize seu processo de cobrança com um chatbot inteligente que envia lembretes amigáveis, facilita pagamentos e permite negociação de prazos, mantendo um bom relacionamento com seus clientes."
-        imageSrc="/placeholder.svg" // Placeholder image, replace with a relevant one
+        imageSrc="/friendly-billing-professional.webp"
         imageAlt="Bot de Cobrança Amigável"
         imageHeight={300}
       />
