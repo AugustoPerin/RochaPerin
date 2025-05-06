@@ -348,7 +348,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 z-10"></div>
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=300&width=500"
+                  src="/custom-offers.webp?height=300&width=500"
                   alt="Agendamento de Serviços"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
