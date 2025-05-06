@@ -62,7 +62,7 @@ export default function ChatbotsPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <img src="/analytics-chatbot-dashboard.png" alt="Chatbots Empresariais" className="rounded-lg shadow-xl" />
+              <img src="/business-chatbot.webp" alt="Chatbots Empresariais" className="rounded-lg shadow-xl" />
             </motion.div>
           </div>
         </div>
