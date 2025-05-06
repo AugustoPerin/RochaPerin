@@ -72,7 +72,7 @@ export default function Home() {
               className="text-3xl md:text-5xl font-bold mb-4 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.4 }}
             >
               Transforme seu negócio com automação inteligente
             </motion.h1>
@@ -80,7 +80,7 @@ export default function Home() {
               className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-blue-100"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
             >
               Especialistas em automação de processos, análise de dados, migração para nuvem e chatbots empresariais
               para impulsionar sua eficiência operacional.
@@ -89,7 +89,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
             >
               <Button
                 asChild
