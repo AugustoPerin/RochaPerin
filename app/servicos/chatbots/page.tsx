@@ -170,7 +170,7 @@ export default function ChatbotsPage() {
                   "Escalonamento inteligente para atendentes humanos",
                   "Integração com sistemas de CRM e helpdesk",
                 ],
-                link: "/servicos/chatbot-sac",
+                link: "/servicos/chatbots/chatbot-sac",
               },
               {
                 title: "Geração de Leads",
@@ -181,7 +181,7 @@ export default function ChatbotsPage() {
                   "Integração com ferramentas de marketing",
                   "Segmentação e direcionamento personalizado",
                 ],
-                link: "/servicos/geracao-leads",
+                link: "/servicos/chatbots/geracao-leads",
               },
               {
                 title: "Pesquisas de Satisfação",
@@ -192,7 +192,7 @@ export default function ChatbotsPage() {
                   "Análise de sentimento e feedback",
                   "Relatórios detalhados e insights acionáveis",
                 ],
-                link: "/servicos/pesquisas",
+                link: "/servicos/chatbots/pesquisas",
               },
               {
                 title: "Cobrança Amigável",
@@ -203,7 +203,7 @@ export default function ChatbotsPage() {
                   "Múltiplas opções de pagamento",
                   "Negociação de prazos e condições",
                 ],
-                link: "/servicos/cobranca",
+                link: "/servicos/chatbots/cobranca",
               },
             ].map((chatbot, index) => (
               <motion.div

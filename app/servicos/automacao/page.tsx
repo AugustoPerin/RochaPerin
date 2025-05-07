@@ -317,29 +317,29 @@ export default function AutomacaoPage() {
                 <div className="bg-blue-50 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-6">
                   <Clock className="text-blue-600 w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Agendamento de Exames</h3>
+                <h3 className="text-xl font-semibold mb-3">Catálogo Interativos</h3>
                 <p className="text-gray-600 mb-4">
-                  Automatize o agendamento de exames médicos ou técnicos com um sistema intuitivo e eficiente.
+                Ofereça um catálogo digital interativo que permite aos clientes explorar produtos e serviços de forma dinâmica.
                 </p>
                 <ul className="mb-4 space-y-2">
                   <li className="flex items-start">
                     <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Seleção de horários disponíveis</span>
+                    <span>Busca avançada</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Confirmação automática</span>
+                    <span>Filtros personalizados</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-green-500 mr-2 flex-shrink-0 mt-1" size={16} />
-                    <span>Lembretes personalizados</span>
+                    <span>Atualização em tempo real</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
                 <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
                 <Link
-                  href="/servicos/automacao/exames"
+                  href="/servicos/automacao/catalogo"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
                 >
                   <ArrowRight className="w-4 h-4" />
