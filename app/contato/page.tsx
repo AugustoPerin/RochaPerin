@@ -18,6 +18,7 @@ import { useTransition, useEffect } from "react"; // Import useEffect
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { handleContact } from "../actions/contato";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 // Define gtag function type for TypeScript if not already globally defined.
 declare global {
@@ -451,7 +452,47 @@ export default function ContatoPage() {
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* FAQ items remain the same */}
+          <section id="faq" className="py-16 bg-gray-100">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+              <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Quais serviços a Rocha Perin oferece?</AccordionTrigger>
+                  <AccordionContent>
+                    Oferecemos soluções em automação de processos, desenvolvimento de chatbots empresariais, análise de dados e migração para a nuvem.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Como posso solicitar um orçamento?</AccordionTrigger>
+                  <AccordionContent>
+                    Basta preencher o formulário de contato nesta página ou nos enviar um e-mail em <a href="mailto:contato@rochaperin.com" className="text-blue-600 underline">contato@rochaperin.com</a>.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Atendem empresas de quais setores?</AccordionTrigger>
+                  <AccordionContent>
+                    Atendemos empresas de diversos setores como logística, varejo, educação, saúde, entre outros que buscam eficiência digital.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>Quais são os horários de atendimento?</AccordionTrigger>
+                  <AccordionContent>
+                    Nosso atendimento é de segunda a sexta das 9h às 18h, e aos sábados das 9h às 13h.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>Como funciona a consultoria inicial?</AccordionTrigger>
+                  <AccordionContent>
+                    Após seu contato, agendamos uma conversa para entender as necessidades da sua empresa e propomos uma solução personalizada.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </section>
           </div>
         </div>
       </section>

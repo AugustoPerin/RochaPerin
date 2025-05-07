@@ -126,7 +126,7 @@ export default function AutomacaoPage() {
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
                 <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
                 <Link
-                  href="/servicos/agendamento"
+                  href="/servicos/automacao/agendamento"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
                 >
                   <ArrowRight className="w-4 h-4" />
@@ -169,7 +169,7 @@ export default function AutomacaoPage() {
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
                 <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
                 <Link
-                  href="/servicos/cotacao"
+                  href="/servicos/automacao/cotacao"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
                 >
                   <ArrowRight className="w-4 h-4" />
@@ -212,7 +212,7 @@ export default function AutomacaoPage() {
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
                 <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
                 <Link
-                  href="/servicos/rastreamento"
+                  href="/servicos/automacao/rastreamento"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
                 >
                   <ArrowRight className="w-4 h-4" />
@@ -254,7 +254,7 @@ export default function AutomacaoPage() {
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
                 <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
                 <Link
-                  href="/servicos/whatsapp-shopping"
+                  href="/servicos/automacao/whatsapp-shopping"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
                 >
                   <ArrowRight className="w-4 h-4" />
@@ -297,7 +297,7 @@ export default function AutomacaoPage() {
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
                 <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
                 <Link
-                  href="/servicos/eventos"
+                  href="/servicos/automacao/eventos"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
                 >
                   <ArrowRight className="w-4 h-4" />
@@ -339,7 +339,7 @@ export default function AutomacaoPage() {
               <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 flex justify-between items-center rounded-b-xl">
                 <span className="text-sm font-medium text-blue-700">Explorar serviço</span>
                 <Link
-                  href="/servicos/exames"
+                  href="/servicos/automacao/exames"
                   className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
                 >
                   <ArrowRight className="w-4 h-4" />
