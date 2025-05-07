@@ -160,7 +160,7 @@ export default function MigracaoNuvemPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               {/* Placeholder image - Consider generating a relevant one */}
-              <img src="/placeholder-cloud-migration.svg" alt="Migração para Nuvem" className="rounded-lg shadow-xl w-full max-w-md" />
+              <img src="/cloud-migration.webp" alt="Migração para Nuvem" className="rounded-lg shadow-xl w-full max-w-md" />
             </motion.div>
           </div>
         </div>

@@ -157,7 +157,7 @@ export default function AnaliseDadosPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               {/* Placeholder image - Consider generating a relevant one */}
-              <img src="/placeholder-data-analysis.svg" alt="Análise de Dados" className="rounded-lg shadow-xl w-full max-w-md" />
+              <img src="/data-analysis.webp" alt="Análise de Dados" className="rounded-lg shadow-xl w-full max-w-md" />
             </motion.div>
           </div>
         </div>
