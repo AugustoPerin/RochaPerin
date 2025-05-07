@@ -203,7 +203,7 @@ export default function ChatbotsPage() {
                   "Múltiplas opções de pagamento",
                   "Negociação de prazos e condições",
                 ],
-                link: "/servicos/chatbots/cobranca",
+                link: "/servicos/chatbots/cobrancas",
               },
             ].map((chatbot, index) => (
               <motion.div
