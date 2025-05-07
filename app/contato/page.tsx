@@ -445,35 +445,50 @@ export default function ContatoPage() {
             <div className="container mx-auto px-4">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Perguntas Frequentes</h2>
               <Accordion type="single" collapsible className="max-w-3xl mx-auto space-y-4">
-                <AccordionItem value="item-1">
+                <AccordionItem
+                  value="item-1"
+                  className="bg-white border border-gray-200 rounded-md shadow-sm"
+                >
                   <AccordionTrigger>Quais serviços a Rocha Perin oferece?</AccordionTrigger>
                   <AccordionContent>
                     Oferecemos soluções em automação de processos, desenvolvimento de chatbots empresariais, análise de dados e migração para a nuvem.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-2">
+                <AccordionItem
+                  value="item-2"
+                  className="bg-white border border-gray-200 rounded-md shadow-sm"
+                >
                   <AccordionTrigger>Como posso solicitar um orçamento?</AccordionTrigger>
                   <AccordionContent>
                     Basta preencher o formulário de contato nesta página ou nos enviar um e-mail em <a href="mailto:contato@rochaperin.com" className="text-blue-600 underline">contato@rochaperin.com</a>.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-3">
+                <AccordionItem
+                  value="item-3"
+                  className="bg-white border border-gray-200 rounded-md shadow-sm"
+                >
                   <AccordionTrigger>Atendem empresas de quais setores?</AccordionTrigger>
                   <AccordionContent>
                     Atendemos empresas de diversos setores como logística, varejo, educação, saúde, entre outros que buscam eficiência digital.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-4">
+                <AccordionItem
+                  value="item-4"
+                  className="bg-white border border-gray-200 rounded-md shadow-sm"
+                >
                   <AccordionTrigger>Quais são os horários de atendimento?</AccordionTrigger>
                   <AccordionContent>
                     Nosso atendimento é de segunda a sexta das 9h às 18h, e aos sábados das 9h às 13h.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-5">
+                <AccordionItem
+                  value="item-5"
+                  className="bg-white border border-gray-200 rounded-md shadow-sm"
+                >
                   <AccordionTrigger>Como funciona a consultoria inicial?</AccordionTrigger>
                   <AccordionContent>
                     Após seu contato, agendamos uma conversa para entender as necessidades da sua empresa e propomos uma solução personalizada.
