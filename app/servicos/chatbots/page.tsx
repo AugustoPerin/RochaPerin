@@ -214,7 +214,7 @@ export default function ChatbotsPage() {
                   "Envio de texto, áudio, imagem e vídeo",
                   "Acompanhamento da efetividade das ofertas",
                 ],
-                link: "/servicos/chatbots/cobrancas",
+                link: "/servicos/chatbots/ofertas",
               },
             ].map((chatbot, index) => (
               <motion.div
