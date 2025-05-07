@@ -84,7 +84,7 @@ Esta Política de Privacidade poderá ser atualizada a qualquer momento para ref
 
 11. CONTATO
 Em caso de dúvidas, sugestões ou solicitações relacionadas ao tratamento de dados pessoais, entre em contato com nosso Encarregado de Dados (DPO):
-Nome: Augusto de Oliveira Perin E-mail: contato@rochaperin.com
+Nome: Augusto de Oliveira Perin E-mail: augusto@rochaperin.com
 `
 
   // Function to parse the text and render with basic HTML structure

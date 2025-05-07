@@ -191,6 +191,18 @@ const serviceData: ServiceCategory[] = [
         link: "/servicos/chatbots/cobrancas",
         icon: CreditCard,
       },
+      {
+        title: "Ofertas e Promoções Personalizadas",
+        description:
+          "Envie ofertas personalizadas aos clientes com base em seu histórico de compras e preferências, aumentando as taxas de conversão e o valor médio do pedido.",
+        features: [
+          "Envios feitos sob medida para seu negócio",
+          "Envio de texto, áudio, imagem e vídeo",
+          "Acompanhamento da efetividade das ofertas",
+        ],
+        link: "/servicos/chatbots/ofertas",
+        icon: FileText,
+      },
     ],
   },
   {
