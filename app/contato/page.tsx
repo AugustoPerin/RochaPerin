@@ -452,7 +452,7 @@ export default function ContatoPage() {
                   <AccordionTrigger className="px-4 py-3 text-left font-medium text-gray-800 hover:bg-gray-50">
                     Quais serviços a Rocha Perin oferece?
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 text-gray-600">
+                  <AccordionContent className="px-4 pb-4 font-medium text-gray-600">
                     Oferecemos soluções em automação de processos, desenvolvimento de chatbots empresariais, análise de dados e migração para a nuvem.
                   </AccordionContent>
                 </AccordionItem>
@@ -464,7 +464,7 @@ export default function ContatoPage() {
                   <AccordionTrigger className="px-4 py-3 text-left font-medium text-gray-800 hover:bg-gray-50">
                     Como posso solicitar um orçamento?
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 text-gray-600">
+                  <AccordionContent className="px-4 pb-4 font-medium text-gray-600">
                     Basta preencher o formulário de contato nesta página ou nos enviar um e-mail em <a href="mailto:contato@rochaperin.com" className="text-blue-600 underline">contato@rochaperin.com</a>.
                   </AccordionContent>
                 </AccordionItem>
@@ -476,7 +476,7 @@ export default function ContatoPage() {
                   <AccordionTrigger className="px-4 py-3 text-left font-medium text-gray-800 hover:bg-gray-50">
                     Atendem empresas de quais setores?
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 text-gray-600">
+                  <AccordionContent className="px-4 pb-4 font-medium text-gray-600">
                     Atendemos empresas de diversos setores como logística, varejo, educação, saúde, entre outros que buscam eficiência digital.
                   </AccordionContent>
                 </AccordionItem>
@@ -488,7 +488,7 @@ export default function ContatoPage() {
                   <AccordionTrigger className="px-4 py-3 text-left font-medium text-gray-800 hover:bg-gray-50">
                     Quais são os horários de atendimento?
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 text-gray-600">
+                  <AccordionContent className="px-4 pb-4 font-medium text-gray-600">
                     Nosso atendimento é de segunda a sexta das 9h às 18h, e aos sábados das 9h às 13h.
                   </AccordionContent>
                 </AccordionItem>
@@ -500,7 +500,7 @@ export default function ContatoPage() {
                   <AccordionTrigger className="px-4 py-3 text-left font-medium text-gray-800 hover:bg-gray-50">
                     Como funciona a consultoria inicial?
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 text-gray-600">
+                  <AccordionContent className="px-4 pb-4 font-medium text-gray-600">
                     Após seu contato, agendamos uma conversa para entender as necessidades da sua empresa e propomos uma solução personalizada.
                   </AccordionContent>
                 </AccordionItem>
