@@ -105,6 +105,10 @@ export default function ClientesPage() {
                   src="/analytica.webp"
                   alt="Cliente 2"
                   className=""
+                  style={{
+                    width: 130,
+                    height: 130,
+                  }}
                 />
               </div>
               <h3 className="text-lg font-semibold mb-2">Grupo Analytica</h3>
