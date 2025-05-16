@@ -145,14 +145,14 @@ export default function Home() {
                 }}
               />
             </motion.div>
-            {/* <motion.div
+            <motion.div
               className="bg-white p-6 rounded-lg w-full max-w-[180px] h-[180px] flex items-center justify-center transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="/placeholder.svg?height=60&width=120"
-                alt="Cliente 2"
+                src="/analytica.webp"
+                alt="Grupo Analytica"
                 className="grayscale hover:grayscale-0 transition-all duration-300"
                 style={{
                   width: 130,
@@ -160,7 +160,7 @@ export default function Home() {
                 }}
               />
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className="bg-white p-6 rounded-lg w-full max-w-[180px] h-[180px] flex items-center justify-center transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}

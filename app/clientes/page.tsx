@@ -92,7 +92,6 @@ export default function ClientesPage() {
                 Implementação de chatbot para atendimento ao cliente e Inteligências Artificiais para diversas tarefas.
               </p>
             </motion.div>
-{/* 
             <motion.div
               className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex flex-col items-center"
               initial={{ opacity: 0, y: 20 }}
@@ -103,18 +102,18 @@ export default function ClientesPage() {
             >
               <div className="bg-gray-50 w-full h-32 rounded-md mb-4 flex items-center justify-center">
                 <img
-                  src="/placeholder.svg?height=80&width=160&text=Cliente 2"
+                  src="/analytica.webp"
                   alt="Cliente 2"
                   className=""
                 />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Empresa 2</h3>
+              <h3 className="text-lg font-semibold mb-2">Grupo Analytica</h3>
               <p className="text-gray-600 text-center text-sm">
-                Automação de processos internos e análise de dados
+                Automação de processos internos e análise de dados nos setores: Compras, Infraestrutura, Sistemas, RH, Financeiro e E-Commerce
               </p>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex flex-col items-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
