@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import type React from "react";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
         </ThemeProvider>
         <GoogleAnalytics gaId="G-B8T2H41CJL" />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
