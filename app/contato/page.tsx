@@ -332,7 +332,7 @@ export default function ContatoPage() {
                     />
                     <div>
                       <h4 className="font-medium mb-1">Telefone</h4>
-                      <p className="text-gray-600">(71) 99349-1849</p>
+                      <p className="text-gray-600">(71) 99207-9723</p>
                     </div>
                   </div>
 
@@ -343,7 +343,7 @@ export default function ContatoPage() {
                     />
                     <div>
                       <h4 className="font-medium mb-1">E-mail</h4>
-                      <p className="text-gray-600">contato@rochaperin.com</p>
+                      <p className="text-gray-600">contato@rochaperin.com.br</p>
                     </div>
                   </div>
                 </div>

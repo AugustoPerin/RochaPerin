@@ -52,7 +52,7 @@ export default function Header() {
                 target="_blank"
                 href="http://wa.me/5571993491849?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20RochaPerin"
               >
-                Fale Conosco
+                Fale Conosco no WhatsApp
               </Link>
             </Button>
           </div>
@@ -110,10 +110,11 @@ export default function Header() {
               </Link>
               <Button asChild className="mt-2">
                 <Link
+                  target="_blank"
                   href="http://wa.me/5571993491849?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20RochaPerin"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Fale Conosco
+                  Fale Conosco no WhatsApp
                 </Link>
               </Button>
             </nav>
